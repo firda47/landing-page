@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami | NihongoPro</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Gaya untuk menunjukkan tautan 'Contact' sedang aktif */
+        .nav-links .link-contact a {
+            color: var(--primary-mid) !important;
+            background: rgba(93,63,211,0.15);
+            font-weight: 700 !important;
+        }
+        /* Tambahan CSS untuk halaman kontak yang lebih baik (sama seperti sebelumnya) */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 64px;
+            align-items: flex-start;
+        }
+        @media (max-width: 768px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info h3 {
+            margin-top: 30px;
+            margin-bottom: 8px;
+            color: var(--primary-mid);
+        }
+        .contact-form {
+            background: var(--soft);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .maps-frame {
+            border: 0; 
+            width: 100%; 
+            height: 400px; 
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="brand">
+                    <div class="logo-mark">N</div>
+                    <div class="logo-text">NihongoPro</div>
+                </a>
+                
+                <div class="nav">
+                    <ul class="nav-links" id="primary-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="tutors.html">Tutors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="link-contact"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                    
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-top: 60px;">
+        
+        <section class="section">
+            <div class="container" data-animate>
+               <div class="section-contact-header" style="text-align: left; margin-bottom: 40px;">
+    <p class="kicker" style="color: var(--primary-mid); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">BUTUH BANTUAN?</p>
+    <h1 class="section-title" style="margin-bottom: 16px;">Hubungi Kami</h1>
+    <p class="lead" style="margin-left: 0; max-width: 600px; text-align: left;">
+        Tim kami siap menjawab pertanyaan Anda. Isi formulir di bawah ini atau gunakan kontak cepat kami.
+    </p>
+</div>
+
+                <div class="contact-layout" style="margin-top: 40px;">
+                    
+                    <div class="contact-info">
+                        <h2>Informasi Kontak Cepat</h2>
+                        <p>Kami akan merespons pertanyaan Anda dalam waktu maksimal 1x24 jam kerja.</p>
+                        
+                        <h3>Email Dukungan</h3>
+                        <p><a href="mailto:support@nihongopro.com" style="color: var(--text);">support@nihongopro.com</a></p>
+                        
+                        <h3>Telepon & WhatsApp</h3>
+                        <p><a href="tel:+628123456789" style="color: var(--text);">+62 812-3456-789 (CS)</a></p>
+                        
+                        <h3>Alamat Kantor (Khusus Pertemuan)</h3>
+                        <p>Jl. Sakura No. 12, Lt. 3, Kebayoran Baru, Jakarta Selatan, 12345.</p>
+                        
+                        <a href="#" class="btn-primary" style="margin-top: 20px;">Kirim Pesan WhatsApp</a>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Kirim Pesan Langsung</h2>
+                        <form action="#" method="POST">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                            
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject">
+                            
+                            <label for="message">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            
+                            <button type="submit" class="btn-primary" style="margin-top: 25px;">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="maps-section">
+                    <h2 class="section-title" style="margin-top: 64px;">Lokasi Kami</h2>
+                    <p class="lead">Kunjungi kantor pusat kami di Jakarta Selatan (dengan perjanjian).</p>
+                    <iframe 
+                        class="maps-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3680211326443!2d106.82030611476974!3d-6.216347895475631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3d53b218525%3A0xc3f6d7730e2001c9!2sJl.%20Jend.%20Sudirman%2C%20Jakarta%20Pusat!5e0!3m2!1sen!2sid!4v1638200000000!5m2!1sen!2sid" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>NihongoPro</h3>
+                    <p>Membuka pintu gerbang ke bahasa dan budaya Jepang dengan metode yang interaktif dan efektif.</p>
+                    <div class="social-links">
+                         <a href="https://www.instagram.com/nihongopro" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M14.5 1h-5A5.5 5.5 0 0 0 4 6.5v11A5.5 5.5 0 0 0 9.5 23h5a5.5 5.5 0 0 0 5.5-5.5v-11A5.5 5.5 0 0 0 14.5 1zm-5 1.5h5a4 4 0 0 1 4 4v11a4 4 0 0 1-4 4h-5a4 4 0 0 1-4-4v-11a4 4 0 0 1 4-4zM12 7a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 0 1.5 0v-3.5A.75.75 0 0 0 12 7zM12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></a>
+                        <a href="https://wa.me/628123456789" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.21 4.5h-6.42A3.79 3.79 0 0 0 5 10.29v3.42A3.79 3.79 0 0 0 8.79 17.5h6.42A3.79 3.79 0 0 0 19 13.71v-3.42A3.79 3.79 0 0 0 15.21 6.5zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm3.5-5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/></svg></a>
+                        <a href="https://www.youtube.com" aria-label="Youtube"><svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M18.896 5.86a.933.933 0 0 0-.933-.933H6.037a.933.933 0 0 0-.933.933v12.28a.933.933 0 0 0 .933.933h12.822a.933.933 0 0 0 .933-.933V5.86zM6.97 17.065V6.935h10.06v10.13h-10.06zm1.5-3.03l1.875 1.875 3.75-3.75 1.875 1.875V11.53l-1.875-1.875-3.75 3.75-1.875-1.875z"/></svg></a>
+                     </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Program Kelas</a></li>
+                        <li><a href="tutors.html">Sensei Kami</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Bantuan & Dukungan</h4>
+                    <ul>
+                        <li><a href="syaratdanketentuan.html">Syarat dan Ketentuan</a></li>
+                        <li><a href="contact.html">Hubungi Dukungan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Kantor Pusat</h4>
+                    <p>Jl. Sakura No. 12, Jakarta Selatan, 12345</p>
+                    <p class="footer-subtitle">Email</p>
+                    <p><a href="mailto:info@nihongopro.com">info@nihongopro.com</a></p>
+                    <p class="footer-subtitle">Telepon</p>
+                    <p><a href="tel:+628123456789">+62 812-3456-789</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 NihongoPro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.link-contact a').classList.add('active'); 
+        });
+    </script>
+</body>
+</html>
