@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress__bar"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+    <div class="container">
+        <div class="logo"><img src="https://media.licdn.com/dms/image/v2/C510BAQHzhVDMBZ0QBw/company-logo_200_200/company-logo_200_200/0/1630612133816/bluetechbd_logo?e=2147483647&v=beta&t=OItjIJ_cz2xPCRRxRz7sA_YbeX79qHs9EPrhmkr7iwc">BlueTech</div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="nav-icon"></span>
+        </button>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="keunggulan.html">Keunggulan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="mobile-nav" id="mobileNav">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+        &times;
+    </button>
+    
+    <ul>
+        <li><a href="index.html" class="menu-link active">Beranda</a></li>
+        <li><a href="#tentang" class="menu-link">Tentang Kami</a></li>
+        <li><a href="layanan.html" class="menu-link">Layanan</a></li>
+        <li><a href="keunggulan.html" class="menu-link">Keunggulan</a></li>
+        <li><a href="kontak.html" class="menu-link">Kontak</a></li>
+    </ul>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- overlay untuk off-canvas menu -->
+   <div class="nav-overlay" aria-hidden="true"></div>
+
+<section id="about-hero" 
+  style="
+    position: relative;
+    min-height: 70vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+  "
+>
+  <!-- overlay gelap -->
+  <div 
+    style="
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    "
+  ></div>
+
+  <div 
+    style="
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 70vh;
+    "
+  >
+    
+
+      <h1 
+        style="
+          font-size: 64px;
+          font-weight: 700;
+          margin-top: 10px;
+        "
+      >
+        About Us
+      </h1>
+    </div>
+  </div>
+
+  <!-- background slideshow -->
+  <div 
+    style="
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    "
+  >
+    <div 
+      id="slideshowContainer"
+      style="
+        width: 100%;
+        height: 100%;
+        position: relative;
+      "
+    >
+      <img 
+        alt="Tim Profesional"
+        class="hero-slide active-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 1;
+          transition: opacity 1.2s ease;
+        "
+      >
+
+      <img 
+        alt="Kolaborasi Tim"
+        class="hero-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 1.5s ease;
+        "
+      >
+
+      <img 
+        alt="Lingkungan Kerja Modern"
+        class="hero-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 1.5s ease;
+        "
+      >
+    </div>
+  </div>
+</section>
+
+<section id="tentang" class="features-section">     
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" class="icon">
+            <h3>Profesional</h3>
+            <p>Tim developer kami yang siap membangun solusi digital modern.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4144/4144781.png" class="icon">
+            <h3>Layanan Konprehensi</h3>
+            <p>Layanan lengkap mulai dari website, aplikasi mobile, UI/UX, hingga IT support.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="icon">
+            <h3>Betanggung Jawab</h3>
+            <p>Budaya kerja yang mengutamakan kualitas, komunikasi, dan ketepatan.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3502/3502458.png" class="icon">
+            <h3>Pengalaman Industri</h3>
+            <p>Berpengalaman membantu bisnis menyesuaikan diri dengan teknologi terbaru.</p>
+        </div>
+
+    </div>
+
+    <div class="about-box">
+        <h5 id="typing-text"></h5>
+        <h2>Lebih dari 40+ Perusahaan Mempercayai Solusi Digital Kami</h2>
+        <p>
+            BlueTech Solutions menyediakan layanan pengembangan website, aplikasi mobile,
+            serta solusi teknologi terpercaya untuk berbagai industri. Kami mengutamakan kualitas,
+            kecepatan, dan inovasi dalam setiap proyek.
+        </p>
+        <p>
+            Dengan tim ahli yang berkompeten, kami membantu bisnis bertransformasi dan tumbuh
+            di tengah era digital yang terus berkembang.
+        </p>
+
+        <a href="#" class="btn-learn">LEARN MORE</a>
+    </div>
+
+    </div>
+</section>
+
+  <section class="vision-mission">
+  <h2>Visi & Misi Kami</h2>
+
+  <div class="vm-container">
+    <div class="vm-card reveal">
+      <div class="vm-icon">🚀</div>
+      <h3>Visi</h3>
+      <p>
+        Menjadi mitra teknologi terpercaya yang menghadirkan solusi digital
+        inovatif, berkelanjutan, dan berdampak nyata bagi perkembangan bisnis.
+      </p>
+    </div>
+
+    <div class="vm-card reveal">
+      <div class="vm-icon">🎯</div>
+      <h3>Misi</h3>
+      <ul>
+        <li>Mengembangkan solusi teknologi yang efisien dan berkualitas.</li>
+        <li>Mengutamakan kebutuhan dan kepuasan klien.</li>
+        <li>Mendorong inovasi dan peningkatan berkelanjutan.</li>
+        <li>Menyediakan layanan profesional dan terpercaya.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+ <footer id="kontak" class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>BlueTech Solutions</h4>
+                    <p>Mitra terpercaya Anda dalam menciptakan solusi IT inovatif dan pengembangan perangkat lunak yang andal.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#">Privasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div class="contact-text">Jakarta, Indonesia</div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <div class="contact-text"><a href="mailto:info@bluetech.com">info@bluetech.com</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div class="contact-text"><a href="tel:+6281234567890">+62 812-3456-7890</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col social">
+                    <h4>Ikuti Kami</h4>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- MAP -->
+            <div class="map-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.300000000000!2d106.900123!3d-6.214567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3abcdef%3A0x1234567890!2sRuko+Sentra+Niaga!5e0!3m2!1sid!2sid!4v1700000000000" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlueTech Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueTech</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Layanan</title>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <!-- scroll progress -->
-    <div class="scroll-progress" aria-hidden="true">
+     <div class="scroll-progress" aria-hidden="true">
         <div class="scroll-progress__bar"></div>
     </div>
 
@@ -26,9 +25,9 @@
 
         <nav class="desktop-nav">
             <ul>
-                <li><a href="#home">Beranda</a></li>
+                <li><a href="index.html">Beranda</a></li>
                 <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="#layanan">Layanan</a></li>
                 <li><a href="keunggulan.html">Keunggulan</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
@@ -43,9 +42,9 @@
     </button>
     
     <ul>
-        <li><a href="#home" class="menu-link active">Beranda</a></li>
+        <li><a href="index.html" class="menu-link active">Beranda</a></li>
         <li><a href="about.html" class="menu-link">Tentang Kami</a></li>
-        <li><a href="layanan.html" class="menu-link">Layanan</a></li>
+        <li><a href="#layanan" class="menu-link">Layanan</a></li>
         <li><a href="keunggulan.html" class="menu-link">Keunggulan</a></li>
         <li><a href="kontak.html" class="menu-link">Kontak</a></li>
     </ul>
@@ -53,103 +52,114 @@
 
 <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- overlay untuk off-canvas menu -->
-    <div class="nav-overlay" aria-hidden="true"></div>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
-      <section id="home" class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content reveal slide-up">
-                    <h1>Mengubah Visi Digital Anda Menjadi Solusi Teknologi Nyata.</h1>
-                    <p>Kami adalah mitra terpercaya Anda dalam pengembangan perangkat lunak, aplikasi mobile, dan solusi IT terintegrasi.</p>
-                    <a href="layanan.html" class="btn btn-primary btn-large">Jelajahi Solusi Kami</a>
-                </div>
-              <div class="hero-image reveal fade-in">
-             <div class="slideshow-container" id="slideshowContainer">
-        
-                <img class="hero-slide active-slide" alt="Gedung Kota Modern" src="[URL_GAMBAR_1_ANDA]">
-                <img class="hero-slide next-slide" alt="Visual Teknologi Abstrak" src="[URL_GAMBAR_2_ANDA]">
-        
-        </div>
+<section id="about-hero" 
+  style="
+    position: relative;
+    min-height: 70vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+  "
+>
+  <!-- overlay gelap -->
+  <div 
+    style="
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    "
+  ></div>
+
+  <div 
+    style="
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 70vh;
+    "
+  >
+    
+
+      <h1 
+        style="
+          font-size: 64px;
+          font-weight: 700;
+          margin-top: 10px;
+        "
+      >
+       layanan Kami
+      </h1>
     </div>
-            </div>
-        </section>
+  </div>
 
-    <section id="tentang" class="features-section">     
-    <div class="features-grid">
+  <!-- background slideshow -->
+  <div 
+    style="
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    "
+  >
+    <div 
+      id="slideshowContainer"
+      style="
+        width: 100%;
+        height: 100%;
+        position: relative;
+      "
+    >
+      <img 
+        alt="Tim Profesional"
+        class="hero-slide active-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 1;
+          transition: opacity 1.2s ease;
+        "
+      >
 
-        <div class="feature-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" class="icon">
-            <h3>Profesional</h3>
-            <p>Tim developer kami yang siap membangun solusi digital modern.</p>
-        </div>
+      <img 
+        alt="Kolaborasi Tim"
+        class="hero-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 1.5s ease;
+        "
+      >
 
-        <div class="feature-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/4144/4144781.png" class="icon">
-            <h3>Layanan Konprehensi</h3>
-            <p>Layanan lengkap mulai dari website, aplikasi mobile, UI/UX, hingga IT support.</p>
-        </div>
-
-        <div class="feature-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="icon">
-            <h3>Betanggung Jawab</h3>
-            <p>Budaya kerja yang mengutamakan kualitas, komunikasi, dan ketepatan.</p>
-        </div>
-
-        <div class="feature-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3502/3502458.png" class="icon">
-            <h3>Pengalaman Industri</h3>
-            <p>Berpengalaman membantu bisnis menyesuaikan diri dengan teknologi terbaru.</p>
-        </div>
-
-    </div>
-
-    <div class="about-box">
-        <h5 id="typing-text"></h5>
-        <h2>Lebih dari 40+ Perusahaan Mempercayai Solusi Digital Kami</h2>
-        <p>
-            BlueTech Solutions menyediakan layanan pengembangan website, aplikasi mobile,
-            serta solusi teknologi terpercaya untuk berbagai industri. Kami mengutamakan kualitas,
-            kecepatan, dan inovasi dalam setiap proyek.
-        </p>
-        <p>
-            Dengan tim ahli yang berkompeten, kami membantu bisnis bertransformasi dan tumbuh
-            di tengah era digital yang terus berkembang.
-        </p>
-
-        <a href="#" class="btn-learn">LEARN MORE</a>
-    </div>
-
-    </div>
-</section>
-
-<section class="vision-mission">
-  <h2>Visi & Misi Kami</h2>
-
-  <div class="vm-container">
-    <div class="vm-card reveal">
-      <div class="vm-icon">🚀</div>
-      <h3>Visi</h3>
-      <p>
-        Menjadi mitra teknologi terpercaya yang menghadirkan solusi digital
-        inovatif, berkelanjutan, dan berdampak nyata bagi perkembangan bisnis.
-      </p>
-    </div>
-
-    <div class="vm-card reveal">
-      <div class="vm-icon">🎯</div>
-      <h3>Misi</h3>
-      <ul>
-        <li>Mengembangkan solusi teknologi yang efisien dan berkualitas.</li>
-        <li>Mengutamakan kebutuhan dan kepuasan klien.</li>
-        <li>Mendorong inovasi dan peningkatan berkelanjutan.</li>
-        <li>Menyediakan layanan profesional dan terpercaya.</li>
-      </ul>
+      <img 
+        alt="Lingkungan Kerja Modern"
+        class="hero-slide"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 1.5s ease;
+        "
+      >
     </div>
   </div>
 </section>
 
-
-   <section id="layanan" class="layanan">
+ <section id="layanan" class="layanan">
         <div class="container">
             <h5>Layanan yang kami berikan</h5>
             <h2 class="fade-in">Layanan Kami</h2>
@@ -234,78 +244,7 @@
         </div>
     </section>
 
-    <section id="keunggulan" class="why-choose">
-    <h5>Keunggulan Kami</h5>
-    <h2>Kenapa Memilih Kami?</h2>
-
-    <div class="features-container-why">
-        <div class="feature-box-why">
-            <h3>Pengalaman Proyek</h3>
-            <p>Kami berpengalaman menangani proyek skala kecil hingga menengah dengan hasil yang terukur.</p>
-        </div>
-
-        <div class="feature-box-why">
-            <h3>Desain Modern & Responsif</h3>
-            <p>Setiap website dan aplikasi dirancang agar tampil optimal di semua perangkat.</p>
-        </div>
-
-        <div class="feature-box-why">
-            <h3>Pengerjaan Cepat</h3>
-            <p>Proses pengerjaan dilakukan secara efektif tanpa mengurangi kualitas.</p>
-        </div>
-
-        <div class="feature-box-why">
-            <h3>Dukungan Teknis</h3>
-            <p>Kami memberikan support jangka panjang untuk memastikan sistem berjalan stabil.</p>
-        </div>
-
-        <div class="feature-box-why">
-            <h3>Tim Profesional</h3>
-            <p>Tim kami terdiri dari tenaga ahli yang komunikatif dan kompeten di bidangnya.</p>
-        </div>
-
-        <div class="feature-box-why">
-            <h3>Solusi yang Fleksibel</h3>
-            <p>Kami mampu menyesuaikan layanan sesuai kebutuhan bisnis, anggaran, dan tujuan klien.</p>
-        </div>
-    </div>
-</section>
-
-<section id="statistik" class="stats-section section-padding">
-    <div class="container">
-        <h2 class="section-title reveal slide-up">Pencapaian Kami</h2><br><br><br>
-        
-        <div class="stats-grid">
-            <div class="stat-item reveal fade-in delay-1">
-                <i class="fas fa-project-diagram"></i>
-                <div class="counter" data-target="250">0</div>
-                <p>Proyek Selesai</p>
-            </div>
-            
-            <div class="stat-item reveal fade-in delay-2">
-                <i class="fas fa-users"></i>
-                <div class="counter" data-target="180">0</div>
-                <p>Klien Puas</p>
-            </div>
-            
-            <div class="stat-item reveal fade-in delay-3">
-                <i class="fas fa-award"></i>
-                <div class="counter" data-target="7">0</div>
-                <p>Tahun Pengalaman</p>
-            </div>
-            
-            <div class="stat-item reveal fade-in delay-4">
-                <i class="fas fa-code-branch"></i>
-                <div class="counter" data-target="45">0</div>
-                <p>Anggota Tim Ahli</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- TESTIMONIALS (carousel) -->  
-
-    <footer id="kontak" class="site-footer">
+     <footer id="kontak" class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
@@ -367,9 +306,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
-    <!-- back to top -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
 </body>
 </html>
