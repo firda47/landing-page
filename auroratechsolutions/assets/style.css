@@ -1,0 +1,109 @@
+/* Animasi untuk website */
+
+/* ===============================
+   Revisi Animasi: Halus & Cepat
+================================ */
+
+/* Fade in dari bawah (Up) - Halus */
+.fade-in-up {
+    opacity: 0;
+    /* Jarak diperkecil dari 80px menjadi 20px */
+    transform: translateY(20px);
+    /* Durasi dipercepat menjadi 0.8s */
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade in dari kiri (Left) - Halus */
+.fade-in-left {
+    opacity: 0;
+    /* Jarak diperkecil dari 100px menjadi -20px */
+    transform: translateX(-20px);
+    /* Durasi dipercepat menjadi 0.8s */
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade in dari kanan (Right) - Halus */
+.fade-in-right {
+    opacity: 0;
+    /* Jarak diperkecil dari 100px menjadi 20px */
+    transform: translateX(20px);
+    /* Durasi dipercepat menjadi 0.8s */
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Mobile Link Styles */
+.mobile-link {
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+.dark .mobile-link {
+    color: #d1d5db;
+}
+
+.mobile-link.active-nav {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sedikit penyesuaian agar gradasi di SVG bekerja sempurna di semua browser */
+svg {
+    overflow: visible;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2563eb;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link.active-nav::after {
+    width: 100%;
+}
+
+
+.dark #iconSun {
+    opacity: 0;
+}
+
+.dark #iconMoon {
+    opacity: 1;
+}
+
+.dark #toggleDot {
+    transform: translateY(-16px);
+    background-color: #9ca3af;
+}
+
