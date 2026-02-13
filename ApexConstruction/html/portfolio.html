@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Apex</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="icon" href="../icon/iconweb.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Apex</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Beranda</a></li>
+                    <li><a href="index.html#about">Tentang</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li>
+                        <button class="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="sun-icon">&#9728;</span>
+                            <span class="moon-icon">&#9790;</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a>
+                <span>/</span>
+                <span>Portofolio</span>
+            </div>
+            <h1 class="portfolio-hero-title">Portofolio Proyek Kami</h1>
+            <p class="portfolio-hero-subtitle">Jelajahi berbagai proyek konstruksi yang telah kami selesaikan dengan keahlian dan dedikasi tinggi</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+                <button class="filter-btn" data-filter="commercial">Komersial</button>
+                <button class="filter-btn" data-filter="residential">Residensial</button>
+                <button class="filter-btn" data-filter="government">Pemerintahan</button>
+                <button class="filter-btn" data-filter="industrial">Industri</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastruktur</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="government">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Pusat Rekayasa Dharma">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Pemerintahan</span>
+                            <h3>Pusat Rekayasa Dharma</h3>
+                            <p>Proyek pembangunan pusat penelitian dan pengembangan teknologi. Memerlukan presisi tinggi dalam pemasangan struktur baja dan sistem utilitas pintar.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Pusat Rekayasa Dharma</h3>
+                        <div class="portfolio-meta">
+                            <span> Jakarta, Indonesia</span>
+                            <span> 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="Menara Korporat Veridian">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Komersial</span>
+                            <h3>Menara Korporat Veridian</h3>
+                            <p>Pembangunan skyscraper 40 lantai di pusat kota. Proyek ini menunjolkan desain fasad kaca modern dan fondasi yang tahan gempa.</p>
+                            <a href="project-detail/project-detail-1.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Menara Korporat Veridian</h3>
+                        <div class="portfolio-meta">
+                            <span> Jakarta, Indonesia</span>
+                            <span> 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="industrial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600" alt="Kawasan Industri Cakra">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Industri</span>
+                            <h3>Kawasan Industri Cakra</h3>
+                            <p>Proyek site management dan pembangunan infrastruktur untuk kompleks industri seluas 50 hektar, termasuk jalan akses dan gudang modular.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Kawasan Industri Cakra</h3>
+                        <div class="portfolio-meta">
+                            <span> Karawang, Indonesia</span>
+                            <span> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Kompleks Residensial Modern">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Residensial</span>
+                            <h3>Kompleks Residensial Harmoni</h3>
+                            <p>Pengembangan hunian modern dengan 200 unit apartemen, dilengkapi fasilitas lengkap dan area hijau yang luas.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Kompleks Residensial Harmoni</h3>
+                        <div class="portfolio-meta">
+                            <span> Tangerang, Indonesia</span>
+                            <span> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600" alt="Pusat Perbelanjaan">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Komersial</span>
+                            <h3>Mall Metropolitan Plaza</h3>
+                            <p>Renovasi dan modernisasi pusat perbelanjaan seluas 100000 m2 dengan konsep retail experience terkini.</p>
+                            <a href="project-detail/project-detail-1.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mall Metropolitan Plaza</h3>
+                        <div class="portfolio-meta">
+                            <span> Surabaya, Indonesia</span>
+                            <span> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="infrastructure">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600" alt="Jembatan Layang">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Infrastruktur</span>
+                            <h3>Jembatan Layang Kemayoran</h3>
+                            <p>Konstruksi jembatan layang sepanjang 2 km untuk meningkatkan mobilitas di kawasan perkotaan.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Jembatan Layang Kemayoran</h3>
+                        <div class="portfolio-meta">
+                            <span> Jakarta, Indonesia</span>
+                            <span> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item" data-category="government">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Gedung Pemerintahan">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Pemerintahan</span>
+                            <h3>Gedung Kantor Gubernur</h3>
+                            <p>Pembangunan gedung pemerintahan 15 lantai dengan standar keamanan tinggi dan teknologi smart building.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Gedung Kantor Gubernur</h3>
+                        <div class="portfolio-meta">
+                            <span> Bandung, Indonesia</span>
+                            <span> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="Office Tower">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Komersial</span>
+                            <h3>Tech Hub Office Tower</h3>
+                            <p>Gedung perkantoran khusus startup dan perusahaan teknologi dengan fasilitas co-working space modern.</p>
+                            <a href="project-detail/project-detail-1.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tech Hub Office Tower</h3>
+                        <div class="portfolio-meta">
+                            <span> Jakarta, Indonesia</span>
+                            <span> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-item" data-category="industrial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600" alt="Warehouse">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Industri</span>
+                            <h3>Gudang Logistik Modern</h3>
+                            <p>Fasilitas logistik dengan teknologi smart warehouse dan sistem otomasi untuk efisiensi maksimal.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Gudang Logistik Modern</h3>
+                        <div class="portfolio-meta">
+                            <span> Bekasi, Indonesia</span>
+                            <span> 2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="portfolio-item" data-category="industrial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" alt="Pabrik Manufaktur Otomotif">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Industri</span>
+                            <h3>Pabrik Manufaktur Otomotif</h3>
+                            <p>Fasilitas produksi kendaraan dengan lini perakitan otomatis dan standar keselamatan internasional.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Pabrik Manufaktur Otomotif</h3>
+                        <div class="portfolio-meta">
+                            <span>Cikarang, Indonesia</span>
+                            <span>2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600" alt="Cluster Hijau Sukamaju">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Residensial</span>
+                            <h3>Cluster Hijau Sukamaju</h3>
+                            <p>Kawasan perumahan hijau dengan konsep ramah lingkungan, panel surya, dan pengelolaan air mandiri.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cluster Hijau Sukamaju</h3>
+                        <div class="portfolio-meta">
+                            <span>Depok, Indonesia</span>
+                            <span>2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1529429617124-aee7e0b3c4af?w=600" alt="Hotel Bisnis Meridian">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Komersial</span>
+                            <h3>Hotel Bisnis Meridian</h3>
+                            <p>Renovasi hotel 25 lantai dengan ballroom modern dan sistem otomasi kamar untuk pengalaman tamu premium.</p>
+                            <a href="project-detail/project-detail-1.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Hotel Bisnis Meridian</h3>
+                        <div class="portfolio-meta">
+                            <span>Surabaya, Indonesia</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="portfolio-item" data-category="government">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1529429617124-d102b69d6c3f?w=600" alt="Rumah Sakit Daerah Mandiri">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Pemerintahan</span>
+                            <h3>Rumah Sakit Daerah Mandiri</h3>
+                            <p>Pembangunan RSUD 12 lantai dengan instalasi gawat darurat terpadu dan sistem HVAC bertekanan.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Rumah Sakit Daerah Mandiri</h3>
+                        <div class="portfolio-meta">
+                            <span>Semarang, Indonesia</span>
+                            <span>2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="portfolio-item" data-category="infrastructure">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=600" alt="Stasiun Transit Terpadu">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Infrastruktur</span>
+                            <h3>Stasiun Transit Terpadu</h3>
+                            <p>Pembangunan stasiun multimoda yang menghubungkan kereta, bus, dan transportasi mikro dengan desain ramah difabel.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Stasiun Transit Terpadu</h3>
+                        <div class="portfolio-meta">
+                            <span>Jakarta, Indonesia</span>
+                            <span>2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600" alt="Creative Innovation Hub">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Komersial</span>
+                            <h3>Creative Innovation Hub</h3>
+                            <p>Pusat kolaborasi kreatif dengan studio, maker-space, dan auditorium fleksibel untuk acara teknologi.</p>
+                            <a href="project-detail/project-detail-1.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Creative Innovation Hub</h3>
+                        <div class="portfolio-meta">
+                            <span>Bandung, Indonesia</span>
+                            <span>2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="portfolio-item" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600" alt="Apartemen Langit Senja">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Residensial</span>
+                            <h3>Apartemen Langit Senja</h3>
+                            <p>Tower apartemen premium dengan sky garden, kolam renang semi-olimpiade, dan sistem keamanan berlapis.</p>
+                            <a href="project-detail/project-detail.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Apartemen Langit Senja</h3>
+                        <div class="portfolio-meta">
+                            <span>Jakarta, Indonesia</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 17 -->
+                <div class="portfolio-item" data-category="industrial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1504306665020-046d955ceb7c?w=600" alt="Pusat Data Tier-4">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Industri</span>
+                            <h3>Pusat Data Tier-4</h3>
+                            <p>Pembangunan data center redundan dengan sistem pendingin in-row dan daya cadangan multi-layer.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Pusat Data Tier-4</h3>
+                        <div class="portfolio-meta">
+                            <span>Batam, Indonesia</span>
+                            <span>2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 18 -->
+                <div class="portfolio-item" data-category="infrastructure">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=600" alt="Terminal Pelabuhan Samudra">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Infrastruktur</span>
+                            <h3>Terminal Pelabuhan Samudra</h3>
+                            <p>Ekspansi terminal petikemas dengan dermaga baru, crane ship-to-shore, dan sistem manajemen logistik digital.</p>
+                            <a href="project-detail/project-detail-2.html" class="portfolio-link">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Terminal Pelabuhan Samudra</h3>
+                        <div class="portfolio-meta">
+                            <span>Makassar, Indonesia</span>
+                            <span>2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="btn btn-outline-dark">Muat Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Proyek Selesai</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Tahun Pengalaman</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Kepuasan Klien</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Penghargaan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Mari Wujudkan Proyek Impian Anda</h2>
+                <p>Hubungi kami untuk konsultasi gratis dan dapatkan penawaran terbaik</p>
+                <a href="contact.html" class="btn btn-outline">HUBUNGI KAMI</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+    <script src="../portfolio.js"></script>
+</body>
+</html>

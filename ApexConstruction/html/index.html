@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex - Company Profile</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../icon/iconweb.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">Apex</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li>
+                        <button class="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="sun-icon">&#9728;</span>
+                            <span class="moon-icon">&#9790;</span>
+                        </button>
+                    </li>
+                    <li><a href="404.html" class="cart-icon"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-line"></div>
+                <h1 class="hero-title">APEX <br></h1>
+                <p class="hero-description">Mitra tepercaya Anda dalam konstruksi yang inovatif. Kami membangun bukan hanya struktur, tetapi juga warisan yang kokoh dan berkelanjutan.</p>
+                <button class="btn btn-primary" onclick="window.location.href='portfolio.html'">Projek Kami</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="9"/>
+                            <rect x="14" y="3" width="7" height="5"/>
+                            <rect x="14" y="12" width="7" height="9"/>
+                            <rect x="3" y="16" width="7" height="5"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Konstruksi Bangunan</h3>
+                        <p>Kami mengubah visi arsitektur menjadi kenyataan struktural. Fokus pada efisiensi, kualitas material premium, dan penyelesaian tepat waktu untuk proyek komersial dan residensial.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 7l-5 5 5 5M19 7l-5 5 5 5"/>
+                            <rect x="2" y="3" width="8" height="18" rx="1"/>
+                            <line x1="6" y1="8" x2="6" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Perbaikan Bangunan</h3>
+                        <p>Layanan perbaikan struktural dan non struktural yang komprehensif. Kami mengembalikan integritas, fungsionalitas, dan estetika bangunan Anda dengan standar Apex.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v6m0 0l-3-3m3 3l3-3"/>
+                            <path d="M4 12h3m10 0h3"/>
+                            <circle cx="12" cy="19" r="2"/>
+                            <path d="M5 8l2 2 2-2M15 8l2 2 2-2"/>
+                            <path d="M4 4h16v3H4z"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pembongkaran</h3>
+                        <p>Layanan pembongkaran yang aman dan terkontrol. Kami memastikan pembersihan lokasi yang efisien dan mematuhi semua regulasi keselamatan, menyiapkan lahan untuk pembangunan berikutnya.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="8" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pondasi</h3>
+                        <p>Spesialisasi dalam pemasangan pondasi yang kuat dan tahan lama, termasuk tiang pancang dan raft foundation. Memastikan stabilitas adalah kunci dari setiap proyek Apex.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v6"/>
+                            <path d="M12 8c-3 1-6 3-6 8h12c0-5-3-7-6-8z"/>
+                            <path d="M6 16v1a2 2 0 002 2h8a2 2 0 002-2v-1"/>
+                            <circle cx="12" cy="20" r="1"/>
+                            <path d="M8 8c-1-2-1-4 0-6M16 8c1-2 1-4 0-6"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pengecatan & eksterior</h3>
+                        <p>Meningkatkan daya tarik visual dan proteksi bangunan Anda. Kami menggunakan bahan cat terbaik dan teknik finishing eksterior untuk ketahanan terhadap cuaca.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 8h18M3 16h18"/>
+                            <rect x="5" y="5" width="14" height="3"/>
+                            <rect x="5" y="16" width="14" height="3"/>
+                            <path d="M8 8v8M16 8v8"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Manajemen Lokasi</h3>
+                        <p>Pengelolaan lokasi proyek secara menyeluruh. Mencakup koordinasi tim, logistik material, pengawasan kualitas, dan memastikan lingkungan kerja yang aman dan efisien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-wrapper">
+                <div class="features-left">
+                    <div class="vision-header">
+                        <h3 class="vision-title">VISI &amp; MISI</h3>
+                        <p class="vision-text">Visi kami memimpin konstruksi berkelanjutan dan presisi di Indonesia. Misi kami hadir lewat tiga pilar utama berikut.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">»</div>
+                        <div class="feature-content">
+                            <h3>Konstruksi Ramah Lingkungan </h3>
+                            <p>Komitmen kami pada keberlanjutan. Kami mengintegrasikan bahan ramah lingkungan, teknik hemat energi, dan meminimalisir limbah untuk konstruksi yang bertanggung jawab.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">»</div>
+                        <div class="feature-content">
+                            <h3>Perbaikan Teknologi Terbaru</h3>
+                            <p>Memanfaatkan teknologi site mapping, drone inspection, dan material inovatif untuk perbaikan yang cepat, akurat, dan memiliki daya tahan lebih lama.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">»</div>
+                        <div class="feature-content">
+                            <h3>Manajemen Mutu Konstruksi Tinggi</h3>
+                            <p>Pengawasan proyek secara end-to-end oleh manajer bersertifikasi. Kami menjamin transparansi, alokasi sumber daya yang optimal, dan kepatuhan standar keselamatan tertinggi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-right">
+                    <h2>Tidak Ada Proyek Terlalu Besar Atau Terlalu Kecil</h2>
+                    <div class="divider"></div>
+                    <div class="features-text">
+                        <p>Di Apex, kami percaya pada skalabilitas dan layanan yang dipersonalisasi. Baik itu renovasi residensial skala kecil, kompleks komersial bertingkat, atau proyek infrastruktur besar, setiap pekerjaan kami kerjakan dengan dedikasi penuh terhadap keunggulan. Keahlian tim kami mencakup spektrum penuh konstruksi dan rekayasa, memastikan bahwa semua klien, tanpa memandang ukuran proyek, menerima solusi yang presisi dan hasil kerja kualitas puncak.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Dapatkan Konsultasi Gratis</h2>
+                <button class="btn btn-outline" onclick="window.location.href='contact.html#contact-hero'">FORUM ONLINE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Projek Terbaru</h2>
+            <div class="divider-center"></div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1723867211579-a4fa21fab238?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pusat Rekayasa Dharma</h3>
+                        <p>Proyek pembangunan pusat penelitian dan pengembangan teknologi. Memerlukan presisi tinggi dalam pemasangan struktur baja dan sistem utilitas pintar.</p>
+                        <button class="btn-link" onclick="window.location.href='project-detail/project-detail.html'">LIHAT PROJEK</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Menara Korporat Veridian</h3>
+                        <p>Pembangunan skycraper 40 lantai di pusat kota. Proyek ini menonjolkan desain fasad kaca modern dan fondasi yang tahan gempa.</p>
+                        <button class="btn-link" onclick="window.location.href='project-detail/project-detail-1.html'">LIHAT PROJEK</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Kawasan Industri Cakra</h3>
+                        <p>Proyek site management dan pembangunan infrastruktur untuk komplek industri seluas 50 hektar, termasuk jalan akses dan gudang modular.</p>
+                        <button class="btn-link" onclick="window.location.href='project-detail/project-detail-2.html'">LIHAT PROJEK</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-outline-dark" onclick="window.location.href='portfolio.html'">Lihat Semuanya</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <h2>Sudah Lebih dari 10 Tahun Kami Membangun</h2>
+                    <div class="divider"></div>
+                    <p>Didirikan lebih dari satu dekade yang lalu, Apex telah menjadi sinonim dengan keunggulan, inovasi, dan integritas dalam industri konstruksi. Kami memulai dengan sebuah visi sederhana: membangun struktur yang tidak hanya berdiri kokoh, tetapi juga menjadi warisan. Dengan rekam jejak yang solid dalam menyelesaikan proyek-proyek mulai dari pengembangan residensial hingga kompleks komersial yang ambisius, tim ahli kami siap mewujudkan tantangan rekayasa terberat Anda.</p>
+                    <a class="btn btn-outline" href="about.html">TENTANG KAMI</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600" alt="Construction Equipment">
+                    <button class="play-button">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-wrapper">
+                <div class="quote-box">
+                    <h3>Hubungi Kami Sekarang</h3>
+                    <p class="phone">(211) 881-0111</p>
+                </div>
+                <button class="btn btn-outline" onclick="window.location.href='contact.html#contact-hero'">FORMULIR ESTIMASI ONLINE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-wrapper">
+                <div class="faq-content">
+                    <h2>Mari Kita Bangun Sesuatu Bersama</h2>
+                    <div class="divider"></div>
+                    <p>Apakah Anda memiliki visi proyek konstruksi atau rekayasa? Tim ahli Apex siap membantu Anda mewujudkan rencana tersebut dari tahap awal hingga penyerahan kunci. Hubungi kami untuk konsultasi awal tanpa kewajiban.</p>
+                    <button class="btn btn-outline" onclick="window.location.href='contact.html#contact-hero'">HUBUNGI KAMI</button>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana proses memulai proyek dengan Apex?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Proses dimulai dengan konsultasi awal dan penilaian mendalam terhadap kebutuhan Anda. Selanjutnya, kami akan menyajikan proposal proyek yang terperinci dan penetapan jadwal kerja yang jelas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek konstruksi?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Durasi proyek sangat bervariasi tergantung pada skala, kompleksitas desain, dan jenis konstruksi. Kami akan memberikan estimasi jadwal yang realistis dan terperinci setelah proposal disetujui.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah proyek Apex memiliki garansi atau jaminan?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ya, tentu. Kami sangat percaya pada mutu pekerjaan kami, sehingga kami memberikan garansi resmi pada hasil kerja struktural dan non-struktural sebagai komitmen kami terhadap kualitas dan daya tahan jangka panjang.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah Apex melayani proyek di luar wilayah kota besar?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ya, jangkauan layanan kami fleksibel dan tidak terbatas pada area perkotaan. Silakan hubungi tim kami untuk mendiskusikan lokasi spesifik proyek Anda dan kemungkinan logistiknya</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa keunggulan utama Apex dibandingkan kontraktor lain?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Keunggulan kami terletak pada tiga pilar: fokus pada Manajemen Mutu Tinggi, integrasi Teknologi Konstruksi Terbaru, dan komitmen kuat pada praktik konstruksi yang Ramah Lingkungan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimoni Klien</h2>
+            <div class="divider-center"></div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Kerja tim Apex luar biasa. Mereka menyelesaikan pembangunan pabrik kami dua minggu lebih cepat dari jadwal tanpa mengorbankan sedikit pun kualitas. Manajemen proyek mereka benar-benar profesional."</p>
+                    <p class="author">Amanda Wijaya</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Kami sangat terkesan dengan ketelitian dan detail dalam proyek perbaikan struktural gedung kantor kami. Apex menggunakan teknologi yang membuat prosesnya efisien dan hasilnya solid. Sangat direkomendasikan!"</p>
+                    <p class="author">Bambang Satria</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Apex berhasil mewujudkan desain residensial impian kami menjadi kenyataan yang kokoh dan indah. Komitmen mereka terhadap bahan ramah lingkungan dan transparansi biaya membuat kami merasa sangat nyaman."</p>
+                    <p class="author">Kartika Dewi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">OUR PARTNERSHIP</h2>
+            <div class="divider-center"></div>
+            <div class="partners-grid">
+                <div class="partner-logo"><img src="../PartnerLogo/asahimas-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/b1-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/ciputra-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/krakatau-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/semen3roda-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/solusibangun-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/majubersama-removebg-preview.png" alt=""></div>
+                <div class="partner-logo"><img src="../PartnerLogo/summarecon-removebg-preview.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Apex Construction</h3>
+                    <p class="footer-desc">Membangun struktur berkualitas dengan tim yang berpengalaman lebih dari satu dekade. Kami fokus pada ketepatan waktu, keselamatan, dan hasil yang tahan lama.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="portfolio.html">Portofolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#services">Konstruksi</a></li>
+                        <li><a href="#services">Perbaikan & Renovasi</a></li>
+                        <li><a href="#services">Pembongkaran</a></li>
+                        <li><a href="#services">Manajemen Lokasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>Jl. Sudirman No. 123, Jakarta</li>
+                        <li>Telp: (211) 881-0111</li>
+                        <li>Email: info@apexconstruction.id</li>
+                    </ul>
+                    <a class="btn btn-outline footer-cta" href="contact.html">KONSULTASI GRATIS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Apex Construction. Semua hak dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <span>•</span>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
