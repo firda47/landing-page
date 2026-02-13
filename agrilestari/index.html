@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PT Nusantara Agri Lestari - Innovating Agriculture for a Sustainable Future. Perusahaan teknologi pertanian terdepan di Indonesia." />
+  <title>PT Nusantara Agri Lestari | Official Website</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary-green: #1B4D3E;
+      --secondary-green: #4CAF50;
+      --accent-gold: #C5A059;
+      --text-dark: #2C3E50;
+      --white: #FFFFFF;
+      --transition: all 0.3s ease;
+      --border-radius-soft: 16px;
+      --border-radius-pill: 30px;
+      --bg-gradient-light: linear-gradient(145deg, #ffffff 0%, #f2f6f5 100%);
+      --bg-gradient-section: linear-gradient(180deg, #f9fbfb 0%, #eef2f1 100%);
+      --bg-gradient-green: linear-gradient(135deg, var(--primary-green) 0%, #0e2e24 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg-gradient-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section-padding { padding: 80px 0; }
+    h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; color: var(--primary-green); letter-spacing: -0.3px; }
+    .text-center { text-align: center; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: var(--border-radius-pill);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--primary-green); color: var(--white); border: 2px solid var(--primary-green); }
+    .btn-primary:hover { background: transparent; color: var(--primary-green); }
+    .btn-outline-white { border: 2px solid var(--white); color: var(--white); background: rgba(255,255,255,0.08); backdrop-filter: blur(6px); }
+    .btn-outline-white:hover { background: var(--white); color: var(--primary-green); }
+
+    /* Header & Nav */
+    header {
+      position: fixed; top: 0; left: 0; width: 100%;
+      z-index: 1000; background: transparent; padding: 20px 0; transition: var(--transition);
+    }
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-size: 1.4rem; font-weight: 700; color: var(--white); display: flex; align-items: center; gap: 10px;
+    }
+    header.scrolled .logo { color: var(--primary-green); }
+    .logo i { color: var(--accent-gold); }
+    nav ul { display: flex; gap: 28px; }
+    nav ul li a {
+      color: var(--white); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; position: relative; transition: var(--transition);
+    }
+    header.scrolled nav ul li a { color: var(--text-dark); }
+    .mobile-menu-btn { display: none; font-size: 1.6rem; color: var(--white); cursor: pointer; }
+    header.scrolled .mobile-menu-btn { color: var(--primary-green); }
+
+    /* Mobile nav panel */
+    nav#nav-menu {
+      /* desktop default */
+    }
+    @media (max-width: 768px) {
+      nav#nav-menu {
+        position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px; height: 100vh;
+        background: var(--white); padding: 90px 24px; transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.12);
+      }
+      nav#nav-menu.active { right: 0; }
+      nav#nav-menu ul { flex-direction: column; gap: 18px; }
+      nav#nav-menu ul li a { color: var(--text-dark); font-size: 1.05rem; }
+    }
+
+    /* Overlay when mobile menu open */
+    .overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.35); backdrop-filter: blur(2px);
+      opacity: 0; visibility: hidden; transition: var(--transition); z-index: 900;
+    }
+    .overlay.show { opacity: 1; visibility: visible; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(27,77,62,0.8), rgba(20,58,47,0.5)), url('https://images.unsplash.com/photo-1625246333195-f819618bba1f?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; text-align: center; color: var(--white); padding-top: 96px;
+    }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.15; color: var(--white); }
+    .hero-content p { font-size: 1.1rem; margin-bottom: 38px; max-width: 760px; margin-left: auto; margin-right: auto; opacity: 0.92; }
+    .hero-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+    /* Section header */
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-header h2 { font-size: 2.4rem; margin-bottom: 16px; }
+    .section-header p { color: #666; max-width: 680px; margin: 0 auto; font-size: 1.05rem; }
+
+    /* About */
+    #about .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about-img img { border-radius: var(--border-radius-soft); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 26px; }
+    .value-item {
+      background: var(--white); padding: 22px; border-radius: var(--border-radius-soft);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06); border-left: 5px solid var(--accent-gold);
+    }
+    .timeline {
+      margin-top: 56px; display: flex; justify-content: space-between; gap: 24px; position: relative;
+    }
+    .timeline-item {
+      background: var(--white); padding: 14px; text-align: center; width: 22%;
+      border-radius: var(--border-radius-soft); box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .timeline-year {
+      font-weight: 700; color: var(--white); background: var(--primary-green);
+      padding: 8px 22px; border-radius: var(--border-radius-pill); display: inline-block; margin-bottom: 12px;
+      box-shadow: 0 5px 14px rgba(27, 77, 62, 0.28);
+    }
+
+    /* Services */
+    #services { background: var(--bg-gradient-section); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .service-card {
+      background: var(--white); padding: 34px; text-align: center; border-radius: var(--border-radius-soft);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06); transition: var(--transition); border-bottom: 4px solid transparent;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 38px rgba(0,0,0,0.1); border-bottom-color: var(--accent-gold); }
+    .service-icon {
+      font-size: 3rem; color: var(--primary-green); margin-bottom: 18px;
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* Products */
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .product-card { background: var(--white); border-radius: var(--border-radius-soft); overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+    .product-img { height: 240px; background-color: #f0f0f0; overflow: hidden; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .product-card:hover .product-img img { transform: scale(1.06); }
+    .product-info { padding: 22px; }
+
+    /* Research */
+    .research-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .research-img img { border-radius: var(--border-radius-soft); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .research-text ul { margin-top: 22px; }
+    .research-text ul li { margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px; }
+    .research-text ul li i { color: var(--accent-gold); margin-top: 4px; font-size: 1.15rem; }
+
+    /* Sustainability */
+    #sustainability { background: var(--bg-gradient-green); color: var(--white); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; text-align: center; }
+    .stat-item h3 { font-size: 3rem; color: var(--accent-gold); margin-bottom: 8px; font-weight: 800; }
+    .stat-item p { font-size: 1.05rem; color: rgba(255,255,255,0.92); }
+
+    /* Leadership */
+    .leadership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+    .leader-card { text-align: center; background: var(--white); border-radius: var(--border-radius-soft); padding: 22px; box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+    .leader-img {
+      width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 18px; overflow: hidden;
+      border: 5px solid var(--white); box-shadow: 0 10px 22px rgba(0,0,0,0.08); transition: var(--transition);
+    }
+    .leader-card:hover .leader-img { transform: scale(1.05); border-color: var(--accent-gold); }
+    .leader-img img { width: 100%; height: 100%; object-fit: cover; }
+    .leader-card h4 { margin-bottom: 6px; font-size: 1.2rem; }
+    .leader-card span { color: var(--secondary-green); font-weight: 600; font-size: 0.95rem; }
+
+    /* News */
+    #news { background: var(--bg-gradient-section); }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .news-item { background: var(--white); border-radius: var(--border-radius-soft); padding: 26px; box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+    .news-date { font-size: 0.9rem; color: var(--secondary-green); font-weight: 600; margin-bottom: 12px; display: block; }
+    .news-item h3 { margin-bottom: 14px; font-size: 1.2rem; line-height: 1.4; }
+    .news-link { color: var(--primary-green); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
+    .news-link:hover { gap: 10px; color: var(--accent-gold); }
+
+    /* Careers */
+    #careers { background: var(--bg-gradient-light); }
+    .job-list { background: var(--white); border-radius: var(--border-radius-soft); overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+    .job-item { padding: 22px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .job-item:last-child { border-bottom: none; }
+    .job-info h4 { margin-bottom: 6px; font-size: 1.05rem; }
+    .job-type { font-size: 0.9rem; background: #eef2f1; padding: 6px 14px; border-radius: var(--border-radius-pill); color: var(--primary-green); font-weight: 600; }
+
+    /* Contact */
+    #contact { background: var(--bg-gradient-section); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-form-wrapper { background: var(--white); padding: 28px; border-radius: var(--border-radius-soft); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+    .contact-form label { display: block; margin-bottom: 8px; font-weight: 600; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 14px; margin-bottom: 18px; border: 2px solid #e0e0e0; border-radius: 10px; background: #f9fbfb; font-family: inherit; transition: var(--transition);
+    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-green); background: var(--white); }
+    .contact-form textarea { resize: vertical; }
+    .contact-info-card { background: var(--white); padding: 24px; border-radius: var(--border-radius-soft); box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+    .contact-info-item { display: flex; gap: 16px; margin-bottom: 16px; }
+    .contact-info-item i { font-size: 1.2rem; color: var(--accent-gold); margin-top: 4px; }
+    .map-container {
+      width: 100%; height: 300px; background: #ddd; border-radius: var(--border-radius-soft);
+      margin-top: 18px; overflow: hidden; box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    }
+
+    /* Footer */
+    footer { background: var(--bg-gradient-green); color: #cfcfcf; padding: 70px 0 28px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 36px; margin-bottom: 36px; }
+    .footer-about h3 { color: var(--white); margin-bottom: 18px; }
+    .footer-col h4 { color: var(--white); margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--accent-gold); padding-left: 4px; }
+    .social-icons a {
+      display: inline-flex; justify-content: center; align-items: center;
+      width: 42px; height: 42px; background: rgba(255,255,255,0.12);
+      border-radius: 50%; margin-right: 10px; transition: var(--transition);
+      border: 1px solid rgba(255,255,255,0.1); color: var(--white);
+    }
+    .social-icons a:hover { background: var(--accent-gold); color: var(--white); transform: translateY(-2px); }
+    .newsletter-form { display: flex; gap: 10px; }
+    .newsletter-form input { flex-grow: 1; padding: 12px; border: none; border-radius: var(--border-radius-pill); background: rgba(255,255,255,0.12); color: var(--white); }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.7); }
+    .newsletter-form button { padding: 12px 22px; background: var(--accent-gold); border: none; color: white; border-radius: var(--border-radius-pill); cursor: pointer; transition: var(--transition); }
+    .newsletter-form button:hover { background: var(--secondary-green); }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 22px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+
+    /* Responsive breakpoints */
+    @media (max-width: 992px) {
+      .hero-content h1 { font-size: 2.4rem; }
+      .hero-content p { font-size: 1rem; }
+      #about .about-grid,
+      .research-content,
+      .contact-grid { grid-template-columns: 1fr; }
+      .timeline { flex-wrap: wrap; justify-content: center; gap: 18px; }
+      .timeline-item { width: 44%; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 16px 0; }
+      .mobile-menu-btn { display: block; z-index: 1100; }
+      .section-padding { padding: 64px 0; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-buttons { flex-direction: column; }
+      .timeline { flex-direction: column; align-items: stretch; }
+      .timeline-item { width: 100%; }
+      .job-item { flex-direction: column; align-items: flex-start; }
+      .job-item .btn { width: 100%; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form button { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .logo { font-size: 1.2rem; }
+      .hero-content h1 { font-size: 1.7rem; }
+      .product-img { height: 200px; }
+      .leader-img { width: 140px; height: 140px; }
+      .stat-item h3 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <header id="header" aria-label="Site header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Go to home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        PT Nusantara Agri Lestari
+      </a>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav-menu" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#research">R&D</a></li>
+          <li><a href="#leadership">Team</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero" role="banner">
+    <div class="container hero-content">
+      <h1>Innovating Agriculture for a Sustainable Future</h1>
+      <p>PT Nusantara Agri Lestari – Membangun Pertanian Indonesia yang Berdaya Saing Global melalui teknologi cerdas dan praktik ramah lingkungan.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Learn More</a>
+        <a href="#contact" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-padding" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="about-title">About Us</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Sejarah & Visi Kami</h3>
+          <p style="margin-bottom: 18px;">Didirikan pada tahun 2010, PT Nusantara Agri Lestari telah bertransformasi dari perusahaan distribusi pupuk lokal menjadi pemimpin dalam agrikultur teknologi terpadu. Kami percaya bahwa masa depan pertanian ada di tangan inovasi yang bertanggung jawab.</p>
+          <h4 style="color: var(--accent-gold);">Visi</h4>
+          <p>Menjadi perusahaan agritech terdepan di Asia Tenggara yang menjamin ketahanan pangan melalui solusi berkelanjutan.</p>
+          <br/>
+          <h4 style="color: var(--accent-gold);">Misi</h4>
+          <p>Memberdayakan petani dengan teknologi, menciptakan produk pangan berkualitas, dan menjaga kelestarian alam.</p>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <h4>Integrity</h4>
+              <p>Transparansi dalam setiap langkah operasional kami.</p>
+            </div>
+            <div class="value-item">
+              <h4>Innovation</h4>
+              <p>Selalu mencari cara baru yang lebih efisien.</p>
+            </div>
+            <div class="value-item">
+              <h4>Sustainability</h4>
+              <p>Pertumbuhan yang menghormati keseimbangan alam.</p>
+            </div>
+            <div class="value-item">
+              <h4>Collaboration</h4>
+              <p>Maju bersama mitra petani dan komunitas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=800&auto=format&fit=crop" alt="Petani binaan PT Nusantara Agri Lestari" />
+        </div>
+      </div>
+
+      <div class="timeline" aria-label="Company milestones">
+        <div class="timeline-item">
+          <span class="timeline-year">2010</span>
+          <p>Didirikan di Bandung sebagai distributor pupuk.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2015</span>
+          <p>Ekspansi Lahan Binaan mencapai 500 Ha.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2019</span>
+          <p>Peluncuran Divisi Teknologi & IoT Smart Farm.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <p>Meraih Penghargaan Nasional "Green Agri Award".</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-padding" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="services-title">Our Services</h2>
+        <p>Solusi komprehensif dari hulu ke hilir untuk pertanian modern yang lebih produktif.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-seedling service-icon" aria-hidden="true"></i>
+          <h3>Agricultural Consulting</h3>
+          <p>Konsultasi agronomi berbasis data untuk memaksimalkan hasil panen dan kesehatan tanah jangka panjang.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-satellite-dish service-icon" aria-hidden="true"></i>
+          <h3>Smart Farming Tech</h3>
+          <p>Implementasi IoT, drone monitoring, dan sistem irigasi otomatis presisi untuk efisiensi sumber daya.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-truck-loading service-icon" aria-hidden="true"></i>
+          <h3>Supply Chain Mgmt</h3>
+          <p>Manajemen rantai pasok yang transparan dan efisien dari ladang hingga ke tangan konsumen.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-globe-asia service-icon" aria-hidden="true"></i>
+          <h3>Export & Distribution</h3>
+          <p>Membuka akses pasar global untuk komoditas unggulan pertanian Indonesia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section-padding" aria-labelledby="products-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="products-title">Featured Products</h2>
+        <p>Produk berkualitas tinggi hasil inovasi dan riset mendalam untuk kebutuhan pangan dan pertanian.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop" alt="Beras Organik Nusantara" />
+          </div>
+          <div class="product-info">
+            <h3>Nusantara Premium Rice</h3>
+            <p>Beras organik bebas pestisida dengan tekstur pulen, wangi alami, dan nilai nutrisi yang tinggi.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?q=80&w=800&auto=format&fit=crop" alt="Pupuk Ramah Lingkungan" />
+          </div>
+          <div class="product-info">
+            <h3>Eco-Grow Fertilizer</h3>
+            <p>Pupuk hayati yang diformulasikan untuk memperkaya mikroba tanah dan meningkatkan produktivitas tanaman secara alami.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=800&auto=format&fit=crop" alt="IoT Sensor Pertanian" />
+          </div>
+          <div class="product-info">
+            <h3>AgriSense IoT Node</h3>
+            <p>Sensor pemantau kelembaban, suhu, dan pH tanah realtime yang terhubung langsung ke aplikasi smartphone Anda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section-padding" aria-labelledby="research-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="research-title">Research & Innovation</h2>
+      </div>
+      <div class="research-content">
+        <div class="research-img">
+          <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop" alt="Laboratorium Riset Pertanian" />
+        </div>
+        <div class="research-text">
+          <h3>Pusat Inovasi Masa Depan</h3>
+          <p>Di fasilitas R&D kami, tim ilmuwan berdedikasi bekerja untuk menciptakan solusi bioteknologi dan rekayasa yang adaptif terhadap perubahan iklim.</p>
+          <ul>
+            <li>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <div>
+                <strong>Kolaborasi Strategis</strong>
+                <p>Bekerja sama dengan universitas terkemuka (IPB, ITB) dalam riset bibit unggul.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <div>
+                <strong>Teknologi Presisi</strong>
+                <p>Pengembangan algoritma AI untuk prediksi masa panen dan deteksi hama dini.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              <div>
+                <strong>Laboratorium Kultur Jaringan</strong>
+                <p>Mempercepat penyediaan bibit berkualitas tinggi dan seragam.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="margin-top: 12px;">Lihat Publikasi Riset</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sustainability" class="section-padding" aria-labelledby="sustainability-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="sustainability-title" style="color: var(--white);">Sustainability Impact</h2>
+        <p style="color: rgba(255,255,255,0.85);">Komitmen nyata kami dalam menciptakan dampak positif bagi bumi dan masyarakat.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Petani Lokal Terbina</p>
+        </div>
+        <div class="stat-item">
+          <h3>30%</h3>
+          <p>Pengurangan Penggunaan Air</p>
+        </div>
+        <div class="stat-item">
+          <h3>1,200 Ha</h3>
+          <p>Lahan Berkelanjutan</p>
+        </div>
+        <div class="stat-item">
+          <h3>15K+</h3>
+          <p>Ton Emisi CO2 Direduksi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="section-padding" aria-labelledby="leadership-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="leadership-title">Leadership Team</h2>
+        <p>Dipimpin oleh para profesional berpengalaman dengan visi memajukan pertanian Indonesia.</p>
+      </div>
+      <div class="leadership-grid">
+        <div class="leader-card">
+          <div class="leader-img">
+            <img src="https://radarpribumi.com/wp-content/uploads/2024/09/wirausahawan-sukses-chairul-tanjung-1024x576-1.jpg" alt="CEO Budi Santoso" />
+          </div>
+          <h4>Ir. Budi Santoso, M.M.</h4>
+          <span>CEO & Founder</span>
+        </div>
+        <div class="leader-card">
+          <div class="leader-img">
+            <img src="https://static.haluan.co/wp-content/uploads/2023/09/business-woman-muslim-woman-portrait-of-confident-2023-07-20-09-49-46-utc.jpg" alt="Head of Research Siti Rahmawati" />
+          </div>
+          <h4>Dr. Siti Rahmawati, M.Sc.</h4>
+          <span>Head of Research & Dev</span>
+        </div>
+        <div class="leader-card">
+          <div class="leader-img">
+            <img src="https://www.bee.id/wp-content/uploads/2024/09/Pengusaha-muda-sukses-di-Indonesia.jpg" alt="Director Ops Andi Pratama" />
+          </div>
+          <h4>Andi Pratama, S.P.</h4>
+          <span>Director of Operations</span>
+        </div>
+        <div class="leader-card">
+          <div class="leader-img">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/950/570/non_2x/beautiful-muslim-woman-wearing-glasses-over-white-background-studio-free-photo.jpg" alt="CMO Dewi Kartika" />
+          </div>
+          <h4>Dewi Kartika, B.Com.</h4>
+          <span>Chief Marketing Officer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section-padding" aria-labelledby="news-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="news-title">News & Events</h2>
+        <p>Kabar terbaru seputar aktivitas perusahaan dan perkembangan industri agrikultur.</p>
+      </div>
+      <div class="news-grid">
+        <div class="news-item">
+          <span class="news-date">20 Desember 2024</span>
+          <h3>Partisipasi di Pameran Teknologi Pertanian Asia 2024</h3>
+          <p>PT Nusantara Agri Lestari memamerkan inovasi drone penyiram presisi terbaru di Jakarta Convention Center dan mendapat respon positif.</p>
+          <a href="#" class="news-link">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="news-item">
+          <span class="news-date">15 November 2024</span>
+          <h3>Perluasan Kemitraan dengan 50 Kelompok Tani Jawa Barat</h3>
+          <p>Penandatanganan MoU strategis untuk implementasi digitalisasi sistem tanam padi di wilayah Jawa Barat bagian selatan.</p>
+          <a href="#" class="news-link">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="news-item">
+          <span class="news-date">10 Oktober 2024</span>
+          <h3>Webinar Nasional: Masa Depan Ketahanan Pangan Indonesia</h3>
+          <p>CEO kami, Bapak Budi Santoso, menjadi pembicara kunci dalam diskusi panel mengenai tantangan iklim dan solusinya.</p>
+          <a href="#" class="news-link">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="careers" class="section-padding" aria-labelledby="careers-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="careers-title">Join Our Team</h2>
+        <p>Mari berkarya bersama menciptakan dampak nyata bagi pertanian Indonesia.</p>
+      </div>
+      <div class="job-list">
+        <div class="job-item">
+          <div class="job-info">
+            <h4>Agronomist Specialist (Padi & Palawija)</h4>
+            <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">Divisi Operasional</p>
+          </div>
+          <span class="job-type">Full Time - Bandung</span>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
+        </div>
+        <div class="job-item">
+          <div class="job-info">
+            <h4>IoT Hardware Engineer</h4>
+            <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">Divisi Teknologi & R&D</p>
+          </div>
+          <span class="job-type">Full Time - Bandung</span>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
+        </div>
+        <div class="job-item">
+          <div class="job-info">
+            <h4>Digital Marketing Executive</h4>
+            <p style="margin-bottom: 0; font-size: 0.95rem; color: #666;">Divisi Pemasaran</p>
+          </div>
+          <span class="job-type">Contract - Jakarta</span>
+          <a href="#" class="btn btn-primary">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-padding" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="contact-title">Contact Us</h2>
+        <p>Hubungi kami untuk kolaborasi atau informasi lebih lanjut mengenai solusi kami.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form-wrapper">
+          <h3 style="margin-bottom: 18px;">Kirim Pesan</h3>
+          <form class="contact-form" aria-label="Contact form">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Contoh: Budi Setiawan" aria-required="true" />
+
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" placeholder="contoh@email.com" aria-required="true" />
+
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" placeholder="Contoh: Permintaan Kemitraan" />
+
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="5" placeholder="Tulis pesan Anda secara detail disini..."></textarea>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <h3 style="margin-bottom: 14px;">Informasi Kantor</h3>
+            <div class="contact-info-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <div>
+                <strong>Kantor Pusat</strong>
+                <p>Jl. Asia Afrika No. 88, Bandung, Jawa Barat, Indonesia 40111</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <div>
+                <strong>Email</strong>
+                <p>info@nusantaraagrilestari.co.id</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              <div>
+                <strong>Telepon</strong>
+                <p>+62 22 1234 5678</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container" aria-label="Company location">
+            <iframe
+              title="Lokasi Kantor Pusat Bandung"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.832960263549!2d107.60767131537475!3d-6.919509969552755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6305b31603d%3A0x5a3232032143230!2sJl.%20Asia%20Afrika%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1679988888888!5m2!1sen!2sid"
+              width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="logo">
+            <i class="fas fa-leaf" aria-hidden="true"></i>
+            PT Nusantara Agri Lestari
+          </h3>
+          <p>Mitra terpercaya dalam mewujudkan pertanian Indonesia yang modern, berkelanjutan, dan menguntungkan bagi petani dan negeri.</p>
+          <div class="social-icons" style="margin-top: 18px;">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Tautan Cepat</h4>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#products">Produk Unggulan</a></li>
+            <li><a href="#news">Berita & Event</a></li>
+            <li><a href="#careers">Karir</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Bantuan</h4>
+          <ul>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Laporan Keberlanjutan</a></li>
+            <li><a href="#contact">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Berlangganan Buletin</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">Dapatkan berita terbaru dan wawasan industri langsung ke email Anda.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Alamat Email Anda" required />
+            <button type="submit">Daftar</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 PT Nusantara Agri Lestari. Seluruh Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky Header
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile Menu Toggle + Overlay
+    const navMenu = document.getElementById('nav-menu');
+    const menuBtn = document.getElementById('menuBtn');
+    const overlay = document.getElementById('overlay');
+
+    function openMenu() {
+      navMenu.classList.add('active');
+      overlay.classList.add('show');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      overlay.classList.remove('show');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function toggleMenu() {
+      if (navMenu.classList.contains('active')) closeMenu(); else openMenu();
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Adjust anchor scroll for fixed header
+    function scrollWithOffset(e) {
+      const href = e.currentTarget.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const headerHeight = header.offsetHeight;
+      const y = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', scrollWithOffset);
+    });
+  </script>
+</body>
+</html>
