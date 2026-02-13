@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recording & Tracking | EchoVibe Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        
+        /* NAVBAR UNIFORM */
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+        
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--gold-accent); color: black; }
+
+        /* HEADER */
+        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+        
+        /* CONTENT BOXES */
+        .info-box { background: var(--bg-card); border: 1px solid #222; padding: 40px; border-radius: 20px; height: 100%; transition: 0.3s; }
+        .info-box:hover { border-color: var(--gold-accent); }
+        .text-gold { color: var(--gold-accent); }
+        .text-white-p { color: #ffffff !important; opacity: 0.9; line-height: 1.8; }
+        
+        .spec-list { list-style: none; padding: 0; }
+        .spec-list li { margin-bottom: 15px; display: flex; align-items: flex-start; }
+        .spec-list i { color: var(--gold-accent); margin-right: 15px; margin-top: 5px; }
+
+        /* EQUIPMENT GRID */
+        .gear-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; filter: grayscale(100%); transition: 0.5s; }
+        .gear-img:hover { filter: grayscale(0%); border: 1px solid var(--gold-accent); }
+        
+        .section-padding { padding: 100px 0; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: var(--gold-accent) !important;">Services</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="tracking.html" style="color: var(--gold-accent) !important; font-weight: 600; background: transparent;">Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Equipments</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="service-header">
+    <div class="container">
+        <h1 class="display-2 fw-bold mb-0">RECORDING / <span class="text-gold">TRACKING</span></h1>
+        <p class="text-white-p fs-5 mt-3">High-Fidelity Audio Capture in a Professional Acoustic Environment.</p>
+    </div>
+</header>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-7">
+                <h2 class="fw-bold mb-4">THE <span class="text-gold">TRACKING PROCESS</span></h2>
+                <p class="text-white-p mb-4">Di EchoVibe Studios, proses rekaman bukan sekadar menekan tombol "record". Kami fokus pada penempatan mikrofon yang presisi, pemilihan preamp yang sesuai dengan karakter vokal/instrumen, dan pemantauan (monitoring) tanpa latency.</p>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <ul class="spec-list text-white-p">
+                            <li><i class="bi bi-check2-circle"></i> Isolated Vocal Booth</li>
+                            <li><i class="bi bi-check2-circle"></i> Multi-track Drum Recording</li>
+                            <li><i class="bi bi-check2-circle"></i> High-End A/D Converters</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="spec-list text-white-p">
+                            <li><i class="bi bi-check2-circle"></i> 192kHz Sample Rate Support</li>
+                            <li><i class="bi bi-check2-circle"></i> Zero-Latency Monitoring</li>
+                            <li><i class="bi bi-check2-circle"></i> Professional Session Engineers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="info-box shadow-lg">
+                    <h4 class="fw-bold text-gold mb-4">ENVIRONMENT</h4>
+                    <p class="text-white-p small">Ruang rekaman kami dirancang oleh konsultan akustik ternama untuk memastikan tidak ada pantulan suara (refleksi) yang tidak diinginkan. Hasilnya adalah suara yang sangat jujur, memudahkan proses Mixing di tahap berikutnya.</p>
+                    <hr class="border-secondary">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="small fw-bold">ACOUSTIC RATING</span>
+                        <span class="text-gold">STC 60+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mt-5 mb-4">EQUIPMENT <span class="text-gold">SPOTLIGHT</span></h3>
+        <div class="row g-3">
+            <div class="col-md-3 col-6">
+                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=400" class="gear-img" alt="Mic">
+                <p class="small mt-2 mb-0 fw-bold">Neumann U87 Ai</p>
+                <small class="text-gold">Industry Standard</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="https://i.pinimg.com/736x/a9/e4/89/a9e489e8c4884e6a3fad72734409a580.jpg" class="gear-img" alt="Preamp">
+                <p class="small mt-2 mb-0 fw-bold">Neve 1073DPD</p>
+                <small class="text-gold">Legendary Preamp</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="https://images.unsplash.com/photo-1559732277-7453b141e3a1?q=80&w=400" class="gear-img" alt="Headphone">
+                <p class="small mt-2 mb-0 fw-bold">Beyerdynamic DT1990</p>
+                <small class="text-gold">Reference Monitor</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=400" class="gear-img" alt="Console">
+                <p class="small mt-2 mb-0 fw-bold">SSL Alpha VHD</p>
+                <small class="text-gold">Harmonic Preamp</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE_</h3>
+                <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3 text-white">FOLLOW US</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

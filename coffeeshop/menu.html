@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kopi Senja | Menu Pilihan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; }
+        h1, h2, h3, h4, .navbar-brand { font-family: 'Playfair Display', serif; }
+        
+        .header-menu {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070');
+            background-size: cover; background-position: center;
+            padding: 80px 0; color: white; text-align: center;
+        }
+
+        /* Best Seller Cards */
+        .card-best {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+        }
+        .card-best:hover { transform: translateY(-5px); }
+        .card-best img { height: 200px; object-fit: cover; }
+        
+        /* List Menu Styling */
+        .menu-list-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .category-title {
+            border-left: 5px solid #ffc107;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            margin-top: 40px;
+            color: #212529;
+        }
+        .price { font-weight: 700; color: #198754; font-size: 0.95rem; }
+        .menu-name { font-weight: 600; font-size: 1rem; margin-bottom: 2px; display: block; }
+        .menu-desc { font-size: 0.8rem; color: #6c757d; display: block; line-height: 1.4; }
+        .nav-link:hover { color: #ffc107 !important; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Logo" width="35" class="me-2">
+            <span class="fw-bold">Kopi Senja</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header-menu">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Menu Kami</h1>
+        <p class="lead">Eksplorasi rasa dalam setiap cangkir dan sajian.</p>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container">
+        
+        <h2 class="text-center fw-bold mb-5">⭐ Pelanggan Terfavorit</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card card-best text-center">
+                    <img src="https://i.pinimg.com/1200x/e1/e5/6a/e1e56ad797792c582b3ac7709dc11cc1.jpg" alt="Senja Latte">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Senja Latte</h5>
+                        <p class="small text-muted mb-2">Signature drink dengan espresso premium dan gula aren cair organik.</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-best text-center">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600" alt="Croissant">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Butter Croissant</h5>
+                        <p class="small text-muted">Pastry klasik Prancis yang renyah dengan aroma mentega yang kuat.</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-best text-center">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600" alt="Matcha">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Uji Matcha</h5>
+                        <p class="small text-muted">Teh hijau murni dari Kyoto yang disajikan dengan susu lembut.</p>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row g-5">
+            <div class="col-md-4">
+                <h4 class="category-title fw-bold">Coffee Series</h4>
+                
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Americano</span>
+                        <span class="menu-desc">Espresso murni dengan air mineral panas/dingin.</span>
+                    </div>
+                    <span class="price">20k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Cappuccino</span>
+                        <span class="menu-desc">Espresso dengan lapisan foam susu tebal.</span>
+                    </div>
+                    <span class="price">28k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Caramel Macchiato</span>
+                        <span class="menu-desc">Sentuhan manis sirup karamel dan espresso.</span>
+                    </div>
+                    <span class="price">32k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Manual Brew</span>
+                        <span class="menu-desc">Biji kopi pilihan yang diseduh dengan teknik V60.</span>
+                    </div>
+                    <span class="price">30k</span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="category-title fw-bold">Non-Coffee</h4>
+                
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Dark Chocolate</span>
+                        <span class="menu-desc">Cokelat pekat premium dengan rasa yang kaya.</span>
+                    </div>
+                    <span class="price">26k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Red Velvet Latte</span>
+                        <span class="menu-desc">Sensasi kue red velvet dalam bentuk minuman.</span>
+                    </div>
+                    <span class="price">26k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Lychee Tea</span>
+                        <span class="menu-desc">Teh segar dengan buah leci asli di dalamnya.</span>
+                    </div>
+                    <span class="price">22k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Lemonade Ice</span>
+                        <span class="menu-desc">Perasan lemon segar untuk melepas dahaga.</span>
+                    </div>
+                    <span class="price">20k</span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="category-title fw-bold">Pastry & Snack</h4>
+                
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Almond Danish</span>
+                        <span class="menu-desc">Pastry manis dengan taburan kacang almond renyah.</span>
+                    </div>
+                    <span class="price">25k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Cinnamon Roll</span>
+                        <span class="menu-desc">Roti kayu manis lembut dengan icing sugar.</span>
+                    </div>
+                    <span class="price">25k</span>
+                </div>
+
+                <div class="menu-list-item">
+                    <div>
+                        <span class="menu-name">Truffle Fries</span>
+                        <span class="menu-desc">Kentang goreng dengan aroma minyak truffle mewah.</span>
+                    </div>
+                    <span class="price">30k</span>
+                </div>
+
+                <div class="menu-item border-0 pt-2">
+                    <p class="small text-muted mt-2 fst-italic">*Semua pastry dipanggang segar setiap pagi.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="py-4 bg-light border-top">
+    <div class="container text-center">
+        <div class="mb-3">
+            <a href="https://www.instagram.com/" class="text-dark mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/" class="text-dark mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/" class="text-dark mx-2 fs-4"><i class="bi bi-twitter"></i></a>
+        </div>
+        <p class="mb-0 text-muted">&copy; 2026 <b>Kopi Senja</b>. Jalan Kenangan No. 45, Jakarta.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | EchoVibe Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        
+        /* MODIFIKASI FORM AGAR PUTIH TERANG */
+        .form-control { background: #000; border: 1px solid #333; color: white !important; padding: 12px; }
+        .form-control:focus { background: #050505; border-color: var(--gold-accent); box-shadow: none; color: white; }
+        
+        /* Membuat tulisan placeholder (Full name, dll) jadi putih */
+        .form-control::placeholder { color: rgba(255,255,255,0.7) !important; }
+        
+        /* Memperbaiki warna teks dan panah pada Select Service */
+        select.form-control { color: white !important; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 16px 12px; appearance: none; }
+        
+        .text-gold { color: var(--gold-accent); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="tracking.html">Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Equipments</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html" style="color: var(--gold-accent) !important; font-weight: 700;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">LET'S <span class="text-gold">TALK</span></h1>
+                <p class="text-white-p mb-5">Ingin booking studio atau tanya mengenai paket mixing? Isi form di bawah ini.</p>
+                <form>
+                    <div class="mb-3"><input type="text" class="form-control" placeholder="Full Name"></div>
+                    <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address"></div>
+                    <div class="mb-3">
+                        <select class="form-control">
+                            <option selected disabled>Select Service</option>
+                            <option>Recording Session</option>
+                            <option>Mixing & Mastering</option>
+                        </select>
+                    </div>
+                    <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message"></textarea></div>
+                    <button class="btn btn-warning w-100 fw-bold py-3" style="background: var(--gold-accent); border:none;">SEND MESSAGE</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="fw-bold text-gold">VISIT US</h3>
+                <p class="text-white-p mb-1"><i class="bi bi-geo-alt me-2 text-gold"></i> Jl. Senopati No. 88, Jakarta Selatan</p>
+                <p class="text-white-p mb-4"><i class="bi bi-whatsapp me-2 text-gold"></i> +62 812 3456 7890</p>
+                <div class="ratio ratio-16x9 border border-secondary shadow rounded overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.267207604318!2d106.8062!3d-6.2283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15049383633%3A0x67c293673059725b!2sJl.%20Senopati!5e0!3m2!1sen!2sid!4v1710000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3 text-white">FOLLOW US</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

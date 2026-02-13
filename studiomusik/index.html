@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EchoVibe Studios | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+
+        /* Dropdown Rapat Sesuai Request */
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--gold-accent); color: black; }
+        .dropdown-divider { margin: 5px 0; border-color: #333; }
+
+        .hero { height: 85vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; }
+        .hero-title { font-size: 4.5rem; font-weight: 900; line-height: 1; }
+        .hero-title span { color: var(--gold-accent); }
+        
+        .feature-card { background: var(--bg-card); border: 1px solid #222; border-radius: 15px; padding: 40px; transition: 0.3s; height: 100%; }
+        .icon-circle { width: 70px; height: 70px; background: var(--gold-accent); color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 20px; }
+        
+        /* Teks Deskripsi Putih */
+        .text-muted { color: #ffffff !important; opacity: 0.9; }
+        footer p, footer h6 { color: #ffffff !important; }
+        .text-gold { color: var(--gold-accent); }
+        .section-padding { padding: 100px 0; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="tracking.html">Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Equipments</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1 class="hero-title">CAPTURE YOUR <br><span>LEGACY.</span></h1>
+        <p class="lead mt-3 mb-5 fw-light">EchoVibe Studios adalah pusat produksi audio profesional di Jakarta yang melayani artis nasional hingga internasional dengan standar high-fidelity.</p>
+        <div class="d-flex gap-3">
+            <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
+            <a href="about.html" class="btn btn-warning btn-lg px-4 text-dark fw-bold" style="background: var(--gold-accent);">Take a Tour</a>
+        </div>
+    </div>
+</header>
+
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="bi bi-mic-fill"></i></div>
+                    <h4 class="fw-bold">Recording</h4>
+                    <p class="text-muted">Tracking instrumen dan vokal dengan kualitas 192kHz menggunakan preamp Neve & SSL untuk hasil suara yang hangat dan detail.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="bi bi-sliders"></i></div>
+                    <h4 class="fw-bold">Mixing</h4>
+                    <p class="text-muted">Proses blending audio menggunakan hybrid system (Plugin Digital & Analog Hardware) agar lagu Anda terdengar lebar dan kompetitif.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-circle"><i class="bi bi-vinyl-fill"></i></div>
+                    <h4 class="fw-bold">Mastering</h4>
+                    <p class="text-muted">Sentuhan akhir untuk memastikan musik Anda terdengar sempurna di semua media (Spotify, YouTube, hingga Radio).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <p class="text-muted small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3">FOLLOW US</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com//" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com//" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://open.spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-muted small mt-4">&copy; 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

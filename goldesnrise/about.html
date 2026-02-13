@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Goldenrise Foods</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* VARIABLES & BASE */
+        :root { --primary-dark: #2c2c2c; --primary-gold: #D4AF37; --bg-light: #f9f9f9; --text-body: #555555; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-body); overflow-x: hidden; }
+        a { text-decoration: none; }
+        
+        /* NAVBAR TRANSPARAN (UPDATED) */
+        .navbar-custom {
+            transition: all 0.4s ease;
+            padding: 20px 0;
+            background-color: transparent; /* Awal Transparan */
+        }
+        
+        /* State saat discroll (Background Putih) */
+        .navbar-custom.scrolled {
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 12px 0;
+        }
+
+        /* Teks default (Putih - saat transparan) */
+        .navbar-brand { font-weight: 800; font-size: 1.5rem; color: #fff !important; transition: 0.3s; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 10px; position: relative; }
+
+        /* Teks saat discroll (Hitam/Gelap - saat background putih) */
+        .navbar-custom.scrolled .navbar-brand { color: var(--primary-dark) !important; }
+        .navbar-custom.scrolled .nav-link { color: var(--primary-dark) !important; }
+        
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--primary-gold); transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Toggler Icon Colors */
+        .navbar-toggler { border-color: rgba(255,255,255,0.5); }
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28212, 175, 55, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        
+        .navbar-custom.scrolled .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 44, 44, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-custom.scrolled .navbar-toggler { border-color: rgba(0,0,0,0.1); }
+
+        .btn-gold { background: linear-gradient(45deg, var(--primary-gold), #eacda3); border: none; color: var(--primary-dark); font-weight: 700; padding: 10px 25px; border-radius: 30px; transition: 0.3s; }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); }
+        
+        /* HEADER */
+        .page-header { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 200px 0 150px;
+            text-align: center;
+            color: white;
+        }
+
+        /* TIMELINE & OTHERS */
+        .timeline-section { position: relative; padding: 80px 0; }
+        .timeline-line { position: absolute; left: 30px; top: 0; bottom: 0; width: 3px; background: #ddd; }
+        .timeline-item { margin-bottom: 50px; position: relative; padding-left: 80px; }
+        .timeline-year { position: absolute; left: 0; top: 0; background: var(--primary-gold); color: #fff; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 0.9rem; z-index: 2; width: 60px; text-align: center; }
+        .timeline-content { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary-gold); }
+        
+        /* TEAM CARD */
+        .team-card { border: none; overflow: hidden; border-radius: 15px; transition: 0.3s; background: white; }
+        .team-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .team-img { height: 380px; object-fit: cover; object-position: center top; width: 100%; filter: grayscale(10%); transition: 0.3s; }
+        .team-card:hover .team-img { filter: grayscale(0%); }
+
+        .dna-box { padding: 40px; border: 1px solid #eee; border-radius: 10px; background: white; height: 100%; transition: 0.3s; }
+        .dna-box:hover { border-color: var(--primary-gold); box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15); }
+
+        /* FOOTER */
+        footer { background-color: #1a1a1a; color: #bbb; padding: 80px 0 30px; margin-top: 50px; }
+        footer h5 { color: #fff; margin-bottom: 25px; }
+        footer a { color: #bbb; transition: 0.3s; }
+        footer a:hover { color: var(--primary-gold); padding-left: 5px; }
+        footer .contact-info li { color: #ffffff !important; }
+        .social-links a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); color: white; justify-content: center; align-items: center; border-radius: 50%; margin-right: 10px; transition: 0.3s; }
+        .social-links a:hover { background: var(--primary-gold); color: #1a1a1a; padding-left: 0; }
+        
+        @media(max-width: 768px) {
+            .navbar-toggler { margin-right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-wheat-awn me-2 text-warning"></i> GOLDENRISE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="quality.html">Kualitas</a></li>
+                <li class="nav-item ms-lg-3"><a href="contact.html" class="btn btn-gold btn-sm px-4">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container" data-aos="fade-up">
+        <h5 class="text-warning text-uppercase ls-2 fw-bold">Tentang Kami</h5>
+        <h1 class="display-3 fw-bold">Menginovasi Rasa,<br>Memberdayakan Nusantara.</h1>
+        <p class="lead mt-4 mx-auto text-white" style="max-width: 800px; font-weight: 500;">
+            Kami bukan sekadar pabrik makanan. Kami adalah jembatan antara hasil bumi terbaik Indonesia dan meja makan jutaan keluarga.
+        </p>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+                <img src="https://i.pinimg.com/1200x/7e/8d/0e/7e8d0e8b539eb4d9c47fa5f3c87a00ca.jpg" class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="Pabrik Modern Goldenrise">
+            </div>
+            <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+                <h3 class="fw-bold mb-3">Sebuah Cerita dari Dapur Kecil</h3>
+                <p class="text-muted">Pada tahun 2012, di sebuah garasi kecil di Jakarta Selatan, pendiri kami menyadari satu hal: Banyak bisnis kuliner (UMKM) yang gagal berkembang bukan karena masakan mereka tidak enak, tapi karena bahan baku yang tidak konsisten.</p>
+                <p class="text-muted">Dengan modal satu mixer tua dan semangat baja, Goldenrise lahir. Kami mulai dengan memproduksi tepung premix sederhana. Fokus kami hanya satu: <strong>Konsistensi</strong>.</p>
+                <p class="text-muted">Hari ini, semangat itu tidak berubah meskipun garasi kami telah berganti menjadi fasilitas manufaktur seluas 2 Hektar. Kami melayani brand F&B global, hotel bintang lima, hingga *coffee shop* lokal favorit Anda.</p>
+                <div class="row mt-4 text-center">
+                    <div class="col-4 border-end">
+                        <h2 class="fw-bold text-warning">12+</h2>
+                        <p class="small mb-0">Tahun Pengalaman</p>
+                    </div>
+                    <div class="col-4 border-end">
+                        <h2 class="fw-bold text-warning">500+</h2>
+                        <p class="small mb-0">Klien B2B</p>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="fw-bold text-warning">100%</h2>
+                        <p class="small mb-0">Lokal Pride</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="text-warning fw-bold">GOLDENRISE DNA</h5>
+            <h2 class="fw-bold">Nilai yang Kami Pegang Teguh</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="dna-box">
+                    <i class="fas fa-hand-holding-heart fa-3x text-warning mb-3"></i>
+                    <h4>Customer Obsessed</h4>
+                    <p class="text-muted">Kami tidak hanya menjual produk. Kami mendengarkan masalah klien dan menciptakan solusi khusus untuk dapur mereka.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="dna-box">
+                    <i class="fas fa-seedling fa-3x text-warning mb-3"></i>
+                    <h4>Sustainability First</h4>
+                    <p class="text-muted">Kami berkomitmen pada rantai pasok yang adil. 80% bahan baku kami diambil langsung dari petani lokal Indonesia.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="dna-box">
+                    <i class="fas fa-rocket fa-3x text-warning mb-3"></i>
+                    <h4>Make It Happen</h4>
+                    <p class="text-muted">Inovasi tanpa henti. Jika ada teknologi pangan baru, kami adalah yang pertama mempelajarinya.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="timeline-section bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Jejak Langkah Kami</h2>
+        </div>
+        
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-content">
+                <h5 class="fw-bold">The Beginning</h5>
+                <p class="mb-0 small text-muted">Goldenrise didirikan sebagai pemasok tepung racikan rumahan untuk 5 toko roti lokal.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+                <h5 class="fw-bold">Pabrik Pertama</h5>
+                <p class="mb-0 small text-muted">Meresmikan pabrik pertama di Tangerang dan mendapatkan sertifikasi Halal MUI.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-content">
+                <h5 class="fw-bold">Ekspansi Retort</h5>
+                <p class="mb-0 small text-muted">Meluncurkan lini produksi Makanan Siap Saji (Retort) untuk pasar ekspor.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+                <h5 class="fw-bold">Go Green</h5>
+                <p class="mb-0 small text-muted">Mengimplementasikan panel surya di pabrik dan sistem pengolahan limbah ramah lingkungan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Di Balik Layar</h2>
+            <p class="text-muted">Orang-orang yang berdedikasi menghadirkan kualitas terbaik.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+
+            <!-- CEO - PRIA INDONESIA -->
+            <div class="col-md-3 col-6" data-aos="zoom-in">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/1200x/13/c2/9e/13c29eee725ec2125487ddf0cf119c3c.jpg" 
+                         class="team-img" alt="Budi Santoso CEO">
+                    <div class="p-3 text-center bg-white">
+                        <h5 class="fw-bold mb-0">Budi Santoso</h5>
+                        <p class="small text-muted">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- R&D - WANITA INDONESIA -->
+            <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/d5/ef/a4/d5efa4fc259e2af0ef4dd9ceb30637d2.jpg" 
+                         class="team-img" alt="Siti Rahma Head of R&D">
+                    <div class="p-3 text-center bg-white">
+                        <h5 class="fw-bold mb-0">Siti Rahma</h5>
+                        <p class="small text-muted">Head of R&D</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATIONS - PRIA INDONESIA -->
+            <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/1200x/07/b8/f8/07b8f8645c0a29934001c00be80380c6.jpg" 
+                         class="team-img" alt="David Tan Director of Operations">
+                    <div class="p-3 text-center bg-white">
+                        <h5 class="fw-bold mb-0">David Tan</h5>
+                        <p class="small text-muted">Director of Operations</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            <div class="col-lg-5 mb-4">
+                <h3 class="text-white fw-bold mb-3"><i class="fas fa-wheat-awn text-warning me-2"></i>GOLDENRISE</h3>
+                <p class="small line-height-lg">
+                    Produsen makanan terpercaya yang berkomitmen menghadirkan kebaikan di setiap sajian melalui bahan baku berkualitas dan teknologi modern.
+                </p>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h5>Navigasi Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html">Beranda</a></li>
+                    <li class="mb-2"><a href="about.html">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="products.html">Produk</a></li>
+                    <li class="mb-2"><a href="quality.html">Kualitas</a></li>
+                    <li class="mb-2"><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h5>Kontak</h5>
+                <ul class="list-unstyled contact-info text-white">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt text-warning me-2"></i> Jl. Industri Raya No. 50, Jakarta Barat, 11050</li>
+                    <li class="mb-3"><i class="fas fa-phone text-warning me-2"></i> (021) 555-0199</li>
+                    <li class="mb-3"><i class="fas fa-envelope text-warning me-2"></i> hello@goldenrisefoods.co</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+        <div class="text-center small">
+            <p class="mb-0">© 2025 Goldenrise Foods Manufacturing. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({ once: true, offset: 100, duration: 800 });
+
+    const navbar = document.getElementById('mainNav');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            navbar.classList.remove('navbar-dark');
+            navbar.classList.add('navbar-light');
+        } else {
+            navbar.classList.remove('scrolled');
+            navbar.classList.add('navbar-dark');
+            navbar.classList.remove('navbar-light');
+        }
+    });
+</script>
+
+</body>
+</html>

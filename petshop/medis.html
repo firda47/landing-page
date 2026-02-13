@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layanan Medis | Happy Paws</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
+        .navbar { background-color: #ffffff !important; padding: 18px 0; border-bottom: 2px solid #f0f4f8; }
+        .navbar-brand { color: #2a9d8f !important; font-size: 1.6rem; }
+        .nav-link { color: #555 !important; font-weight: 500; }
+        @media (min-width: 992px) { .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.08); } }
+        
+        .service-section { padding: 80px 0; }
+        .card-medis { border: none; border-radius: 25px; padding: 40px; background: white; transition: 0.3s; height: 100%; border: 1px solid #f0f4f8; }
+        .card-medis:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-color: #2a9d8f; }
+        .icon-circle { width: 70px; height: 70px; background: #e9f5f3; color: #2a9d8f; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 25px; }
+        .medis-highlight { background-color: #264653; color: white; border-radius: 40px; padding: 60px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="me-2">🐾</span> <span class="fw-bold">Happy Paws</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Layanan</a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="medis.html">🩺 Layanan Medis</a></li>
+                        <li><a class="dropdown-item" href="grooming.html">🧼 Grooming & Spa</a></li>
+                        <li><a class="dropdown-item" href="hotel.html">🏨 Pet Hotel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="service-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold" style="color: #e76f51; letter-spacing: 2px;">Comprehensive Care</h6>
+            <h1 class="display-4 fw-bold">Standar Medis Internasional</h1>
+            <p class="text-muted mx-auto" style="max-width: 700px;">Kami mengintegrasikan keahlian medis dengan teknologi diagnostik terbaru untuk memastikan anabul Anda mendapatkan penanganan yang akurat.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card-medis">
+                    <div class="icon-circle"><i class="bi bi-heart-pulse-fill"></i></div>
+                    <h4 class="fw-bold">Poli Klinik Umum</h4>
+                    <p class="text-muted small">Pemeriksaan rutin, konsultasi penyakit dalam, pemberian vaksinasi berkala, dan manajemen kesehatan preventif yang dipantau secara berkala.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-medis">
+                    <div class="icon-circle"><i class="bi bi-scissors"></i></div> <h4 class="fw-bold">Bedah & Orthopedic</h4>
+                    <p class="text-muted small">Tindakan bedah jaringan lunak, sterilisasi (kastrasi/OH), bedah tulang, serta perawatan gigi dan mulut secara profesional dengan anastesi aman.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-medis">
+                    <div class="icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-microscope" viewBox="0 0 16 16">
+                            <path d="M5.621 1.421A.5.5 0 0 1 6 1.5h4a.5.5 0 0 1 .379.821l-1.5 1.75a.5.5 0 0 1-.758 0l-1.5-1.75zm.263 2.54c.062.275.22.66.458 1.055.428.708 1.087 1.47 2.158 1.47 1.07 0 1.73-.762 2.158-1.47.239-.396.396-.78.458-1.055a.5.5 0 0 1 .971.236c-.102.418-.313.922-.615 1.422-.435.72-1.133 1.538-2.472 1.538-1.339 0-2.037-.818-2.472-1.538-.302-.5-.513-1.004-.615-1.422a.5.5 0 0 1 .971-.236zM1.494 11.15l-.142-.424a.5.5 0 0 1 .454-.65h.063c.231 0 .43.155.487.38l.147.587c.033.13.174.195.293.134.12-.061.168-.21.104-.326l-.427-.77a.5.5 0 0 1 .061-.582L3.102 8H12.898l.57 1.018a.5.5 0 0 1 .061.582l-.427.77c-.064.116-.016.265.104.326.119.061.26.004.293-.134l.147-.587a.5.5 0 0 1 .487-.38h.063a.5.5 0 0 1 .454.65l-.142.424a.5.5 0 0 1-.474.341H1.968a.5.5 0 0 1-.474-.341zm11.23-1.9L12.063 8h1.12c.164 0 .31.08.397.214l.145.218a.5.5 0 0 1-.416.777h-.585zM2.707 9.25l-.145-.218A.5.5 0 0 1 2.959 8h1.12l-.66 1.25H2.707zM3.5 13a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
+                    <h4 class="fw-bold">Lab Diagnostik</h4>
+                    <p class="text-muted small">Fasilitas tes darah lengkap, urinalisis, pemeriksaan mikroskopis parasit, serta tes diagnostik cepat lainnya untuk diagnosa instan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="p-5 rounded-5 shadow-sm border-0" style="background: linear-gradient(135deg, #2a9d8f, #264653); color: white;">
+                    <h2 class="fw-bold mb-4">Mengapa Memilih Laboratorium Kami?</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="bi bi-check-circle-fill me-3 text-warning"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Hasil Cepat & Akurat</h6>
+                                        <p class="small opacity-75">Hasil tes darah rutin dapat diketahui hanya dalam waktu 30-60 menit.</p>
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="bi bi-check-circle-fill me-3 text-warning"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Peralatan Modern</h6>
+                                        <p class="small opacity-75">Menggunakan mesin hematologi otomatis standar rumah sakit manusia.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="bi bi-check-circle-fill me-3 text-warning"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Tenaga Ahli Medis</h6>
+                                        <p class="small opacity-75">Setiap hasil lab divalidasi langsung oleh dokter hewan senior.</p>
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="bi bi-check-circle-fill me-3 text-warning"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Data Digital</h6>
+                                        <p class="small opacity-75">Riwayat hasil lab tersimpan digital dan bisa dikirim via WhatsApp/Email.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 bg-white border-top mt-5">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h4 class="fw-bold" style="color: #2a9d8f;">🐾 Happy Paws</h4>
+                <p class="text-muted small mt-3">Klinik hewan yang mengutamakan kenyamanan dan kesehatan hewan peliharaan Anda dengan standar medis internasional.</p>
+                <div class="mt-4">
+                    <a href="https://www.instagram.com/" class="text-dark me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/" class="text-dark me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="fw-bold mb-3">Navigasi</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="medis.html" class="text-decoration-none text-muted">Layanan Medis</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-muted">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-bold mb-3">Jam Buka</h6>
+                <p class="text-muted small mb-1">Senin - Sabtu</p>
+                <p class="fw-bold small mb-3">08.00 - 20.00</p>
+                <p class="text-muted small mb-1">Minggu</p>
+                <p class="fw-bold small">09.00 - 15.00</p>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="fw-bold mb-3">Kantor Pusat</h6>
+                <p class="text-muted small"><i class="bi bi-geo-alt me-2"></i>Jl. Bahagia Anabul No. 88, Jakarta Selatan</p>
+                <p class="text-muted small"><i class="bi bi-telephone me-2"></i>(021) 555-PAWS</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="text-center text-muted small mb-0">&copy; 2026 <b>Happy Paws</b>. Semua Hak Dilindungi.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>                 

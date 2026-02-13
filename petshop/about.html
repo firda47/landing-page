@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tentang Happy Paws</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
+        .navbar { background-color: #ffffff !important; padding: 18px 0; border-bottom: 2px solid #f0f4f8; }
+        .navbar-brand { color: #2a9d8f !important; font-size: 1.6rem; }
+        .nav-link { color: #555 !important; font-weight: 500; }
+        @media (min-width: 992px) { .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.08); } }
+        
+        .stat-box { background: white; border-radius: 20px; padding: 30px; border: 1px solid #f0f4f8; text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #2a9d8f; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="me-2">🐾</span> <span class="fw-bold">Happy Paws</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Tentang Kami</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Layanan</a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="medis.html">🩺 Layanan Medis</a></li>
+                        <li><a class="dropdown-item" href="grooming.html">🧼 Grooming & Spa</a></li>
+                        <li><a class="dropdown-item" href="hotel.html">🏨 Pet Hotel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=800" class="img-fluid rounded-5 shadow" alt="Klinik Kami">
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+            <h6 class="text-success fw-bold text-uppercase" style="letter-spacing: 2px;">Established 2015</h6>
+            <h1 class="display-4 fw-bold mb-4">Kasih Sayang Tanpa Batas</h1>
+            <p class="text-muted mb-4">Happy Paws didirikan dengan visi sederhana: memberikan perawatan hewan yang jujur dan berkualitas tinggi di Jakarta. Selama lebih dari satu dekade, kami telah menangani ribuan anabul dengan pendekatan medis yang personal.</p>
+            <p class="text-muted">Kami percaya bahwa setiap peliharaan adalah anggota keluarga, itulah sebabnya kami tidak hanya fokus pada pengobatan, tetapi juga pada kesejahteraan emosional mereka selama berada di klinik kami.</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">10k+</div>
+                <div class="small text-muted">Pasien Sembuh</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">15+</div>
+                <div class="small text-muted">Dokter Ahli</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">24h</div>
+                <div class="small text-muted">Emergency Call</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="small text-muted">Kasih Sayang</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark text-white p-5 rounded-5 mt-5">
+        <h2 class="fw-bold mb-5 text-center">Pilar Integritas Kami</h2>
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <i class="bi bi-shield-check fs-1 text-success mb-3 d-block"></i>
+                <h5 class="fw-bold">Kejujuran Medis</h5>
+                <p class="small opacity-75">Kami memberikan diagnosa yang jujur tanpa melebih-lebihkan tindakan medis yang tidak perlu.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-currency-exchange fs-1 text-success mb-3 d-block"></i>
+                <h5 class="fw-bold">Harga Transparan</h5>
+                <p class="small opacity-75">Seluruh rincian biaya pengobatan diinformasikan secara jelas di depan sebelum tindakan dilakukan.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-heart-pulse fs-1 text-success mb-3 d-block"></i>
+                <h5 class="fw-bold">Kesejahteraan Hewan</h5>
+                <p class="small opacity-75">Mengutamakan metode "Fear Free" untuk meminimalisir stres pada hewan saat pemeriksaan.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="py-5 bg-white border-top mt-5">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h4 class="fw-bold" style="color: #2a9d8f;">🐾 Happy Paws</h4>
+                <p class="text-muted small mt-3">Klinik hewan yang mengutamakan kenyamanan dan kesehatan hewan peliharaan Anda dengan standar medis internasional.</p>
+                <div class="mt-4">
+                    <a href="https://www.instagram.com/" class="text-dark me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/" class="text-dark me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="fw-bold mb-3">Navigasi</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="medis.html" class="text-decoration-none text-muted">Layanan Medis</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-muted">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-bold mb-3">Jam Buka</h6>
+                <p class="text-muted small mb-1">Senin - Sabtu</p>
+                <p class="fw-bold small mb-3">08.00 - 20.00</p>
+                <p class="text-muted small mb-1">Minggu</p>
+                <p class="fw-bold small">09.00 - 15.00</p>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="fw-bold mb-3">Kantor Pusat</h6>
+                <p class="text-muted small"><i class="bi bi-geo-alt me-2"></i>Jl. Bahagia Anabul No. 88, Jakarta Selatan</p>
+                <p class="text-muted small"><i class="bi bi-telephone me-2"></i>(021) 555-PAWS</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="text-center text-muted small mb-0">&copy; 2026 <b>Happy Paws</b>. Semua Hak Dilindungi.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

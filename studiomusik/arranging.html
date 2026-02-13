@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Arrangement | EchoVibe Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        
+        /* NAVBAR UNIFORM - IDENTIK */
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+        
+        /* DROPDOWN RAPAT */
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--gold-accent); color: black; }
+        .dropdown-divider { margin: 5px 0; border-color: #333; }
+
+        /* HEADER */
+        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+        
+        /* CONTENT STYLES */
+        .info-box { background: var(--bg-card); border: 1px solid #222; padding: 40px; border-radius: 20px; height: 100%; transition: 0.3s; position: relative; overflow: hidden; }
+        .info-box:hover { border-color: var(--gold-accent); }
+        .text-gold { color: var(--gold-accent); }
+        .text-white-p { color: #ffffff !important; opacity: 0.9; line-height: 1.8; }
+        
+        .step-number { font-size: 3.5rem; font-weight: 800; color: rgba(212, 175, 55, 0.1); position: absolute; top: -10px; right: 10px; }
+        .section-padding { padding: 80px 0; }
+        
+        .genre-card { border: 1px solid #333; padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s; }
+        .genre-card:hover { background: var(--gold-accent); color: #000; }
+        .genre-card i { font-size: 2rem; margin-bottom: 15px; display: block; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: var(--gold-accent) !important;">Services</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="tracking.html" >Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html" >Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html"style="color: var(--gold-accent) !important; font-weight: 600; background: transparent;">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Equipments</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="service-header">
+    <div class="container">
+        <h1 class="display-2 fw-bold mb-0">MUSIC <span class="text-gold">ARRANGEMENT</span></h1>
+        <p class="text-white-p fs-5 mt-3">Transforming Your Raw Ideas into Cinematic Masterpieces.</p>
+    </div>
+</header>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">OUR CREATIVE <span class="text-gold">PROCESS</span></h2>
+            <p class="text-white-p">Bagaimana kami membangun fondasi musik Anda dari nol hingga siap rekam.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="info-box">
+                    <span class="step-number">01</span>
+                    <h4 class="fw-bold text-gold">Concept & Drafting</h4>
+                    <p class="text-white-p small">Kami mendiskusikan visi, referensi, dan struktur lagu. Di tahap ini, kerangka nada dan progresi akor ditentukan.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box">
+                    <span class="step-number">02</span>
+                    <h4 class="fw-bold text-gold">Instrumentation</h4>
+                    <p class="text-white-p small">Pemilihan instrumen yang tepat—apakah itu string section yang megah, synthesizer modern, atau brass yang berani.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box">
+                    <span class="step-number">03</span>
+                    <h4 class="fw-bold text-gold">Dynamic Texturing</h4>
+                    <p class="text-white-p small">Menambahkan detail emosional dan layer suara untuk memastikan lagu Anda memiliki dinamika yang bercerita.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding" style="background: #080808;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-4">VERSATILITY IN <span class="text-gold">GENRES</span></h2>
+                <p class="text-white-p">Apapun warna musik Anda, tim arranger kami memiliki pengalaman luas dalam berbagai spektrum audio.</p>
+                <p class="text-white-p small">Dari aransemen orkestra yang kompleks untuk scoring film hingga produksi pop-electronic modern yang catchy.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-3">
+    <div class="col-6 col-md-4">
+        <div class="genre-card"><i class="bi bi-mic-fill text-gold"></i>Pop & RnB</div>
+    </div>
+    <div class="col-6 col-md-4">
+        <div class="genre-card"><i class="bi bi-film text-gold"></i>Cinematic</div>
+    </div>
+    <div class="col-6 col-md-4">
+        <div class="genre-card"><i class="bi bi-cpu-fill text-gold"></i>Electronic</div>
+    </div>
+    <div class="col-6 col-md-4">
+        <div class="genre-card"><i class="bi bi-lightning-charge-fill text-gold"></i>Rock & Indie</div>
+    </div>
+   <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-music-player-fill text-gold"></i>Jazz Fusion</div>
+                    </div>
+    <div class="col-6 col-md-4">
+        <div class="genre-card"><i class="bi bi-megaphone-fill text-gold"></i>Commercial</div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding text-center">
+    <div class="container">
+        <div class="info-box py-5 border-gold">
+            <h2 class="fw-bold">READY TO START YOUR <span class="text-gold">PRODUCTIONS?</span></h2>
+            <p class="text-white-p mb-4">Bawa demo sederhana Anda, dan biarkan kami mengubahnya menjadi kualitas standar industri.</p>
+            <a href="contact.html" class="btn btn-outline-warning btn-lg px-5">Contact Arranger</a>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3 text-white">FOLLOW US</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

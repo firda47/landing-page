@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kopi Senja | Tentang Kami</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
+        
+        /* Custom Styles */
+        .header-about {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070');
+            background-size: cover; background-position: center;
+            padding: 120px 0; color: white; text-align: center;
+        }
+        .bg-cream { background-color: #fdfaf5; }
+        .img-about { border-radius: 20px; box-shadow: 15px 15px 0px #ffc107; }
+        .timeline-item { border-left: 3px solid #ffc107; padding-left: 20px; position: relative; }
+        .timeline-item::before {
+            content: ""; position: absolute; left: -11px; top: 0;
+            width: 20px; height: 20px; background: #ffc107; border-radius: 50%;
+        }
+        .team-card img { border-radius: 15px; height: 300px; object-fit: cover; filter: grayscale(100%); transition: 0.3s; }
+        .team-card:hover img { filter: grayscale(0%); transform: translateY(-10px); }
+        .nav-link:hover { color: #ffc107 !important; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Logo" width="35" class="me-2">
+            <span class="fw-bold">Kopi Senja</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header-about">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Dedikasi Dalam Tiap Seduhan</h1>
+        <p class="lead fs-4">Mengenal lebih dekat rumah bagi para penikmat kopi.</p>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000" class="img-fluid img-about" alt="Tentang Kami">
+            </div>
+            <div class="col-lg-6">
+                <h6 class="text-warning fw-bold text-uppercase">Our Story</h6>
+                <h2 class="display-5 fw-bold mb-4">Membangun Komunitas Lewat Secangkir Kopi</h2>
+                <p class="text-muted">Dimulai dari sebuah garasi kecil di sudut kota pada tahun 2023, Kopi Senja didirikan dengan satu misi sederhana: membawa kualitas kopi artisan ke semua lapisan masyarakat.</p>
+                <p class="text-muted">Kami menyediakan ruang di mana ide lahir, persahabatan terjalin, dan penat hilang. Setiap biji kopi yang kami gunakan telah melewati proses seleksi ketat untuk memastikan profil rasa yang konsisten.</p>
+                <div class="row mt-4 g-3 text-center text-sm-start">
+                    <div class="col-sm-4">
+                        <h3 class="fw-bold text-dark">03</h3>
+                        <p class="text-muted small">Cabang di Jakarta</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="fw-bold text-dark">12+</h3>
+                        <p class="text-muted small">Barista Sertifikasi</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3 class="fw-bold text-dark">100%</h3>
+                        <p class="text-muted small">Biji Kopi Lokal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-cream">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Perjalanan Kami</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="timeline-item mb-4">
+                    <h5 class="fw-bold">Januari 2023</h5>
+                    <p class="text-muted">Kedai pertama resmi dibuka di kawasan Jakarta Selatan.</p>
+                </div>
+                <div class="timeline-item mb-4">
+                    <h5 class="fw-bold">Agustus 2024</h5>
+                    <p class="text-muted">Meraih penghargaan "The Most Cozy Cafe" versi Majalah Kuliner.</p>
+                </div>
+                <div class="timeline-item mb-4">
+                    <h5 class="fw-bold">Desember 2025</h5>
+                    <p class="text-muted">Meluncurkan lini biji kopi kemasan (Coffee Beans) untuk penikmat rumahan.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="fw-bold">Maret 2026</h5>
+                    <p class="text-muted">Memulai program "Sustainability Farmer" untuk membantu petani lokal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Orang di Balik Layar</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/1200x/6c/28/6e/6c286ea85654384ee32680eb811e5d92.jpg" class="img-fluid mb-3" alt="Founder">
+                    <h5 class="fw-bold">Aris Pratama</h5>
+                    <p class="text-warning fw-bold">Founder & Head Roaster</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/b6/b2/9f/b6b29f0752d3530e2e7cebbf09e1e5ab.jpg" class="img-fluid mb-3" alt="Head Barista">
+                    <h5 class="fw-bold">Siska Wijaya</h5>
+                    <p class="text-warning fw-bold">Head Barista</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/c7/cc/69/c7cc69e4dc1fc74478db2e8014add06b.jpg" class="img-fluid mb-3" alt="Manager">
+                    <h5 class="fw-bold">Dimas Anggara</h5>
+                    <p class="text-warning fw-bold">Store Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white">
+    <div class="container text-center py-4">
+        <h2 class="fw-bold mb-5 text-warning">Nilai Yang Kami Pegang</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <i class="bi bi-heart-fill fs-1 text-warning"></i>
+                <h5 class="mt-3">Integritas</h5>
+                <p class="small text-white-50">Kejujuran dalam setiap gram kopi yang kami timbang.</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-people-fill fs-1 text-warning"></i>
+                <h5 class="mt-3">Komunitas</h5>
+                <p class="small text-white-50">Menjadi wadah bagi siapa saja untuk berbagi cerita.</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-award-fill fs-1 text-warning"></i>
+                <h5 class="mt-3">Kualitas</h5>
+                <p class="small text-white-50">Hanya menggunakan bahan terbaik tanpa kompromi.</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-geo-alt-fill fs-1 text-warning"></i>
+                <h5 class="mt-3">Lokal</h5>
+                <p class="small text-white-50">Mendukung penuh ekosistem kopi nusantara.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-4 bg-light border-top">
+    <div class="container text-center">
+        <div class="mb-3">
+            <a href="https://www.instagram.com/" class="text-dark mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/" class="text-dark mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/" class="text-dark mx-2 fs-4"><i class="bi bi-twitter"></i></a>
+        </div>
+        <p class="mb-0 text-muted">&copy; 2026 <b>Kopi Senja</b>. Jalan Kenangan No. 45, Jakarta.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

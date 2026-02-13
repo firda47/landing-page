@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Equipment List | EchoVibe Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        
+        /* NAVBAR UNIFORM */
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+        
+        /* DROPDOWN RAPAT */
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--gold-accent); color: black; }
+
+        /* GEAR STYLES */
+        .gear-section { padding: 80px 0; border-bottom: 1px solid #222; }
+        .gear-category-title { color: var(--gold-accent); font-weight: 800; border-left: 4px solid var(--gold-accent); padding-left: 15px; margin-bottom: 40px; }
+        .gear-item { background: var(--bg-card); border: 1px solid #222; padding: 20px; border-radius: 10px; transition: 0.3s; height: 100%; }
+        .gear-item:hover { border-color: var(--gold-accent); transform: translateY(-5px); }
+        .gear-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
+        .gear-desc { color: #aaa; font-size: 0.85rem; margin-bottom: 0; }
+        
+        .text-gold { color: var(--gold-accent); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Layanan</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="tracking.html">Rekaman / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html">Aransemen Musik</a></li>
+                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Studio Latihan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: var(--gold-accent) !important;">Alat-Alat</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="gear.html#microphones" >Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments" >Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog" >Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portofolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-3 fw-bold">THE <span class="text-gold"> GEAR LIST</span></h1>
+            <p class="text-white-p opacity-75">Kami hanya menggunakan perangkat standar industri terbaik untuk menjaga kualitas karya Anda.</p>
+        </div>
+
+        <div class="gear-section" id="microphones">
+            <h2 class="gear-category-title">MICROPHONES</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gear-item">
+                        <p class="gear-name">Neumann U87 Ai</p>
+                        <p class="gear-desc">Standar emas dunia untuk vokal dan instrumen akustik yang detail.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item">
+                        <p class="gear-name">AKG C414 XLS</p>
+                        <p class="gear-desc">Kondensor multi-pattern yang serbaguna untuk menangkap kejernihan suara.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item">
+                        <p class="gear-name">Shure SM7B</p>
+                        <p class="gear-desc">Sangat ikonik untuk vokal rock, podcast, dan siaran dengan karakter yang tebal.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item">
+                        <p class="gear-name">Sennheiser MD421-II</p>
+                        <p class="gear-desc">Sangat legendaris untuk drum, perkusi, dan cabinet gitar.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item">
+                        <p class="gear-name">Royer R-121</p>
+                        <p class="gear-desc">Mic Ribbon premium untuk hasil suara yang hangat dan tekstur alami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gear-section" id="analog">
+            <h2 class="gear-category-title">ANALOG OUTBOARD</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="gear-item">
+                        <p class="gear-name">Universal Audio LA-2A</p>
+                        <p class="gear-desc">Kompresor tabung optik klasik untuk hasil vokal yang halus dan rata.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gear-item">
+                        <p class="gear-name">Universal Audio 1176LN</p>
+                        <p class="gear-desc">Limiting FET cepat untuk drum yang bertenaga dan vokal yang agresif.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gear-item">
+                        <p class="gear-name">Neve 1073DPD</p>
+                        <p class="gear-desc">Preamp dual mono dengan karakter suara "British" yang legendaris.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gear-item">
+                        <p class="gear-name">SSL G-Series Bus Compressor</p>
+                        <p class="gear-desc">Efek "lem" (glue) rahasia yang menyatukan seluruh elemen dalam mix Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gear-section" id="instruments">
+            <h2 class="gear-category-title">INSTRUMENTS</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gear-item text-center">
+                        <i class="bi bi-music-note-beamed text-gold display-6 mb-2"></i>
+                        <p class="gear-name">Fender Stratocaster 1962 Reissue</p>
+                        <p class="gear-desc">Gitar ikonik dengan karakter vintage yang jernih.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item text-center">
+                        <i class="bi bi-music-note-beamed text-gold display-6 mb-2"></i>
+                        <p class="gear-name">Gibson Les Paul Standard</p>
+                        <p class="gear-desc">Menghasilkan suara tebal dan sustain tak tertandingi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gear-item text-center">
+                        <i class="bi bi-music-note-beamed text-gold display-6 mb-2"></i>
+                        <p class="gear-name">Tama Starclassic Drum Kit</p>
+                        <p class="gear-desc">Set drum premium untuk hentakan yang solid dan presisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3 text-white">IKUTI KAMI</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

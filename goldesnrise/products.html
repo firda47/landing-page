@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk & Layanan - Goldenrise Foods</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* VARIABLES & BASE */
+        :root { --primary-dark: #2c2c2c; --primary-gold: #D4AF37; --bg-light: #f9f9f9; --text-body: #555555; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-body); overflow-x: hidden; }
+        a { text-decoration: none; }
+        
+        /* NAVBAR TRANSPARAN */
+        .navbar-custom { transition: all 0.4s ease; padding: 20px 0; background-color: transparent; }
+        .navbar-custom.scrolled { background-color: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 12px 0; }
+        
+        .navbar-brand { font-weight: 800; font-size: 1.5rem; color: #fff !important; transition: 0.3s; }
+        .navbar-custom.scrolled .navbar-brand { color: var(--primary-dark) !important; }
+        
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 10px; }
+        .navbar-custom.scrolled .nav-link { color: var(--primary-dark) !important; }
+        .nav-link:hover { color: var(--primary-gold) !important; }
+        
+        /* Navbar Toggler */
+        .navbar-toggler { border-color: rgba(255,255,255,0.5); }
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28212, 175, 55, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-custom.scrolled .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 44, 44, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-custom.scrolled .navbar-toggler { border-color: rgba(0,0,0,0.1); }
+
+        .btn-gold { background: linear-gradient(45deg, var(--primary-gold), #eacda3); border: none; color: var(--primary-dark); font-weight: 700; padding: 10px 25px; border-radius: 30px; transition: 0.3s; }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); }
+        
+        /* HEADER - FOTO BACKGROUND DIGANTI DI SINI */
+        .page-header { 
+            /* Menggunakan foto fasilitas produksi pangan modern */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1565895405139-e188df996e0b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        /* PRODUCT STYLES */
+        .product-section { padding: 80px 0; border-bottom: 1px solid #eee; }
+        .prod-img { border-radius: 20px; width: 100%; height: 400px; object-fit: cover; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: 0.3s; }
+        .prod-img:hover { transform: scale(1.02); }
+        
+        .cat-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; color: var(--primary-dark); line-height: 1.2; }
+        
+        /* Product Item Box */
+        .product-item { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; transition: 0.3s; border: 1px solid #f0f0f0; }
+        .product-item:hover { transform: translateY(-5px); border-bottom: 4px solid var(--primary-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        .check-list li { margin-bottom: 10px; list-style: none; display: flex; align-items: start; font-size: 0.95rem; }
+        .check-list li i { color: var(--primary-gold); margin-right: 12px; margin-top: 5px; }
+        
+        .oem-section { background-color: var(--primary-dark); color: white; padding: 100px 0; }
+        
+        /* FOOTER */
+        footer { background-color: #1a1a1a; color: #bbb; padding: 80px 0 30px; }
+        footer h5 { color: #fff; margin-bottom: 25px; }
+        footer a { color: #bbb; transition: 0.3s; }
+        footer a:hover { color: var(--primary-gold); padding-left: 5px; }
+        footer .contact-info li { color: #ffffff !important; }
+        .social-links a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); color: white; justify-content: center; align-items: center; border-radius: 50%; margin-right: 10px; transition: 0.3s; }
+        .social-links a:hover { background: var(--primary-gold); color: #1a1a1a; padding-left: 0; }
+        
+        @media(max-width: 991px) { .navbar-toggler { margin-right: 10px; } }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-wheat-awn me-2 text-warning"></i> GOLDENRISE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="quality.html">Kualitas</a></li>
+                <li class="nav-item ms-lg-3"><a href="contact.html" class="btn btn-gold btn-sm px-4">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container" data-aos="fade-up">
+        <h5 class="text-warning text-uppercase ls-2 fw-bold">PRODUK & LAYANAN</h5>
+        <h1 class="display-3 fw-bold">Solusi Pangan Terpadu</h1>
+        <p class="lead text-white mt-3">Dari bahan baku premium hingga produk siap saji, kami memenuhi standar industri global.</p>
+    </div>
+</header>
+
+<section class="product-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" class="prod-img" alt="Bakery Production">
+            </div>
+            <div class="col-lg-7 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                <h2 class="cat-title">Bread &<br>Bakery Solutions</h2>
+                <p class="text-muted mb-4 lead">Kami menyediakan fondasi terbaik untuk bisnis roti dan kue Anda. Mulai dari adonan beku yang praktis hingga tepung racikan presisi untuk hasil yang konsisten.</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-bread-slice text-warning me-2"></i> Frozen Dough</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Croissant Butter (30gr - 90gr)</li>
+                                <li><i class="fas fa-check"></i> Danish Pastry Sheet</li>
+                                <li><i class="fas fa-check"></i> Roti Manis & Donat Beku</li>
+                                <li><i class="fas fa-check"></i> Par-baked Baguette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-birthday-cake text-warning me-2"></i> Premix Flour</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Sponge Cake & Chiffon Mix</li>
+                                <li><i class="fas fa-check"></i> Muffin & Brownies Mix</li>
+                                <li><i class="fas fa-check"></i> Waffle & Pancake Horeca</li>
+                                <li><i class="fas fa-check"></i> Tepung Roti Gandum</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-section bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5 order-2 order-lg-1" data-aos="fade-right">
+                <h2 class="cat-title">Savory &<br>Ready-to-Eat</h2>
+                <p class="text-muted mb-4 lead">Solusi praktis untuk dapur komersial dan industri retail. Mengurangi waktu persiapan hingga 70% dengan rasa yang terstandarisasi melalui teknologi sterilisasi retort.</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-utensils text-warning me-2"></i> Retort Meals</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Rendang & Kari Sapi (Shelf Stable)</li>
+                                <li><i class="fas fa-check"></i> Opor Ayam & Gudeg Kaleng</li>
+                                <li><i class="fas fa-check"></i> Nasi Goreng Pouch</li>
+                                <li><i class="fas fa-check"></i> Cream Soup Series</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-pepper-hot text-warning me-2"></i> Sauces & Condiments</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Sambal Terasi / Bawang / Ijo</li>
+                                <li><i class="fas fa-check"></i> Saus Pasta (Bolognese, Carbonara)</li>
+                                <li><i class="fas fa-check"></i> Marinasi BBQ & Teriyaki</li>
+                                <li><i class="fas fa-check"></i> Salad Dressing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80" class="prod-img" alt="Ready Meal Production">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+                <img src="https://i.pinimg.com/736x/0e/cd/07/0ecd0786e139032ab1002d7e4dfda72a.jpg"  class="prod-img" alt="Bahan Baku Premium">
+            </div>
+            <div class="col-lg-7 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                <h2 class="cat-title">Ingredients &<br>Healthy Choices</h2>
+                <p class="text-muted mb-4 lead">Bahan baku pilihan yang telah melalui proses seleksi ketat serta solusi untuk gaya hidup sehat modern.</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-cubes text-warning me-2"></i> Industrial Ingredients</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Gula Halus (Icing Sugar)</li>
+                                <li><i class="fas fa-check"></i> Cocoa Powder Premium</li>
+                                <li><i class="fas fa-check"></i> Ekstrak Vanilla & Pasta Perasa</li>
+                                <li><i class="fas fa-check"></i> Baking Powder & Improver</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-item">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-heartbeat text-warning me-2"></i> Healthy Series</h5>
+                            <ul class="check-list p-0 text-muted">
+                                <li><i class="fas fa-check"></i> Gluten-Free Flour Mix</li>
+                                <li><i class="fas fa-check"></i> Low GI Sugar (Gula Rendah Kalori)</li>
+                                <li><i class="fas fa-check"></i> Plant-Based Meat Alternative</li>
+                                <li><i class="fas fa-check"></i> High Fiber Cookies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oem-section">
+    <div class="container text-center">
+        <h5 class="text-warning text-uppercase ls-2">LAYANAN EKSLUSIF</h5>
+        <h2 class="display-5 fw-bold mb-4">OEM & Private Label Manufacturing</h2>
+        <p class="lead mx-auto mb-5" style="max-width: 800px; opacity: 0.8;">
+            Punya ide produk makanan tapi tidak punya pabrik? Kami menyediakan jasa maklon (contract manufacturing) dari formulasi resep, legalitas BPOM, hingga produksi massal dengan merek Anda sendiri.
+        </p>
+        
+        <div class="row g-4 justify-content-center mb-5">
+            <div class="col-md-3">
+                <div class="p-4 border border-secondary rounded">
+                    <i class="fas fa-flask fa-2x text-warning mb-3"></i>
+                    <h5 class="fw-bold">R&D Custom</h5>
+                    <p class="small opacity-75 mb-0">Peracikan rasa sesuai target pasar Anda.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border border-secondary rounded">
+                    <i class="fas fa-file-contract fa-2x text-warning mb-3"></i>
+                    <h5 class="fw-bold">Legalitas</h5>
+                    <p class="small opacity-75 mb-0">Bantuan pendaftaran BPOM & Halal.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border border-secondary rounded">
+                    <i class="fas fa-industry fa-2x text-warning mb-3"></i>
+                    <h5 class="fw-bold">Produksi</h5>
+                    <p class="small opacity-75 mb-0">Manufaktur skala besar yang higienis.</p>
+                </div>
+            </div>
+        </div>
+        
+        <a href="contact.html" class="btn btn-gold btn-lg px-5">Diskusikan Proyek Anda</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            <div class="col-lg-5 mb-4">
+                <h3 class="text-white fw-bold mb-3"><i class="fas fa-wheat-awn text-warning me-2"></i>GOLDENRISE</h3>
+                <p class="small line-height-lg">
+                    Produsen makanan terpercaya yang berkomitmen menghadirkan kebaikan di setiap sajian melalui bahan baku berkualitas dan teknologi modern.
+                </p>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h5>Navigasi Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html">Beranda</a></li>
+                    <li class="mb-2"><a href="about.html">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="products.html">Produk</a></li>
+                    <li class="mb-2"><a href="quality.html">Kualitas</a></li>
+                    <li class="mb-2"><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h5>Kontak</h5>
+                <ul class="list-unstyled contact-info text-white">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt text-warning me-2"></i> Jl. Industri Raya No. 50, Jakarta Barat, 11050</li>
+                    <li class="mb-3"><i class="fas fa-phone text-warning me-2"></i> (021) 555-0199</li>
+                    <li class="mb-3"><i class="fas fa-envelope text-warning me-2"></i> hello@goldenrisefoods.co</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+        <div class="text-center small">
+            <p class="mb-0">© 2025 Goldenrise Foods Manufacturing. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS Animation
+    AOS.init({ once: true, offset: 100, duration: 800 });
+
+    // Navbar Scroll Logic
+    const navbar = document.getElementById('mainNav');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            navbar.classList.remove('navbar-dark');
+            navbar.classList.add('navbar-light');
+        } else {
+            navbar.classList.remove('scrolled');
+            navbar.classList.add('navbar-dark');
+            navbar.classList.remove('navbar-light');
+        }
+    });
+</script>
+
+</body>
+</html>

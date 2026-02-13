@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tim Dokter Ahli | Happy Paws</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; }
+        .navbar { background-color: #ffffff !important; padding: 18px 0; border-bottom: 2px solid #f0f4f8; }
+        .navbar-brand { color: #2a9d8f !important; font-size: 1.6rem; }
+        .nav-link { color: #555 !important; font-weight: 500; }
+        @media (min-width: 992px) { .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.08); } }
+        
+        .doc-card { background: white; border-radius: 30px; border: 1px solid #f0f4f8; transition: 0.3s; overflow: hidden; height: 100%; }
+        .doc-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .doc-img { height: 300px; width: 100%; object-fit: cover; }
+        .schedule-table { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="me-2">🐾</span> <span class="fw-bold">Happy Paws</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Layanan</a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="medis.html">🩺 Layanan Medis</a></li>
+                        <li><a class="dropdown-item" href="grooming.html">🧼 Grooming & Spa</a></li>
+                        <li><a class="dropdown-item" href="hotel.html">🏨 Pet Hotel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link active" href="dokter.html">Dokter</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Tim Medis Kami</h1>
+        <p class="text-muted mx-auto" style="max-width: 600px;">Ditangani oleh dokter hewan profesional yang tersertifikasi dan memiliki pengalaman bertahun-tahun dalam menangani berbagai spesies anabul.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="doc-card">
+                <img src="https://i.pinimg.com/736x/b1/29/51/b12951be457a7a22c5771dbe4cdf4d4e.jpg" class="doc-img" alt="Dokter">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-1">drh. Sarah Wijaya</h4>
+                    <p class="text-success fw-bold small mb-3">Spesialis Penyakit Dalam (Internist)</p>
+                    <p class="text-muted small">Lulusan IPB dengan pengalaman 10 tahun. Ahli dalam menangani kasus kronis dan sistem imun hewan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="doc-card">
+                <img src="https://i.pinimg.com/1200x/34/36/3b/34363b47c41d8b9ee62923b75af2788b.jpg" class="doc-img" alt="Dokter">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-1">drh. Andi Pratama</h4>
+                    <p class="text-success fw-bold small mb-3">Spesialis Bedah & Orthopedic</p>
+                    <p class="text-muted small">Ahli dalam tindakan bedah mayor, rekonstruksi tulang, dan sterilisasi metode minimal invasif.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="doc-card">
+                <img src="https://i.pinimg.com/736x/84/d5/1d/84d51de0353e946673852e7f17e7a807.jpg" class="doc-img" alt="Dokter">
+                <div class="p-4">
+                    <h4 class="fw-bold mb-1">drh. Mia Lestari</h4>
+                    <p class="text-success fw-bold small mb-3">Dokter Hewan Eksotis</p>
+                    <p class="text-muted small">Memiliki keahlian khusus menangani kelinci, hamster, reptil, dan burung. Fokus pada kesehatan preventif.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 p-4 p-md-5 schedule-table">
+        <h3 class="fw-bold mb-4 text-center">Jadwal Praktek Mingguan</h3>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Dokter</th>
+                        <th>Senin - Rabu</th>
+                        <th>Kamis - Sabtu</th>
+                        <th>Minggu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>drh. Sarah Wijaya</strong></td>
+                        <td>08.00 - 14.00</td>
+                        <td>14.00 - 20.00</td>
+                        <td>Libur</td>
+                    </tr>
+                    <tr>
+                        <td><strong>drh. Andi Pratama</strong></td>
+                        <td>14.00 - 20.00</td>
+                        <td>08.00 - 14.00</td>
+                        <td>On-Call</td>
+                    </tr>
+                    <tr>
+                        <td><strong>drh. Mia Lestari</strong></td>
+                        <td>09.00 - 17.00</td>
+                        <td>09.00 - 17.00</td>
+                        <td>09.00 - 15.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer class="py-5 bg-white border-top mt-5">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h4 class="fw-bold" style="color: #2a9d8f;">🐾 Happy Paws</h4>
+                <p class="text-muted small mt-3">Klinik hewan yang mengutamakan kenyamanan dan kesehatan hewan peliharaan Anda dengan standar medis internasional.</p>
+                <div class="mt-4">
+                    <a href="https://www.instagram.com/" class="text-dark me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/" class="text-dark me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/" class="text-dark fs-5"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1">
+                <h6 class="fw-bold mb-3">Navigasi</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="medis.html" class="text-decoration-none text-muted">Layanan Medis</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-muted">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-bold mb-3">Jam Buka</h6>
+                <p class="text-muted small mb-1">Senin - Sabtu</p>
+                <p class="fw-bold small mb-3">08.00 - 20.00</p>
+                <p class="text-muted small mb-1">Minggu</p>
+                <p class="fw-bold small">09.00 - 15.00</p>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="fw-bold mb-3">Kantor Pusat</h6>
+                <p class="text-muted small"><i class="bi bi-geo-alt me-2"></i>Jl. Bahagia Anabul No. 88, Jakarta Selatan</p>
+                <p class="text-muted small"><i class="bi bi-telephone me-2"></i>(021) 555-PAWS</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="text-center text-muted small mb-0">&copy; 2026 <b>Happy Paws</b>. Semua Hak Dilindungi.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

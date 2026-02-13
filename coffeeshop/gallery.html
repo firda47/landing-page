@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kopi Senja | Galeri Lengkap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+        h1, h2, .navbar-brand { font-family: 'Playfair Display', serif; }
+        
+        .header-gallery {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=2000');
+            background-size: cover; background-position: center;
+            padding: 100px 0; color: white; text-align: center;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 350px; 
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Stats Section */
+        .stats-bar {
+            background: #212529;
+            color: #ffc107;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Logo" width="35" class="me-2">
+            <span class="fw-bold">Kopi Senja</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header-gallery">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Visual Senja</h1>
+        <p class="lead fs-4">Setiap foto bercerita tentang kualitas dan kenyamanan.</p>
+    </div>
+</header>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800" alt="Cafe">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Indoor Space</h5>
+                    <p class="small mb-0">Desain industrial yang hangat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800" alt="Kopi">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Latte Art</h5>
+                    <p class="small mb-0">Sentuhan tangan barista profesional.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800" alt="Outdoor">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Outdoor Area</h5>
+                    <p class="small mb-0">Tempat terbaik menikmati angin sore.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=800" alt="Coffee Cup">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Morning Coffee</h5>
+                    <p class="small mb-0">Mood booster sebelum beraktivitas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=800" alt="Pastry">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Freshly Baked</h5>
+                    <p class="small mb-0">Pastry hangat setiap harinya.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/1200x/00/e4/08/00e4083bc1148f029d55a8a8a8a46538.jpg" alt="Meeting">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Work from Cafe</h5>
+                    <p class="small mb-0">Fasilitas WiFi kencang dan colokan banyak.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800" alt="Barista">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Brewing Process</h5>
+                    <p class="small mb-0">Kualitas di setiap tetes seduhan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?q=80&w=800" alt="Night">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Night Ambience</h5>
+                    <p class="small mb-0">Tetap nyaman hingga larut malam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800" alt="V60">
+                <div class="gallery-overlay">
+                    <h5 class="fw-bold">Manual Brew</h5>
+                    <p class="small mb-0">Eksplorasi biji kopi nusantara.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="stats-bar text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6 mb-3">
+                <h2 class="fw-bold">500+</h2>
+                <p class="small text-white">Cangkir/Hari</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <h2 class="fw-bold">50+</h2>
+                <p class="small text-white">Menu Pilihan</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <h2 class="fw-bold">1000+</h2>
+                <p class="small text-white">Member Aktif</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <h2 class="fw-bold">4.8</h2>
+                <p class="small text-white">Rating Google</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="py-4 bg-light border-top">
+    <div class="container text-center">
+        <div class="mb-3">
+            <a href="https://www.instagram.com/" class="text-dark mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/" class="text-dark mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/" class="text-dark mx-2 fs-4"><i class="bi bi-twitter"></i></a>
+        </div>
+        <p class="mb-0 text-muted">&copy; 2026 <b>Kopi Senja</b>. Jalan Kenangan No. 45, Jakarta.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Kami - Goldenrise Foods</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* VARIABLES & BASE */
+        :root { --primary-dark: #2c2c2c; --primary-gold: #D4AF37; --bg-light: #f9f9f9; --text-body: #555555; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-body); overflow-x: hidden; }
+        a { text-decoration: none; }
+        
+        /* NAVBAR */
+        .navbar-custom { transition: all 0.4s ease; padding: 20px 0; background-color: transparent; }
+        .navbar-custom.scrolled { background-color: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 12px 0; }
+        .navbar-brand { font-weight: 800; font-size: 1.5rem; color: #fff !important; transition: 0.3s; }
+        .navbar-custom.scrolled .navbar-brand { color: var(--primary-dark) !important; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 10px; }
+        .navbar-custom.scrolled .nav-link { color: var(--primary-dark) !important; }
+        .nav-link:hover { color: var(--primary-gold) !important; }
+        
+        /* Navbar Toggler (Strip 3) */
+        .navbar-toggler { border-color: rgba(255,255,255,0.5); }
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28212, 175, 55, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-custom.scrolled .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 44, 44, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+        .navbar-custom.scrolled .navbar-toggler { border-color: rgba(0,0,0,0.1); }
+
+        .btn-gold { background: linear-gradient(45deg, var(--primary-gold), #eacda3); border: none; color: var(--primary-dark); font-weight: 700; padding: 12px 35px; border-radius: 30px; transition: 0.3s; }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); }
+        
+        /* HEADER */
+        .page-header { 
+            background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; padding: 180px 0 100px; text-align: center; color: white; margin-bottom: 60px; 
+        }
+        
+        /* CONTENT STYLES */
+        .info-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); display: flex; align-items: flex-start; margin-bottom: 20px; transition: 0.3s; border-left: 4px solid transparent; }
+        .info-box:hover { transform: translateY(-5px); border-left: 4px solid var(--primary-gold); }
+        .info-icon { font-size: 24px; color: var(--primary-gold); background: rgba(212, 175, 55, 0.1); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 20px; flex-shrink: 0; }
+        
+        .contact-form-wrapper { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); height: 100%; }
+        .form-control { padding: 12px 20px; border-radius: 10px; border: 1px solid #eee; background-color: #fcfcfc; }
+        .form-control:focus { box-shadow: none; border-color: var(--primary-gold); background-color: #fff; }
+        
+        .map-section { width: 100%; height: 500px; margin-top: 80px; border-top: 5px solid var(--primary-gold); }
+        .map-iframe { width: 100%; height: 100%; border: 0; filter: grayscale(20%); transition: 0.3s; }
+        .map-iframe:hover { filter: grayscale(0%); }
+
+        /* FOOTER */
+        footer { background-color: #1a1a1a; color: #bbb; padding: 70px 0 30px; }
+        footer h5 { color: #fff; margin-bottom: 25px; }
+        footer a { color: #bbb; transition: 0.3s; }
+        footer a:hover { color: var(--primary-gold); padding-left: 5px; }
+        footer .contact-info li { color: #ffffff !important; }
+        .social-links a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); color: white; justify-content: center; align-items: center; border-radius: 50%; margin-right: 10px; transition: 0.3s; }
+        .social-links a:hover { background: var(--primary-gold); color: #1a1a1a; padding-left: 0; }
+        
+        @media(max-width: 768px) {
+            .navbar-toggler { margin-right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-wheat-awn me-2 text-warning"></i> GOLDENRISE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="quality.html">Kualitas</a></li>
+                <li class="nav-item ms-lg-3"><a href="contact.html" class="btn btn-gold btn-sm px-4">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container" data-aos="fade-up">
+        <h1>Hubungi Kami</h1>
+        <p class="text-white">Kami siap mendengar kebutuhan bisnis Anda.</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row g-5">
+        
+        <div class="col-lg-5" data-aos="fade-right">
+            <div class="mb-4">
+                <h5 class="text-warning text-uppercase ls-2 fw-bold">Punya Pertanyaan?</h5>
+                <h2 class="fw-bold mb-3">Mari Berdiskusi</h2>
+                <p class="text-muted">Kami siap membantu kebutuhan manufaktur makanan Anda. Hubungi kami melalui saluran berikut atau kunjungi kantor pusat kami.</p>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                    <h5 class="fw-bold mb-1">Alamat Kantor</h5>
+                    <p class="mb-0 text-muted small">Jl. Industri Raya No. 50, Jakarta Barat, 11050, Indonesia</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                    <h5 class="fw-bold mb-1">Telepon</h5>
+                    <p class="mb-0 text-muted small">(021) 555-0199</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                    <h5 class="fw-bold mb-1">Email</h5>
+                    <p class="mb-0 text-muted small">hello@goldenrisefoods.co</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                    <h5 class="fw-bold mb-1">Jam Operasional</h5>
+                    <p class="mb-0 text-muted small">Senin - Jumat, 08.00 - 17.00 WIB</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+            <div class="contact-form-wrapper">
+                <h3 class="fw-bold mb-4">Kirim Pesan</h3>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">Nama Lengkap</label>
+                                <input type="text" class="form-control" placeholder="Masukkan nama Anda">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">Email</label>
+                                <input type="email" class="form-control" placeholder="email@perusahaan.com">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">Subjek / Keperluan</label>
+                                <select class="form-select form-control">
+                                    <option selected>Pilih Keperluan...</option>
+                                    <option value="1">Permintaan Penawaran (Quotation)</option>
+                                    <option value="2">Kerjasama / Distributor</option>
+                                    <option value="3">Layanan Pelanggan</option>
+                                    <option value="4">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small">Pesan</label>
+                                <textarea class="form-control" rows="6" placeholder="Tuliskan detail pesan Anda di sini..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-gold w-100 py-3 rounded-pill mt-2">
+                                <i class="fas fa-paper-plane me-2"></i> Kirim Pesan
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid p-0" data-aos="fade-up">
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.28318721102!2d106.75628522338867!3d-6.229386744888062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Special%20Capital%20Region%20of%20Jakarta!5e0!3m2!1sen!2sid!4v1708412345678!5m2!1sen!2sid" 
+                class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            <div class="col-lg-5 mb-4">
+                <h3 class="text-white fw-bold mb-3"><i class="fas fa-wheat-awn text-warning me-2"></i>GOLDENRISE</h3>
+                <p class="small line-height-lg">
+                    Produsen makanan terpercaya yang berkomitmen menghadirkan kebaikan di setiap sajian melalui bahan baku berkualitas dan teknologi modern.
+                </p>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h5>Navigasi Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html">Beranda</a></li>
+                    <li class="mb-2"><a href="about.html">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="products.html">Produk</a></li>
+                    <li class="mb-2"><a href="quality.html">Kualitas</a></li>
+                    <li class="mb-2"><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h5>Kontak</h5>
+                <ul class="list-unstyled contact-info text-white">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt text-warning me-2"></i> Jl. Industri Raya No. 50, Jakarta Barat, 11050</li>
+                    <li class="mb-3"><i class="fas fa-phone text-warning me-2"></i> (021) 555-0199</li>
+                    <li class="mb-3"><i class="fas fa-envelope text-warning me-2"></i> hello@goldenrisefoods.co</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary my-5">
+        <div class="text-center small">
+            <p class="mb-0">© 2025 Goldenrise Foods Manufacturing. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        once: true,
+        offset: 100,
+        duration: 800,
+    });
+
+    // Navbar Transition Logic
+    const navbar = document.getElementById('mainNav');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            navbar.classList.remove('navbar-dark');
+            navbar.classList.add('navbar-light');
+        } else {
+            navbar.classList.remove('scrolled');
+            navbar.classList.add('navbar-dark');
+            navbar.classList.remove('navbar-light');
+        }
+    });
+</script>
+
+</body>
+</html>

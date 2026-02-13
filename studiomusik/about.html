@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | EchoVibe Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
+        .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
+        .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--gold-accent) !important; }
+        .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
+        .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
+        .dropdown-item:hover { background: var(--gold-accent); color: black; }
+        .text-white-p { color: #ffffff !important; opacity: 0.9; }
+        .text-gold { color: var(--gold-accent); }
+        .team-card { background: var(--bg-card); border: 1px solid #222; border-radius: 15px; overflow: hidden; transition: 0.3s; }
+        .team-card:hover { border-color: var(--gold-accent); }
+        .team-img { height: 300px; width: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+        .team-card:hover .team-img { filter: grayscale(0%); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">About Studio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="tracking.html">Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Equipments</a>
+                    <ul class="dropdown-menu shadow">
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h1 class="display-3 fw-bold">OUR <span class="text-gold">STORY</span></h1>
+                <p class="text-white-p fs-5 mt-4">EchoVibe Studios didirikan pada tahun 2018 dengan satu visi: memberikan kualitas audio kelas dunia untuk musisi lokal maupun internasional.</p>
+                <p class="text-white-p">Kami menggabungkan teknologi digital tercanggih dengan kehangatan perangkat analog legendaris seperti Neve, SSL, dan Universal Audio.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800" class="img-fluid rounded-4 shadow border border-secondary" alt="Studio">
+            </div>
+        </div>
+
+        <div class="row text-center py-5">
+            <div class="col-md-4">
+                <h2 class="text-gold fw-bold">1000+</h2>
+                <p class="text-white-p">Songs Produced</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-gold fw-bold">50+</h2>
+                <p class="text-white-p">Award Nominations</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-gold fw-bold">100%</h2>
+                <p class="text-white-p">Analog Purest</p>
+            </div>
+        </div>
+
+        <h2 class="text-center fw-bold mt-5 mb-5">THE <span class="text-gold">ENGINEERS</span></h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/1200x/6e/f8/0b/6ef80b30c13cb1771f797311e6eadcc8.jpg" class="team-img">
+                    <div class="p-4 text-center">
+                        <h5 class="fw-bold">Rizky Utama</h5>
+                        <p class="text-gold small">Head Engineer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/4d/7c/86/4d7c86b9e2cdfa68168975ae8a832982.jpg" class="team-img">
+                    <div class="p-4 text-center">
+                        <h5 class="fw-bold">Sarah Amelia</h5>
+                        <p class="text-gold small">Mixing Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <img src="https://i.pinimg.com/736x/3d/e2/28/3de228b02f62ea79823ae4938346049b.jpg" class="team-img">
+                    <div class="p-4 text-center">
+                        <h5 class="fw-bold">Doni Putra</h5>
+                        <p class="text-gold small">Mastering Expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-4 text-lg-end">
+                <h6 class="fw-bold mb-3 text-white">FOLLOW US</h6>
+                <div class="fs-4">
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                </div>
+                <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
