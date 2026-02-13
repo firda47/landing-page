@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Program - KodingKids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="code-symbol">&lt;/&gt;</div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">KodingKids</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="programs.html" class="active">Program</a></li>
+                <li><a href="blog.html">Artikel</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Program Detail -->
+    <section class="program-detail-page" id="programDetail">
+        <div class="container">
+            <div class="program-detail-header fade-in">
+                <div class="program-icon-xl" id="programIcon">💻</div>
+                <h1 id="programTitle">Coding Dasar untuk Anak</h1>
+                <p id="programDescription">Program ini dirancang khusus untuk anak-anak...</p>
+            </div>
+
+            <div class="program-info-grid fade-in-scroll">
+                <div class="info-box">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-content">
+                        <h4>Durasi</h4>
+                        <p id="programDuration">3 Bulan</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">👥</div>
+                    <div class="info-content">
+                        <h4>Usia</h4>
+                        <p id="programAge">8-12 tahun</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">📚</div>
+                    <div class="info-content">
+                        <h4>Metode</h4>
+                        <p id="programMethod">Project-based learning</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">📅</div>
+                    <div class="info-content">
+                        <h4>Jadwal</h4>
+                        <p id="programSchedule">2x seminggu @ 90 menit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-content-grid">
+                <div class="program-content-box fade-in-scroll">
+                    <h2>Hasil Belajar</h2>
+                    <ul id="programOutcomes" class="check-list">
+                        <li>Memahami konsep dasar pemrograman</li>
+                        <li>Mampu berpikir logis dan sistematis</li>
+                        <li>Membuat mini project sederhana</li>
+                    </ul>
+                </div>
+
+                <div class="program-content-box fade-in-scroll">
+                    <h2>Silabus Pembelajaran</h2>
+                    <ul id="programSyllabus" class="numbered-list">
+                        <li>Pengenalan Coding dan Algoritma</li>
+                        <li>Visual Programming dengan Scratch</li>
+                        <li>Konsep Variabel dan Tipe Data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-box fade-in-scroll">
+                <h2>Siap Mendaftarkan Anak Anda?</h2>
+                <p>Hubungi kami untuk informasi lebih lanjut dan pendaftaran!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Daftar Sekarang</a>
+                    <a href="programs.html" class="btn btn-secondary">Lihat Program Lain</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="logo-icon">&lt;/&gt;</span> KodingKids</h3>
+                    <p>Membantu anak Indonesia berpikir logis dan kreatif melalui coding.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="programs.html">Program</a></li>
+                        <li><a href="blog.html">Artikel</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodingkids.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Bogor, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KodingKids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

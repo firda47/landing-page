@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Makeup Natural untuk Sehari-hari yang Tahan Lama - Belle Lumière</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-hero {
+            padding: 150px 0 80px;
+            background: var(--gray-color);
+        }
+
+        .article-header {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .article-header .article-category {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .article-meta-detail {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .article-featured-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .article-body h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin: 40px 0 20px;
+        }
+
+        .article-body h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin: 30px 0 15px;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 20px 0 20px 30px;
+            line-height: 1.9;
+        }
+
+        .article-body li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .article-body strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .tip-box {
+            background: var(--accent-color);
+            padding: 25px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .tip-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .author-box {
+            background: var(--gray-color);
+            padding: 40px;
+            border-radius: 10px;
+            display: flex;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .author-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .related-articles {
+            background: var(--gray-color);
+            padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+
+            .article-meta-detail {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .author-photo {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Belle Lumière</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="articles.html" class="active">Artikel</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-header">
+                <span class="article-category">Makeup</span>
+                <h1>Tutorial Makeup Natural untuk Sehari-hari yang Tahan Lama</h1>
+                <div class="article-meta-detail">
+                    <span>📅 5 Februari 2026</span>
+                    <span>✍️ Melissa Tan</span>
+                    <span>⏱️ 6 menit baca</span>
+                </div>
+            </div>
+            <div class="article-featured-image">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=1200&h=600&fit=crop" alt="Natural Makeup Tutorial">
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <article class="article-body">
+        <p>Makeup natural adalah pilihan sempurna untuk aktivitas sehari-hari. Tampilannya fresh, tidak berlebihan, namun tetap membuat Anda terlihat rapi dan percaya diri. Yang terpenting, makeup natural mudah diaplikasikan dan cocok untuk berbagai kesempatan - dari kerja, kuliah, hingga hangout santai.</p>
+
+        <p>Dalam tutorial ini, saya akan membagikan langkah demi langkah untuk menciptakan makeup natural yang tidak hanya cantik, tetapi juga tahan lama sepanjang hari menggunakan produk-produk Belle Lumière.</p>
+
+        <h2>Persiapan: Skincare sebagai Base</h2>
+        <p>Sebelum mulai makeup, pastikan kulit Anda sudah dipersiapkan dengan baik melalui rutinitas skincare. Makeup akan menempel lebih baik dan tahan lama pada kulit yang sehat dan terhidrasi.</p>
+
+        <ol>
+            <li>Bersihkan wajah dengan gentle cleanser</li>
+            <li>Aplikasikan toner untuk menyegarkan</li>
+            <li>Gunakan serum (opsional, untuk extra glow)</li>
+            <li>Aplikasikan moisturizer dan tunggu meresap 2-3 menit</li>
+            <li>Wajib pakai sunscreen SPF 50+ sebagai langkah terakhir skincare</li>
+        </ol>
+
+        <div class="tip-box">
+            <h4>💡 Pro Tip:</h4>
+            <p>Tunggu 5-10 menit setelah aplikasi sunscreen sebelum memulai makeup. Ini memberikan waktu bagi sunscreen untuk set dan menciptakan base yang sempurna.</p>
+        </div>
+
+        <h2>Produk yang Dibutuhkan</h2>
+        <p>Untuk makeup natural, Anda tidak perlu banyak produk. Berikut adalah essentials yang diperlukan:</p>
+
+        <ul>
+            <li><strong>Primer</strong> - Untuk memperpanjang ketahanan makeup</li>
+            <li><strong>Foundation/Cushion</strong> - Coverage ringan hingga medium</li>
+            <li><strong>Concealer</strong> - Untuk menutupi area yang membutuhkan extra coverage</li>
+            <li><strong>Bedak</strong> - Setting powder untuk mengontrol minyak</li>
+            <li><strong>Blush</strong> - Untuk memberikan warna alami pada pipi</li>
+            <li><strong>Eyeshadow</strong> - Warna nude/netral</li>
+            <li><strong>Mascara</strong> - Untuk membuka mata</li>
+            <li><strong>Lipstick/Lip tint</strong> - Warna natural atau MLBB (My Lips But Better)</li>
+        </ul>
+
+        <h2>Langkah 1: Primer untuk Base yang Sempurna</h2>
+        <p>Primer adalah kunci untuk makeup yang tahan lama. Pilih primer sesuai dengan kebutuhan kulit Anda:</p>
+
+        <ul>
+            <li><strong>Kulit Berminyak:</strong> Mattifying primer untuk mengontrol sebum</li>
+            <li><strong>Kulit Kering:</strong> Hydrating primer untuk extra glow</li>
+            <li><strong>Kulit Kombinasi:</strong> Pore-minimizing primer</li>
+        </ul>
+
+        <p>Aplikasikan primer tipis-tipis pada seluruh wajah, fokus pada T-zone dan area yang pori-porinya besar. Tunggu 1-2 menit agar primer benar-benar set sebelum lanjut ke foundation.</p>
+
+        <h2>Langkah 2: Foundation atau Cushion</h2>
+        <p>Untuk makeup natural, pilih foundation atau cushion dengan <strong>light to medium coverage</strong>. Belle Lumière <strong>Dewy Glow Cushion Foundation</strong> adalah pilihan sempurna karena memberikan coverage natural dengan finish dewy yang segar.</p>
+
+        <h3>Cara Aplikasi:</h3>
+        <ol>
+            <li>Ambil cushion secukupnya dengan puff</li>
+            <li>Tepuk-tepuk mulai dari tengah wajah (dahi, hidung, pipi) ke arah luar</li>
+            <li>Blend dengan gerakan tap-tap, bukan mengusap</li>
+            <li>Bangun coverage secara bertahap - lebih baik tipis berlapis daripada langsung tebal</li>
+            <li>Jangan lupa aplikasikan juga pada leher untuk hasil yang seamless</li>
+        </ol>
+
+        <div class="tip-box">
+            <h4>✨ Trik untuk Hasil Natural:</h4>
+            <p>Gunakan beauty sponge yang sedikit lembab untuk blend foundation. Ini akan memberikan hasil yang lebih natural dan skin-like dibanding menggunakan brush.</p>
+        </div>
+
+        <h2>Langkah 3: Concealer untuk Brightening</h2>
+        <p>Concealer tidak hanya untuk menutupi dark circles, tetapi juga untuk highlighting dan brightening area tertentu di wajah.</p>
+
+        <h3>Area yang Perlu Concealer:</h3>
+        <ul>
+            <li><strong>Under eyes</strong> - Bentuk segitiga terbalik untuk lifting effect</li>
+            <li><strong>Bridge of nose</strong> - Untuk efek hidung lebih mancung</li>
+            <li><strong>Center of forehead</strong> - Untuk dimension</li>
+            <li><strong>Cupid's bow</strong> - Membuat bibir terlihat lebih plump</li>
+            <li><strong>Chin</strong> - Untuk balancing</li>
+        </ul>
+
+        <p>Blend concealer dengan beauty sponge atau jari menggunakan gentle tapping motion. Jangan digosok karena bisa menghilangkan foundation di bawahnya.</p>
+
+        <h2>Langkah 4: Setting dengan Bedak</h2>
+        <p>Setting powder penting untuk mengunci foundation dan concealer, terutama di area yang mudah berminyak.</p>
+
+        <p>Gunakan <strong>baking technique</strong> pada area under eyes untuk hasil crease-free yang tahan lama:</p>
+        <ol>
+            <li>Aplikasikan loose powder dengan generous amount pada under eye area</li>
+            <li>Biarkan selama 5-10 menit (sambil makeup bagian lain)</li>
+            <li>Brush off excess powder dengan fluffy brush</li>
+        </ol>
+
+        <p>Untuk area lain wajah, gunakan bedak tipis-tipis saja. Terlalu banyak bedak akan membuat makeup terlihat cakey.</p>
+
+        <h2>Langkah 5: Blush untuk Natural Flush</h2>
+        <p>Blush memberikan warna alami yang membuat wajah terlihat segar dan sehat. Pilih warna yang menyerupai warna pipi Anda saat flush alami - biasanya tone pink atau peachy.</p>
+
+        <p>Belle Lumière <strong>Natural Glow Cream Blush</strong> sangat cocok untuk makeup natural karena mudah di-blend dan memberikan hasil yang natural seperti sedang blushing.</p>
+
+        <h3>Cara Aplikasi:</h3>
+        <ol>
+            <li>Senyum untuk menemukan apple of your cheeks</li>
+            <li>Aplikasikan blush dengan jari atau stippling brush</li>
+            <li>Blend dengan gerakan circular ke arah atas (menuju telinga)</li>
+            <li>Bangun warna secara bertahap - mulai dari sedikit</li>
+        </ol>
+
+        <h2>Langkah 6: Eyeshadow Nude yang Simpel</h2>
+        <p>Untuk makeup natural, tidak perlu eyeshadow yang rumit. Cukup gunakan 2-3 warna nude dari Belle Lumière <strong>Nude Harmony Eyeshadow Palette</strong>.</p>
+
+        <h3>Teknik Aplikasi Simpel:</h3>
+        <ol>
+            <li><strong>All over lid:</strong> Aplikasikan shade paling terang pada seluruh kelopak mata</li>
+            <li><strong>Crease:</strong> Gunakan shade medium brown di bagian crease untuk dimension</li>
+            <li><strong>Outer corner:</strong> Sedikit shade gelap di outer V untuk depth</li>
+            <li><strong>Inner corner highlight:</strong> Shimmer champagne untuk membuka mata</li>
+        </ol>
+
+        <p>Blend semuanya dengan baik agar tidak ada garis yang terlihat keras.</p>
+
+        <h2>Langkah 7: Mascara untuk Mata yang Terbuka</h2>
+        <p>Mascara adalah game-changer dalam makeup natural. Bahkan tanpa eyeshadow, mascara saja sudah bisa membuat mata terlihat lebih hidup.</p>
+
+        <h3>Tips Aplikasi Mascara:</h3>
+        <ul>
+            <li>Curl bulu mata terlebih dahulu untuk hasil yang lebih dramatic</li>
+            <li>Aplikasikan mascara dari root ke tip dengan gerakan zigzag</li>
+            <li>Untuk lower lashes, gunakan tip dari wand mascara</li>
+            <li>Gunakan 2 coat untuk hasil optimal</li>
+            <li>Sisir dengan spoolie untuk memisahkan dan menghilangkan clumps</li>
+        </ul>
+
+        <h2>Langkah 8: Alis yang Rapi</h2>
+        <p>Alis yang rapi membingkai wajah dengan sempurna. Untuk look natural, cukup isi sparse areas dan rapikan bentuk:</p>
+
+        <ol>
+            <li>Brush alis dengan spoolie ke arah pertumbuhan rambut</li>
+            <li>Isi bagian yang jarang dengan eyebrow pencil menggunakan hair-like strokes</li>
+            <li>Set dengan brow gel transparan</li>
+            <li>Highlight bawah alis dengan concealer untuk clean look (opsional)</li>
+        </ol>
+
+        <h2>Langkah 9: Lips yang Natural</h2>
+        <p>Untuk finishing touch, pilih lip color yang enhance warna bibir alami Anda. Belle Lumière <strong>Velvet Matte Lipstick</strong> dalam shade nude atau rosy pink sangat cocok untuk everyday look.</p>
+
+        <h3>Teknik untuk Bibir Natural:</h3>
+        <ul>
+            <li>Aplikasikan lip balm terlebih dahulu untuk hidrasi</li>
+            <li>Gunakan lipstick dengan tapping motion menggunakan jari untuk hasil yang diffused</li>
+            <li>Atau aplikasikan langsung dari bullet lalu blur edges dengan jari</li>
+            <li>Tambahkan lip gloss di center bibir untuk plumping effect (opsional)</li>
+        </ul>
+
+        <h2>Langkah 10: Setting Spray untuk Finishing</h2>
+        <p>Terakhir, lock everything in place dengan setting spray. Ini akan membuat makeup menyatu dengan kulit dan tahan lebih lama.</p>
+
+        <p>Spray dari jarak 20-30 cm dengan gerakan X dan T pada wajah. Biarkan high naturally - jangan di-fan atau blown dry.</p>
+
+        <div class="tip-box">
+            <h4>🌟 Pro Makeup Artist Secret:</h4>
+            <p>Untuk extra glow dan natural finish, spray setting spray pada beauty sponge lalu tap pada high points of face (cheekbones, nose bridge, cupid's bow). Ini memberikan efekt lit-from-within glow yang gorgeous!</p>
+        </div>
+
+        <h2>Tips Agar Makeup Tahan Lama Seharian</h2>
+
+        <h3>1. Skincare yang Tepat</h3>
+        <p>Makeup hanya akan tahan lama di kulit yang sehat dan well-prepped. Jangan skip skincare routine Anda!</p>
+
+        <h3>2. Less is More</h3>
+        <p>Terlalu banyak produk justru membuat makeup mudah luntur. Gunakan secukupnya dan build up gradually.</p>
+
+        <h3>3. Blotting Paper adalah Sahabat</h3>
+        <p>Bawa blotting paper untuk touch up di siang hari. Cukup blot area berminyak tanpa perlu tambah bedak.</p>
+
+        <h3>4. Set Everything</h3>
+        <p>Setiap cream product (foundation, concealer, blush) harus di-set dengan powder agar tahan lama.</p>
+
+        <h3>5. Touch Up with Care</h3>
+        <p>Jika perlu touch up, jangan langsung tambah bedak. Spray setting spray terlebih dahulu, lalu baru tambah bedak tipis.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Makeup natural yang cantik dan tahan lama sangat mungkin dicapai dengan teknik yang tepat dan produk berkualitas. Kunci utamanya adalah persiapan kulit yang baik, aplikasi yang tepat, dan setting yang proper.</p>
+
+        <p>Ingat, makeup seharusnya membuat Anda merasa lebih percaya diri, bukan menutupi diri Anda. Natural makeup adalah tentang enhance what you already have, bukan transform completely. Practice makes perfect, jadi jangan takut untuk bereksperimen dan menemukan technique yang paling cocok untuk Anda!</p>
+
+        <p>Selamat mencoba dan have fun with your makeup journey! 💄✨</p>
+
+        <!-- Author Box -->
+        <div class="author-box">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop" alt="Melissa Tan" class="author-photo">
+            <div class="author-info">
+                <h4>Melissa Tan</h4>
+                <p>Professional Makeup Artist dan Beauty Content Creator dengan pengalaman lebih dari 8 tahun di industri kecantikan. Melissa adalah Brand Ambassador Belle Lumière dan aktif membagikan tips makeup dan beauty di berbagai platform media sosial dengan followers lebih dari 500K.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Artikel Terkait</span>
+                <h2>Baca Juga Artikel Lainnya</h2>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&h=400&fit=crop" alt="Morning Routine">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Skincare</span>
+                        <h3>7 Langkah Rutinitas Skincare Pagi untuk Kulit Glowing</h3>
+                        <p class="article-excerpt">Temukan rahasia kulit sehat dan bercahaya</p>
+                        <div class="article-meta">
+                            <span class="article-date">10 Februari 2026</span>
+                        </div>
+                        <a href="article-detail-1.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&h=400&fit=crop" alt="Glass Skin">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Trend</span>
+                        <h3>Tren K-Beauty: Glass Skin dan Cara Mencapainya</h3>
+                        <p class="article-excerpt">Ikuti tren glass skin ala Korea dengan produk yang tepat</p>
+                        <div class="article-meta">
+                            <span class="article-date">22 Januari 2026</span>
+                        </div>
+                        <a href="article-detail-8.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=400&fit=crop" alt="Vitamin C">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Ingredient</span>
+                        <h3>Manfaat Vitamin C untuk Kulit Wajah dan Cara Penggunaannya</h3>
+                        <p class="article-excerpt">Pelajari mengapa vitamin C menjadi bahan favorit dalam skincare</p>
+                        <div class="article-meta">
+                            <span class="article-date">8 Februari 2026</span>
+                        </div>
+                        <a href="article-detail-2.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Belle Lumière</h3>
+                    <p>Kosmetik premium Indonesia yang menghadirkan kecantikan alami dengan formulasi terbaik untuk kulit sehat dan bercahaya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="products.html#skincare">Skincare</a></li>
+                        <li><a href="products.html#makeup">Makeup</a></li>
+                        <li><a href="products.html#bodycare">Body Care</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📍 Jl. Sudirman No. 123, Jakarta Selatan</li>
+                        <li>📞 +62 21 5555 8888</li>
+                        <li>✉️ info@bellelumiere.co.id</li>
+                        <li>🕐 Senin - Jumat: 09.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Belle Lumière. All rights reserved. | Terdaftar di BPOM & Halal MUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

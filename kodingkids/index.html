@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodingKids - Belajar Coding dengan Cara Seru!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="code-symbol">&lt;/&gt;</div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">KodingKids</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="programs.html">Program</a></li>
+                <li><a href="blog.html">Artikel</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Belajar Coding dengan Cara Seru!</h1>
+                <p class="hero-subtitle">Kelas pemrograman untuk anak usia 8–15 tahun, belajar sambil bermain.</p>
+                <div class="hero-buttons">
+                    <a href="programs.html" class="btn btn-primary">Lihat Program</a>
+                    <a href="contact.html" class="btn btn-secondary">Daftar Sekarang</a>
+                </div>
+            </div>
+            <div class="hero-illustration fade-in">
+                <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Laptop -->
+                    <rect x="150" y="180" width="200" height="130" rx="5" fill="#667eea"/>
+                    <rect x="160" y="190" width="180" height="100" fill="#764ba2"/>
+                    <line x1="165" y1="200" x2="185" y2="200" stroke="#f6ad55" stroke-width="2"/>
+                    <line x1="165" y1="210" x2="195" y2="210" stroke="#48bb78" stroke-width="2"/>
+                    <line x1="165" y1="220" x2="175" y2="220" stroke="#ed64a6" stroke-width="2"/>
+                    <text x="200" y="250" fill="#fbbf24" font-size="40" font-weight="bold">&lt;/&gt;</text>
+                    <rect x="140" y="310" width="220" height="10" rx="5" fill="#4a5568"/>
+                    
+                    <!-- Kid -->
+                    <circle cx="100" cy="150" r="30" fill="#fbbf24"/>
+                    <rect x="75" y="180" width="50" height="60" rx="25" fill="#48bb78"/>
+                    <rect x="60" y="190" width="15" height="40" rx="7" fill="#48bb78"/>
+                    <rect x="125" y="190" width="15" height="40" rx="7" fill="#48bb78"/>
+                    
+                    <!-- Robot -->
+                    <rect x="380" y="200" width="60" height="70" rx="10" fill="#ed64a6"/>
+                    <circle cx="395" cy="220" r="5" fill="#fff"/>
+                    <circle cx="425" cy="220" r="5" fill="#fff"/>
+                    <rect x="400" y="240" width="20" height="3" fill="#fff"/>
+                    <rect x="375" y="210" width="10" height="30" rx="5" fill="#ed64a6"/>
+                    <rect x="445" y="210" width="10" height="30" rx="5" fill="#ed64a6"/>
+                    
+                    <!-- Floating elements -->
+                    <text x="50" y="80" fill="#667eea" font-size="24" class="float-1">{</text>
+                    <text x="420" y="100" fill="#48bb78" font-size="24" class="float-2">}</text>
+                    <text x="250" y="60" fill="#f6ad55" font-size="20" class="float-3">;</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Coding Section -->
+    <section class="why-coding">
+        <div class="container">
+            <h2 class="section-title fade-in-scroll">Mengapa Belajar Coding?</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in-scroll">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Melatih Logika</h3>
+                    <p>Coding mengajarkan anak berpikir sistematis dan memecahkan masalah dengan logika yang terstruktur.</p>
+                </div>
+                <div class="feature-card fade-in-scroll">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Meningkatkan Kreativitas</h3>
+                    <p>Anak dapat mengekspresikan ide mereka dengan membuat game, website, dan aplikasi sendiri.</p>
+                </div>
+                <div class="feature-card fade-in-scroll">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Problem Solving</h3>
+                    <p>Kemampuan menyelesaikan masalah yang dipelajari dalam coding berguna untuk kehidupan sehari-hari.</p>
+                </div>
+                <div class="feature-card fade-in-scroll">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Teknologi Masa Depan</h3>
+                    <p>Mempersiapkan anak untuk era digital dengan keterampilan yang sangat dibutuhkan di masa depan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <h2 class="section-title fade-in-scroll">Program Kami</h2>
+            <div class="programs-grid">
+                <a href="program-detail.html?id=1" class="program-card fade-in-scroll">
+                    <div class="program-icon">💻</div>
+                    <h3>Coding Dasar untuk Anak</h3>
+                    <p>Belajar logika pemrograman dengan visual dan game yang menyenangkan.</p>
+                    <div class="program-meta">
+                        <span>⏱️ 3 Bulan</span>
+                        <span>👥 Usia 8-12 tahun</span>
+                    </div>
+                    <span class="learn-more">Pelajari lebih lanjut →</span>
+                </a>
+                <a href="program-detail.html?id=2" class="program-card fade-in-scroll">
+                    <div class="program-icon">🎮</div>
+                    <h3>Game Development untuk Pemula</h3>
+                    <p>Membuat game sederhana dengan visual coding dan block programming.</p>
+                    <div class="program-meta">
+                        <span>⏱️ 4 Bulan</span>
+                        <span>👥 Usia 10-15 tahun</span>
+                    </div>
+                    <span class="learn-more">Pelajari lebih lanjut →</span>
+                </a>
+                <a href="program-detail.html?id=3" class="program-card fade-in-scroll">
+                    <div class="program-icon">🌐</div>
+                    <h3>Website untuk Anak</h3>
+                    <p>Belajar HTML & CSS dasar untuk membuat website pertama mereka.</p>
+                    <div class="program-meta">
+                        <span>⏱️ 3 Bulan</span>
+                        <span>👥 Usia 11-15 tahun</span>
+                    </div>
+                    <span class="learn-more">Pelajari lebih lanjut →</span>
+                </a>
+                <a href="program-detail.html?id=4" class="program-card fade-in-scroll">
+                    <div class="program-icon">🤖</div>
+                    <h3>Robotika Dasar</h3>
+                    <p>Mengenal dunia robotika dengan pemrograman robot sederhana.</p>
+                    <div class="program-meta">
+                        <span>⏱️ 4 Bulan</span>
+                        <span>👥 Usia 9-14 tahun</span>
+                    </div>
+                    <span class="learn-more">Pelajari lebih lanjut →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="latest-articles">
+        <div class="container">
+            <h2 class="section-title fade-in-scroll">Artikel Terbaru</h2>
+            <div class="articles-grid">
+                <a href="article.html?id=1" class="article-card fade-in-scroll">
+                    <div class="article-image">
+                        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                        <image 
+                            href="https://cdn.prod.website-files.com/65b0758d9ad56c822b1d0622/65d41965f4139a09f5c3d5b8_n-FIddOIQI0ETESzjq0dfpCduk_2fmdTjosb_6PAx-Nkf5wuKJlIuJrd_ITqgA1li4awKPBZ9oSLsmGRbrMs0-LUN9ThlX-O9sfbYmAeqHmFsh6RpptmKOy7RQbbx3z7MC197_nrMBxLb0eOWaxhFOI.jpeg"
+                            x="0" y="0"
+                            width="400" height="250"
+                            preserveAspectRatio="xMidYMid slice"
+                        />
+
+                        <text x="200" y="140" text-anchor="middle" fill="#fff" font-size="50" font-weight="bold">
+                            &lt;/&gt;
+                        </text>
+                        </svg>
+
+                    </div>
+                    <div class="article-content">
+                        <span class="article-date">5 Februari 2026</span>
+                        <h3>Kenapa Anak Perlu Belajar Coding Sejak Dini?</h3>
+                        <p>Coding bukan hanya tentang komputer, tapi tentang cara berpikir yang akan berguna seumur hidup...</p>
+                    </div>
+                </a>
+                <a href="article2.html" class="article-card fade-in-scroll">
+                    <div class="article-image">
+                       <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                        <image 
+                            href="https://sevenclass.id/wp-content/uploads/2025/07/20250714_1126_Anak-Kreatif-Digital_simple_compose_01k03jtcc3eepr0jyhh182ecb9-768x512.png"
+                            x="0" y="0"
+                            width="400" height="250"
+                            preserveAspectRatio="xMidYMid slice"
+                        />
+
+                        <text x="200" y="140" text-anchor="middle" fill="#fff" font-size="50" font-weight="bold">
+                            &lt;/&gt;
+                        </text>
+                        </svg>
+
+                    </div>
+                    <div class="article-content">
+                        <span class="article-date">3 Februari 2026</span>
+                        <h3>Manfaat Coding untuk Kreativitas Anak</h3>
+                        <p>Kreativitas anak dapat berkembang pesat ketika mereka belajar membuat project coding sendiri...</p>
+                    </div>
+                </a>
+                
+                <a href="article3.html" class="article-card fade-in-scroll">
+                    <div class="article-image">
+                    <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <image 
+                        href="https://www.kodingakademi.id/storage/blog/ChatGPT-Image-Apr-3-2025-10_24_09-PM.png"
+                        x="0" y="0"
+                        width="400" height="250"
+                        preserveAspectRatio="xMidYMid slice"
+                    />
+
+                    <text x="200" y="140" text-anchor="middle" fill="#fff" font-size="50" font-weight="bold">
+                        &lt;/&gt;
+                    </text>
+                    </svg>
+
+                    </div>
+                    <div class="article-content">
+                        <span class="article-date">1 Februari 2026</span>
+                        <h3>Cara Belajar Coding yang Menyenangkan untuk Anak</h3>
+                        <p>Dengan metode yang tepat, coding bisa menjadi aktivitas yang sangat menyenangkan bagi anak...</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="blog.html" class="btn btn-primary">Lihat Semua Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in-scroll">
+                <h2>Siap Memulai Perjalanan Coding?</h2>
+                <p>Daftarkan anak Anda sekarang dan lihat mereka berkembang!</p>
+                <a href="contact.html" class="btn btn-light">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="logo-icon">&lt;/&gt;</span> KodingKids</h3>
+                    <p>Membantu anak Indonesia berpikir logis dan kreatif melalui coding.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="programs.html">Program</a></li>
+                        <li><a href="blog.html">Artikel</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodingkids.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Bogor, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KodingKids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinasi - Nusantara Voyage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 0C8.954 0 0 8.954 0 20c0 3.531.923 6.985 2.673 10.044L.833 37.5l7.75-2.028A19.925 19.925 0 0020 40c11.046 0 20-8.954 20-20S31.046 0 20 0zm9.737 28.263c-.408 1.146-2.03 2.1-3.318 2.374-.884.186-2.039.335-5.925-.973-4.948-1.666-8.142-6.693-8.39-7-0.247-.307-2.02-2.687-2.02-5.126 0-2.44 1.279-3.638 1.733-4.135.454-.497 1.006-.621 1.342-.621.336 0 .672.003.966.017.31.014.727-.118 1.137.866.419 1.008 1.43 3.488 1.555 3.743.125.255.208.553.042.86-.166.308-.249.5-.497.77-.248.27-.52.603-.743.81-.248.23-.506.479-.218.94.289.46 1.281 2.113 2.752 3.424 1.893 1.685 3.488 2.208 3.985 2.456.497.248.787.207 1.075-.125.289-.331 1.238-1.445 1.567-1.94.331-.497.662-.415 1.117-.249.454.166 2.893 1.364 3.39 1.612.496.248.827.372.946.58.125.208.125 1.202-.283 2.348z" fill="white"/></svg>
+    </a>
+    <button class="back-to-top" id="backToTop"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">🌴</span><span class="logo-text">Nusantara Voyage</span></a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="tentang.html" class="nav-link">Tentang Kami</a>
+                <a href="paket.html" class="nav-link">Paket Wisata</a>
+                <a href="destinasi.html" class="nav-link active">Destinasi</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="artikel.html" class="nav-link">Artikel</a>
+                <a href="kontak.html" class="nav-link nav-cta">Kontak & Booking</a>
+            </div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Beranda</a><span>→</span><span>Destinasi</span></div>
+            <h1>Destinasi Unggulan</h1>
+            <p>Jelajahi keindahan dan keragaman destinasi wisata Indonesia</p>
+        </div>
+    </div>
+
+    <section class="visible" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="destinations-grid">
+                <a href="paket.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80');">
+                        <div class="destination-overlay"><span class="destination-tag">Populer</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Bali</h3>
+                        <p class="destination-subtitle">Pulau Dewata</p>
+                        <p class="destination-desc">Pulau yang terkenal dengan keindahan pantai, sawah terasering yang hijau, pura-pura megah, dan budaya yang sangat kaya. Dari Ubud yang tenang hingga Seminyak yang glamor, Bali menawarkan pengalaman untuk setiap jenis wisatawan.</p>
+                        <ul class="package-features" style="margin-top: 1rem;">
+                            <li>Tanah Lot & Uluwatu Temple</li>
+                            <li>Tegallalang Rice Terrace</li>
+                            <li>Nusa Penida & Nusa Lembongan</li>
+                            <li>Ubud Monkey Forest</li>
+                        </ul>
+                        <div class="destination-footer">
+                            <span class="destination-duration">3-7 Hari</span>
+                            <span class="destination-link">Lihat Paket →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="paket.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://assets-a1.kompasiana.com/items/album/2023/11/07/borobudur-654a47837a39d51a9d385b93.jpg');">
+                        <div class="destination-overlay"><span class="destination-tag">Budaya</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Yogyakarta</h3>
+                        <p class="destination-subtitle">Kota Budaya</p>
+                        <p class="destination-desc">Jantung budaya Jawa dengan candi-candi bersejarah, keraton yang masih berfungsi, dan kuliner tradisional yang lezat. Yogyakarta adalah destinasi sempurna untuk memahami kedalaman sejarah dan budaya Indonesia.</p>
+                        <ul class="package-features" style="margin-top: 1rem;">
+                            <li>Candi Borobudur & Prambanan</li>
+                            <li>Keraton Yogyakarta</li>
+                            <li>Merapi Lava Tour</li>
+                            <li>Malioboro & Alun-alun Kidul</li>
+                        </ul>
+                        <div class="destination-footer">
+                            <span class="destination-duration">3-5 Hari</span>
+                            <span class="destination-link">Lihat Paket →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="paket.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&q=80');">
+                        <div class="destination-overlay"><span class="destination-tag">Pantai</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Lombok</h3>
+                        <p class="destination-subtitle">Pulau Seribu Masjid</p>
+                        <p class="destination-desc">Alternatif Bali yang lebih tenang dengan pantai-pantai indah, Gunung Rinjani yang menantang, dan budaya Sasak yang unik. Lombok menawarkan keindahan alam yang masih alami dan belum terlalu ramai.</p>
+                        <ul class="package-features" style="margin-top: 1rem;">
+                            <li>Gili Trawangan, Meno, Air</li>
+                            <li>Pantai Kuta & Pink Beach</li>
+                            <li>Gunung Rinjani Trekking</li>
+                            <li>Desa Adat Sade</li>
+                        </ul>
+                        <div class="destination-footer">
+                            <span class="destination-duration">4-6 Hari</span>
+                            <span class="destination-link">Lihat Paket →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="paket.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80');">
+                        <div class="destination-overlay"><span class="destination-tag">Petualangan</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Labuan Bajo</h3>
+                        <p class="destination-subtitle">Gerbang Komodo</p>
+                        <p class="destination-desc">Kota pelabuhan yang menjadi pintu gerbang menuju Taman Nasional Komodo. Terkenal dengan komodo purba, pantai pink yang unik, dan snorkeling di perairan jernih dengan kehidupan laut yang menakjubkan.</p>
+                        <ul class="package-features" style="margin-top: 1rem;">
+                            <li>Pulau Komodo & Rinca</li>
+                            <li>Pink Beach & Padar Island</li>
+                            <li>Manta Point Snorkeling</li>
+                            <li>Sunset di Bukit Cinta</li>
+                        </ul>
+                        <div class="destination-footer">
+                            <span class="destination-duration">4-5 Hari</span>
+                            <span class="destination-link">Lihat Paket →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="paket.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://indonesiajuara.asia/wp-content/uploads/2023/11/raja-ampat_11zon.webp');">
+                        <div class="destination-overlay"><span class="destination-tag">Premium</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Raja Ampat</h3>
+                        <p class="destination-subtitle">Surga Bawah Laut</p>
+                        <p class="destination-desc">Kepulauan di ujung timur Indonesia dengan keanekaragaman hayati laut terkaya di dunia. Destinasi diving kelas dunia dengan pemandangan pulau karst yang ikonik dan laguna tersembunyi yang memukau.</p>
+                        <ul class="package-features" style="margin-top: 1rem;">
+                            <li>Wayag Island & Piaynemo</li>
+                            <li>Diving & Snorkeling Premium</li>
+                            <li>Hidden Lagoon</li>
+                            <li>Arborek Village</li>
+                        </ul>
+                        <div class="destination-footer">
+                            <span class="destination-duration">5-7 Hari</span>
+                            <span class="destination-link">Lihat Paket →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="kontak.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80');">
+                        <div class="destination-overlay"><span class="destination-tag">Coming Soon</span></div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Destinasi Lainnya</h3>
+                        <p class="destination-subtitle">Custom Trip</p>
+                        <p class="destination-desc">Tertarik dengan destinasi lain di Indonesia? Kami juga melayani trip ke Bromo, Ijen, Belitung, Wakatobi, Toraja, dan destinasi menarik lainnya. Hubungi kami untuk custom package!</p>
+                        <div class="destination-footer">
+                            <span class="destination-duration">Fleksibel</span>
+                            <span class="destination-link">Hubungi Kami →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><span class="logo-icon">🌴</span><span class="logo-text">Nusantara Voyage</span></div>
+                    <p class="footer-desc">Menjelajahi keindahan Indonesia dengan pengalaman autentik dan berkesan sejak 2017.</p>
+                    <div class="footer-social"><a href="#" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">▶️</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Tautan Cepat</h4>
+                    <ul class="footer-links"><li><a href="tentang.html">Tentang Kami</a></li><li><a href="paket.html">Paket Wisata</a></li><li><a href="destinasi.html">Destinasi</a></li><li><a href="galeri.html">Galeri</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informasi</h4>
+                    <ul class="footer-links"><li><a href="artikel.html">Artikel & Blog</a></li><li><a href="#">Syarat & Ketentuan</a></li><li><a href="#">Kebijakan Privasi</a></li><li><a href="#">FAQ</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul class="footer-contact"><li>📍 Jl. Gatot Subroto No. 45, Denpasar, Bali 80234</li><li>📞 +62 812-3456-7890</li><li>✉️ info@nusantaravoyage.com</li><li>🕒 Senin - Sabtu: 09:00 - 18:00</li></ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Nusantara Voyage. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

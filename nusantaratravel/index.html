@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Voyage - Jelajahi Keindahan Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M20 0C8.954 0 0 8.954 0 20c0 3.531.923 6.985 2.673 10.044L.833 37.5l7.75-2.028A19.925 19.925 0 0020 40c11.046 0 20-8.954 20-20S31.046 0 20 0zm9.737 28.263c-.408 1.146-2.03 2.1-3.318 2.374-.884.186-2.039.335-5.925-.973-4.948-1.666-8.142-6.693-8.39-7-0.247-.307-2.02-2.687-2.02-5.126 0-2.44 1.279-3.638 1.733-4.135.454-.497 1.006-.621 1.342-.621.336 0 .672.003.966.017.31.014.727-.118 1.137.866.419 1.008 1.43 3.488 1.555 3.743.125.255.208.553.042.86-.166.308-.249.5-.497.77-.248.27-.52.603-.743.81-.248.23-.506.479-.218.94.289.46 1.281 2.113 2.752 3.424 1.893 1.685 3.488 2.208 3.985 2.456.497.248.787.207 1.075-.125.289-.331 1.238-1.445 1.567-1.94.331-.497.662-.415 1.117-.249.454.166 2.893 1.364 3.39 1.612.496.248.827.372.946.58.125.208.125 1.202-.283 2.348z" fill="white"/>
+        </svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://img.freepik.com/vektor-premium/pesawat-kertas-terbang-kartun-di-latar-belakang-putih_921039-19790.jpg" alt="">
+                <span class="logo-text">Nusantara Voyage</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="tentang.html" class="nav-link">Tentang Kami</a>
+                <a href="paket.html" class="nav-link">Paket Wisata</a>
+                <a href="destinasi.html" class="nav-link">Destinasi</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="artikel.html" class="nav-link">Artikel</a>
+                <a href="kontak.html" class="nav-link nav-cta">Kontak & Booking</a>
+            </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1920&q=80');">
+            </div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80');">
+            </div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920&q=80');">
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Jelajahi Keindahan Indonesia Bersama Nusantara Voyage</h1>
+            <p class="hero-subtitle">Menyediakan pengalaman wisata lokal yang autentik, aman, dan berkesan</p>
+            <div class="hero-buttons">
+                <a href="paket.html" class="btn btn-primary">Lihat Paket Wisata</a>
+                <a href="kontak.html" class="btn btn-secondary">Hubungi Kami</a>
+            </div>
+        </div>
+
+        <div class="hero-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <p class="section-subtitle">Komitmen kami untuk memberikan pengalaman terbaik</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Aman & Terpercaya</h3>
+                    <p>Berpengalaman lebih dari 8 tahun dalam industri pariwisata Indonesia dengan standar keamanan internasional</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Pemandu Lokal Profesional</h3>
+                    <p>Tour guide bersertifikat yang menguasai bahasa, budaya, dan sejarah setiap destinasi dengan baik</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Pengalaman Autentik</h3>
+                    <p>Menjelajahi destinasi dengan cara lokal, berinteraksi dengan masyarakat, dan merasakan budaya asli</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/>
+                        </svg>
+                    </div>
+                    <h3>Ramah Lingkungan</h3>
+                    <p>Berkomitmen pada pariwisata berkelanjutan yang menjaga kelestarian alam dan budaya lokal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="destinations">
+        <div class="container">
+            <h2 class="section-title">Destinasi Unggulan</h2>
+            <p class="section-subtitle">Jelajahi keajaiban Indonesia yang menakjubkan</p>
+            
+            <div class="destinations-grid">
+                <a href="destinasi.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80');">
+                        <div class="destination-overlay">
+                            <span class="destination-tag">Populer</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Bali</h3>
+                        <p class="destination-subtitle">Ubud & Nusa Penida</p>
+                        <p class="destination-desc">Pulau dewata dengan keindahan alam, budaya spiritual, dan pantai eksotis yang memukau</p>
+                        <div class="destination-footer">
+                            <span class="destination-duration">3-5 Hari</span>
+                            <span class="destination-link">Lihat Detail →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destinasi.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://assets-a1.kompasiana.com/items/album/2023/11/07/borobudur-654a47837a39d51a9d385b93.jpg');">
+                        <div class="destination-overlay">
+                            <span class="destination-tag">Budaya</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Yogyakarta</h3>
+                        <p class="destination-subtitle">Merapi & Candi Borobudur</p>
+                        <p class="destination-desc">Kota budaya dengan warisan dunia UNESCO, kuliner lezat, dan keramahan masyarakat Jawa</p>
+                        <div class="destination-footer">
+                            <span class="destination-duration">3-4 Hari</span>
+                            <span class="destination-link">Lihat Detail →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destinasi.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80');">
+                        <div class="destination-overlay">
+                            <span class="destination-tag">Petualangan</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Labuan Bajo</h3>
+                        <p class="destination-subtitle">Pulau Komodo & Pink Beach</p>
+                        <p class="destination-desc">Bertemu komodo purba, snorkeling di laut kristal, dan menikmati sunset di Padar Island</p>
+                        <div class="destination-footer">
+                            <span class="destination-duration">4-5 Hari</span>
+                            <span class="destination-link">Lihat Detail →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destinasi.html" class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://indonesiajuara.asia/wp-content/uploads/2023/11/raja-ampat_11zon.webp');">
+                        <div class="destination-overlay">
+                            <span class="destination-tag">Premium</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Raja Ampat</h3>
+                        <p class="destination-subtitle">Papua Barat</p>
+                        <p class="destination-desc">Surga bawah laut dengan keanekaragaman hayati terkaya di dunia dan pemandangan karst yang ikonik</p>
+                        <div class="destination-footer">
+                            <span class="destination-duration">5-7 Hari</span>
+                            <span class="destination-link">Lihat Detail →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="destinasi.html" class="btn btn-primary">Lihat Semua Destinasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="articles-preview">
+        <div class="container">
+            <h2 class="section-title">Artikel & Tips Perjalanan</h2>
+            <p class="section-subtitle">Panduan dan informasi bermanfaat untuk perjalanan Anda</p>
+            
+            <div class="articles-grid">
+                <a href="artikel-labuan-bajo.html" class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80');"></div>
+                    <div class="article-content">
+                        <span class="article-category">Tips Perjalanan</span>
+                        <h3>Tips Liburan Aman ke Labuan Bajo</h3>
+                        <p>Panduan lengkap untuk menjelajahi Labuan Bajo dengan aman, termasuk persiapan, akomodasi, dan aktivitas terbaik...</p>
+                        <div class="article-meta">
+                            <span class="article-date">15 Januari 2025</span>
+                            <span class="article-read">5 menit</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="artikel-raja-ampat.html" class="article-card">
+                    <div class="article-image" style="background-image: url('https://indonesiajuara.asia/wp-content/uploads/2023/11/raja-ampat_11zon.webp');"></div>
+                    <div class="article-content">
+                        <span class="article-category">Panduan Destinasi</span>
+                        <h3>Waktu Terbaik Berkunjung ke Raja Ampat</h3>
+                        <p>Mengetahui musim ideal untuk diving, cuaca terbaik, dan festival lokal yang tidak boleh dilewatkan di Raja Ampat...</p>
+                        <div class="article-meta">
+                            <span class="article-date">10 Januari 2025</span>
+                            <span class="article-read">6 menit</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="artikel-memilih-paket.html" class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80');"></div>
+                    <div class="article-content">
+                        <span class="article-category">Informasi</span>
+                        <h3>Cara Memilih Paket Wisata yang Tepat</h3>
+                        <p>Faktor-faktor penting yang perlu dipertimbangkan saat memilih paket wisata sesuai budget dan preferensi Anda...</p>
+                        <div class="article-meta">
+                            <span class="article-date">5 Januari 2025</span>
+                            <span class="article-read">4 menit</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="artikel.html" class="btn btn-primary">Baca Semua Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Memulai Petualangan Anda?</h2>
+                <p>Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik untuk perjalanan impian Anda</p>
+                <div class="cta-buttons">
+                    <a href="kontak.html" class="btn btn-light">Booking Sekarang</a>
+                    <a href="https://wa.me/6281234567890" class="btn btn-outline-light" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Chat WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🌴</span>
+                        <span class="logo-text">Nusantara Voyage</span>
+                    </div>
+                    <p class="footer-desc">Menjelajahi keindahan Indonesia dengan pengalaman autentik dan berkesan sejak 2017.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Tautan Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="paket.html">Paket Wisata</a></li>
+                        <li><a href="destinasi.html">Destinasi</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Informasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="artikel.html">Artikel & Blog</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Jl. Gatot Subroto No. 45, Denpasar, Bali 80234</li>
+                        <li>📞 +62 812-3456-7890</li>
+                        <li>✉️ info@nusantaravoyage.com</li>
+                        <li>🕒 Senin - Sabtu: 09:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nusantara Voyage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

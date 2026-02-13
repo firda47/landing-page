@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - Belle Lumière</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .articles-main {
+            padding: 80px 0;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        @media (max-width: 968px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Belle Lumière</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="articles.html" class="active">Artikel</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Artikel & Tips Kecantikan</h1>
+            <p>Temukan informasi dan inspirasi seputar perawatan kulit dan makeup</p>
+        </div>
+    </section>
+
+    <!-- Articles Main -->
+    <section class="articles-main">
+        <div class="container">
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&h=400&fit=crop" alt="Rutinitas Skincare">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Skincare</span>
+                        <h3>7 Langkah Rutinitas Skincare Pagi untuk Kulit Glowing</h3>
+                        <p class="article-excerpt">Temukan rahasia kulit sehat dan bercahaya dengan rutinitas perawatan pagi yang tepat menggunakan produk Belle Lumière</p>
+                        <div class="article-meta">
+                            <span class="article-date">10 Februari 2026</span>
+                            <span class="article-author">Dr. Amanda Sari</span>
+                        </div>
+                        <a href="article-detail-1.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=400&fit=crop" alt="Vitamin C">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Ingredient</span>
+                        <h3>Manfaat Vitamin C untuk Kulit Wajah dan Cara Penggunaannya</h3>
+                        <p class="article-excerpt">Pelajari mengapa vitamin C menjadi bahan favorit dalam skincare dan bagaimana cara menggunakannya dengan benar</p>
+                        <div class="article-meta">
+                            <span class="article-date">8 Februari 2026</span>
+                            <span class="article-author">dr. Putri Kusuma</span>
+                        </div>
+                        <a href="article-detail-2.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&h=400&fit=crop" alt="Makeup Natural">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Makeup</span>
+                        <h3>Tutorial Makeup Natural untuk Sehari-hari yang Tahan Lama</h3>
+                        <p class="article-excerpt">Ciptakan tampilan fresh dan natural yang sempurna untuk aktivitas harian dengan produk makeup Belle Lumière</p>
+                        <div class="article-meta">
+                            <span class="article-date">5 Februari 2026</span>
+                            <span class="article-author">Melissa Tan</span>
+                        </div>
+                        <a href="article-detail-3.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop" alt="Kulit Berminyak">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Skincare</span>
+                        <h3>Cara Merawat Kulit Berminyak agar Tidak Berjerawat</h3>
+                        <p class="article-excerpt">Panduan lengkap merawat kulit berminyak dengan produk yang tepat untuk mencegah jerawat dan komedo</p>
+                        <div class="article-meta">
+                            <span class="article-date">3 Februari 2026</span>
+                            <span class="article-author">Dr. Amanda Sari</span>
+                        </div>
+                        <a href="article-detail-4.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop" alt="Anti Aging">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Anti-Aging</span>
+                        <h3>5 Bahan Aktif Anti-Aging yang Wajib Ada di Skincare Anda</h3>
+                        <p class="article-excerpt">Kenali bahan-bahan aktif yang efektif melawan tanda-tanda penuaan dini untuk kulit awet muda</p>
+                        <div class="article-meta">
+                            <span class="article-date">1 Februari 2026</span>
+                            <span class="article-author">dr. Putri Kusuma</span>
+                        </div>
+                        <a href="article-detail-5.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&h=400&fit=crop" alt="Skincare Routine">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Skincare</span>
+                        <h3>Kesalahan Umum dalam Skincare yang Harus Dihindari</h3>
+                        <p class="article-excerpt">Hindari kesalahan-kesalahan ini agar rutinitas skincare Anda memberikan hasil maksimal</p>
+                        <div class="article-meta">
+                            <span class="article-date">28 Januari 2026</span>
+                            <span class="article-author">Dr. Amanda Sari</span>
+                        </div>
+                        <a href="article-detail-6.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&h=400&fit=crop" alt="Sunscreen">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Sun Protection</span>
+                        <h3>Mengapa Sunscreen adalah Langkah Terpenting dalam Skincare</h3>
+                        <p class="article-excerpt">Pelajari pentingnya penggunaan sunscreen setiap hari untuk melindungi kulit dari kerusakan akibat sinar UV</p>
+                        <div class="article-meta">
+                            <span class="article-date">25 Januari 2026</span>
+                            <span class="article-author">dr. Putri Kusuma</span>
+                        </div>
+                        <a href="article-detail-7.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&h=400&fit=crop" alt="Korean Skincare">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Trend</span>
+                        <h3>Tren K-Beauty: Glass Skin dan Cara Mencapainya</h3>
+                        <p class="article-excerpt">Ikuti tren glass skin ala Korea dengan produk dan teknik yang tepat untuk kulit super glowing</p>
+                        <div class="article-meta">
+                            <span class="article-date">22 Januari 2026</span>
+                            <span class="article-author">Melissa Tan</span>
+                        </div>
+                        <a href="article-detail-8.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article> -->
+
+                <!-- <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=600&h=400&fit=crop" alt="Night Routine">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Skincare</span>
+                        <h3>Rutinitas Skincare Malam yang Efektif untuk Regenerasi Kulit</h3>
+                        <p class="article-excerpt">Maksimalkan proses regenerasi kulit di malam hari dengan rutinitas perawatan yang tepat</p>
+                        <div class="article-meta">
+                            <span class="article-date">20 Januari 2026</span>
+                            <span class="article-author">Dr. Amanda Sari</span>
+                        </div>
+                        <a href="article-detail-9.html" class="article-link">Baca Selengkapnya →</a>
+                    </div>
+                </article> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Belle Lumière</h3>
+                    <p>Kosmetik premium Indonesia yang menghadirkan kecantikan alami dengan formulasi terbaik untuk kulit sehat dan bercahaya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="products.html#skincare">Skincare</a></li>
+                        <li><a href="products.html#makeup">Makeup</a></li>
+                        <li><a href="products.html#bodycare">Body Care</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📍 Jl. Sudirman No. 123, Jakarta Selatan</li>
+                        <li>📞 +62 21 5555 8888</li>
+                        <li>✉️ info@bellelumiere.co.id</li>
+                        <li>🕐 Senin - Jumat: 09.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Belle Lumière. All rights reserved. | Terdaftar di BPOM & Halal MUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

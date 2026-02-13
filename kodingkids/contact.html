@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - KodingKids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="code-symbol">&lt;/&gt;</div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">KodingKids</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="programs.html">Program</a></li>
+                <li><a href="blog.html">Artikel</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html" class="active btn-nav">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Hubungi Kami</h1>
+            <p class="fade-in">Punya pertanyaan? Kami siap membantu Anda!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-wrapper fade-in-scroll">
+                    <h2>Kirim Pesan</h2>
+                    <p>Isi form di bawah ini dan kami akan segera menghubungi Anda</p>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap *</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="nama@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">No. WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="08123456789">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Kirim Pesan</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper fade-in-scroll">
+                    <h2>Informasi Kontak</h2>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+62 812-3456-7890</p>
+                                <a href="https://wa.me/6281234567890" class="contact-link" target="_blank">Chat Sekarang →</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@kodingkids.com</p>
+                                <a href="mailto:info@kodingkids.com" class="contact-link">Kirim Email →</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Lokasi</h4>
+                                <p>Bogor, Jawa Barat<br>Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">⏰</div>
+                            <div class="contact-details">
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 09.00 - 17.00<br>Sabtu: 09.00 - 15.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <!-- <section class="map-section fade-in-scroll">
+        <div class="container">
+            <h2 class="section-title">Lokasi Kami</h2>
+            <div class="map-placeholder">
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="800" height="400" fill="#e2e8f0"/>
+                    <circle cx="400" cy="200" r="50" fill="#667eea"/>
+                    <path d="M 400 150 L 400 200 L 425 225" stroke="#fff" stroke-width="4" fill="none"/>
+                    <text x="400" y="280" text-anchor="middle" fill="#4a5568" font-size="20" font-weight="bold">Bogor, Indonesia</text>
+                    <circle cx="400" cy="200" r="60" fill="none" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+                    <circle cx="400" cy="200" r="80" fill="none" stroke="#667eea" stroke-width="2" opacity="0.2"/>
+                </svg>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title fade-in-scroll">Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-grid">
+                <div class="faq-item fade-in-scroll">
+                    <h3>Apakah anak saya perlu pengalaman coding sebelumnya?</h3>
+                    <p>Tidak perlu! Program kami dirancang untuk pemula. Kami akan mengajarkan dari dasar dengan metode yang mudah dipahami anak.</p>
+                </div>
+                <div class="faq-item fade-in-scroll">
+                    <h3>Berapa usia minimum untuk bergabung?</h3>
+                    <p>Kami menerima anak mulai dari usia 8 tahun. Setiap program disesuaikan dengan rentang usia tertentu untuk hasil optimal.</p>
+                </div>
+                <div class="faq-item fade-in-scroll">
+                    <h3>Apakah belajar dilakukan online atau offline?</h3>
+                    <p>Kami menyediakan kedua opsi, online dan offline. Anda bisa memilih sesuai dengan preferensi dan kenyamanan anak.</p>
+                </div>
+                <div class="faq-item fade-in-scroll">
+                    <h3>Berapa lama durasi setiap kelas?</h3>
+                    <p>Setiap sesi kelas berlangsung sekitar 90 menit, dengan frekuensi 2x seminggu untuk memastikan pembelajaran yang efektif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="logo-icon">&lt;/&gt;</span> KodingKids</h3>
+                    <p>Membantu anak Indonesia berpikir logis dan kreatif melalui coding.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="programs.html">Program</a></li>
+                        <li><a href="blog.html">Artikel</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodingkids.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Bogor, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KodingKids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

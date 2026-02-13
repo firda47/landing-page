@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Belle Lumière</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-hero {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        /* Responsive padding: lebih kecil di mobile */
+        padding: 120px 20px 60px; 
+        text-align: center;
+        color: var(--light-color);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem); /* Ukuran font adaptif */
+        margin-bottom: 20px;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+    .contact-info {
+        padding: 20px 0; /* Kurangi padding samping di mobile */
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+        color: var(--dark-color);
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .info-icon {
+        font-size: 1.5rem;
+        min-width: 35px;
+    }
+
+        .info-details h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 8px;
+        }
+
+        .info-details p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .social-media {
+            margin-top: 40px;
+        }
+
+        .social-media h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            background: var(--gray-color);
+            border-radius: 10px;
+            
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group.required label::after {
+            content: ' *';
+            color: var(--primary-color);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .contact-form {
+        background: var(--gray-color);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap; /* Agar icon tidak terpotong jika layar sangat kecil */
+        gap: 10px;
+    }
+
+   .map-section {
+            padding: 80px 0;
+            background: var(--gray-color);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+        .faq-item {
+            background: var(--gray-color);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-form {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-info {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-info {
+                padding: 15px;
+            }
+
+            .contact-form {
+                padding: 15px;
+            }
+
+            .page-hero {
+                padding: 80px 10px 40px;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-hero p {
+                font-size: 0.9rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .info-icon {
+                font-size: 1.2rem;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .submit-btn {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+
+            .form-group label {
+                font-size: 0.8rem;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Belle Lumière</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="articles.html">Artikel</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p>Kami siap membantu Anda dengan pertanyaan seputar produk dan layanan Belle Lumière</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Mari Terhubung dengan Kami</h2>
+                    <p>Apakah Anda memiliki pertanyaan tentang produk kami, ingin konsultasi skincare, atau tertarik untuk berkolaborasi? Tim Belle Lumière siap membantu Anda.</p>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-details">
+                            <h3>Alamat Kantor</h3>
+                            <p>Jl. Jenderal Sudirman No. 123<br>Senayan, Jakarta Selatan 12190<br>Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-details">
+                            <h3>Telepon</h3>
+                            <p>Customer Service: +62 21 5555 8888<br>WhatsApp: +62 812 3456 7890</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-details">
+                            <h3>Email</h3>
+                            <p>Umum: info@bellelumiere.co.id<br>Customer Care: cs@bellelumiere.co.id<br>Partnership: partnership@bellelumiere.co.id</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-details">
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat: 09.00 - 17.00 WIB<br>Sabtu: 09.00 - 14.00 WIB<br>Minggu & Libur: Tutup</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h3>Ikuti Kami di Media Sosial</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-icon" aria-label="TikTok">🎵</a>
+                            <a href="#" class="social-icon" aria-label="YouTube">📹</a>
+                            <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Kirim Pesan</h2>
+                    <form id="contactForm">
+                        <div class="form-group required">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+62 xxx xxxx xxxx" required>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="subject">Subjek</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih subjek pesan</option>
+                                <option value="product">Pertanyaan Produk</option>
+                                <option value="order">Status Pesanan</option>
+                                <option value="consultation">Konsultasi Skincare</option>
+                                <option value="partnership">Kerjasama & Partnership</option>
+                                <option value="complaint">Keluhan & Saran</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Lokasi Kami</span>
+                <h2>Kunjungi Kantor Belle Lumière</h2>
+                <p style="color: var(--text-light); max-width: 600px; margin: 20px auto 40px;">Anda dapat mengunjungi kantor pusat kami di Jakarta Selatan untuk konsultasi langsung atau melihat koleksi produk kami</p>
+            </div>
+            <div class="map-container">
+                <!-- Google Maps Embed - Contoh menggunakan koordinat Jakarta Selatan -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2644875147887!2d106.8094!3d-6.2297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTMnNDcuMCJTIDEwNsKwNDgnMzMuOCJF!5e0!3m2!1sen!2sid!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Pertanyaan Umum</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Bagaimana cara memesan produk Belle Lumière?</h3>
+                    <p>Anda dapat memesan produk kami melalui website resmi, marketplace official store (Tokopedia, Shopee, Lazada), atau mengunjungi store offline kami di berbagai kota. Untuk pemesanan dalam jumlah besar, hubungi tim sales kami.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Apakah produk Belle Lumière sudah BPOM dan Halal?</h3>
+                    <p>Ya, seluruh produk Belle Lumière telah terdaftar di BPOM dan bersertifikat Halal MUI. Nomor registrasi BPOM dan sertifikat Halal dapat dilihat pada kemasan setiap produk.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Berapa lama pengiriman pesanan?</h3>
+                    <p>Untuk wilayah Jakarta dan sekitarnya, pengiriman membutuhkan waktu 1-2 hari kerja. Untuk wilayah luar Jakarta, estimasi pengiriman 2-5 hari kerja tergantung lokasi. Anda akan mendapatkan nomor resi untuk tracking pesanan.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Apakah ada garansi atau kebijakan pengembalian?</h3>
+                    <p>Kami menerima pengembalian produk dalam kondisi cacat produksi atau kesalahan pengiriman dalam 7 hari setelah produk diterima. Produk harus dalam kondisi segel dan belum dibuka. Hubungi customer service untuk proses return.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Bagaimana cara konsultasi produk yang sesuai untuk kulit saya?</h3>
+                    <p>Anda dapat berkonsultasi gratis dengan beauty consultant kami melalui WhatsApp, Instagram DM, atau email. Untuk konsultasi lebih detail, Anda juga bisa membuat appointment untuk bertemu langsung di kantor kami.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Apakah Belle Lumière membuka peluang reseller atau distributor?</h3>
+                    <p>Ya, kami membuka peluang kerjasama sebagai reseller dan distributor di seluruh Indonesia. Silakan hubungi tim partnership kami di partnership@bellelumiere.co.id atau melalui form kontak dengan subjek "Partnership" untuk informasi lebih lanjut.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Belle Lumière</h3>
+                    <p>Kosmetik premium Indonesia yang menghadirkan kecantikan alami dengan formulasi terbaik untuk kulit sehat dan bercahaya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="products.html#skincare">Skincare</a></li>
+                        <li><a href="products.html#makeup">Makeup</a></li>
+                        <li><a href="products.html#bodycare">Body Care</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📍 Jl. Sudirman No. 123, Jakarta Selatan</li>
+                        <li>📞 +62 21 5555 8888</li>
+                        <li>✉️ info@bellelumiere.co.id</li>
+                        <li>🕐 Senin - Jumat: 09.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Belle Lumière. All rights reserved. | Terdaftar di BPOM & Halal MUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

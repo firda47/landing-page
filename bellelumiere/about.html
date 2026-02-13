@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Belle Lumière</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .story-section {
+            padding: 100px 0;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .story-content:nth-child(even) {
+            direction: rtl;
+        }
+
+        .story-content:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .story-text h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .vision-mission {
+            background: var(--gray-color);
+            padding: 100px 0;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .vm-card {
+            background: var(--light-color);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .vm-card h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .vm-card p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .values-section {
+            padding: 100px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .value-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .value-card h4 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .team-section {
+            background: var(--gray-color);
+            padding: 100px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .team-card {
+            background: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 30px;
+        }
+
+        .team-info h4 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .team-info .position {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 968px) {
+            .story-content,
+            .vm-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Belle Lumière</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html" class="active">Tentang Kami</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="articles.html">Artikel</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Tentang Belle Lumière</h1>
+            <p>Perjalanan kami dalam menghadirkan kecantikan alami untuk setiap wanita Indonesia</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=500&fit=crop" alt="Belle Lumière Story" class="story-image">
+                <div class="story-text">
+                    <h2>Kisah Kami Dimulai dari Mimpi Sederhana</h2>
+                    <p>Belle Lumière lahir dari mimpi sederhana pada tahun 2018 - menciptakan produk kosmetik yang tidak hanya mempercantik, tetapi juga merawat kesehatan kulit wanita Indonesia dengan standar internasional namun harga yang terjangkau.</p>
+                    <p>Berawal dari sebuah laboratorium kecil di Jakarta, kami berkomitmen untuk menggunakan bahan-bahan alami terbaik yang dikombinasikan dengan teknologi skincare modern. Setiap produk dirancang khusus untuk memenuhi kebutuhan kulit tropis Indonesia yang unik.</p>
+                    <p>Kini, setelah lebih dari 6 tahun perjalanan, Belle Lumière telah menjadi pilihan lebih dari 100.000 wanita Indonesia yang mempercayai kami untuk merawat kecantikan alami mereka.</p>
+                </div>
+            </div>
+
+            <div class="story-content">
+                <img src="https://media.istockphoto.com/id/1404493509/photo/young-hispanic-woman-scientist-making-makeup-working-at-laboratory.jpg?s=612x612&w=0&k=20&c=yNopCplWTIMwnRdJd6Hl9BLjcP4zB4TYaTBDMoUPbHI=" alt="Our Laboratory" class="story-image">
+                <div class="story-text">
+                    <h2>Filosofi Belle Lumière</h2>
+                    <p>"Belle Lumière" berasal dari bahasa Prancis yang berarti "Cahaya Cantik" - mencerminkan keyakinan kami bahwa setiap wanita memiliki cahaya kecantikan unik yang perlu dipancarkan, bukan disembunyikan.</p>
+                    <p>Kami percaya bahwa kecantikan sejati bukan tentang menutupi kekurangan, melainkan merawat dan menonjolkan keindahan alami yang sudah ada dalam diri setiap wanita. Produk kami dirancang untuk memberdayakan wanita agar merasa percaya diri dengan kulit sehat mereka.</p>
+                    <p>Dengan pendekatan holistik terhadap kecantikan, kami tidak hanya fokus pada hasil visual, tetapi juga pada kesehatan jangka panjang kulit Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Visi & Misi</span>
+                <h2>Komitmen Kami untuk Masa Depan</h2>
+            </div>
+            <div class="vm-grid">
+                <div class="vm-card">
+                    <h3>Visi Kami</h3>
+                    <p>Menjadi brand kosmetik lokal terdepan di Indonesia yang dikenal karena kualitas produk premium, inovasi berkelanjutan, dan komitmen terhadap kecantikan alami wanita Indonesia. Kami bermimpi Belle Lumière menjadi pilihan pertama setiap wanita Indonesia dalam merawat kecantikan mereka.</p>
+                </div>
+                <div class="vm-card">
+                    <h3>Misi Kami</h3>
+                    <p>Menghadirkan produk kosmetik berkualitas tinggi yang aman, efektif, dan terjangkau dengan menggunakan bahan-bahan alami pilihan. Memberikan edukasi skincare yang tepat kepada konsumen, serta berkontribusi pada pemberdayaan ekonomi lokal melalui penggunaan bahan baku dalam negeri dan praktik bisnis yang berkelanjutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Nilai-Nilai Kami</span>
+                <h2>Prinsip yang Memandu Setiap Langkah Kami</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h4>Alami & Aman</h4>
+                    <p>Kami berkomitmen menggunakan bahan-bahan alami berkualitas tinggi yang aman untuk semua jenis kulit dan ramah lingkungan</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h4>Inovasi Berkelanjutan</h4>
+                    <p>Terus berinovasi dengan riset dan pengembangan produk yang mengikuti perkembangan teknologi skincare terkini</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h4>Kualitas Premium</h4>
+                    <p>Tidak pernah berkompromi dengan kualitas - setiap produk melalui standar kontrol kualitas yang ketat</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💚</div>
+                    <h4>Keberlanjutan</h4>
+                    <p>Peduli lingkungan dengan kemasan ramah lingkungan dan proses produksi yang bertanggung jawab</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Transparansi</h4>
+                    <p>Terbuka tentang bahan, proses produksi, dan hasil riset untuk membangun kepercayaan konsumen</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h4>Memberdayakan</h4>
+                    <p>Memberdayakan wanita untuk percaya diri dengan kecantikan alami mereka dan mendukung ekonomi lokal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Tim Kami</span>
+                <h2>Orang-Orang di Balik Belle Lumière</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Dr. Sarah Wijaya" class="team-photo">
+                    <div class="team-info">
+                        <h4>Dr. Sarah Wijaya</h4>
+                        <p class="position">Founder & CEO</p>
+                        <p>Dokter dermatologi dengan pengalaman 15 tahun, memimpin Belle Lumière dengan visi menciptakan skincare berkualitas untuk Indonesia</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop" alt="Diana Putri" class="team-photo">
+                    <div class="team-info">
+                        <h4>Diana Putri, M.Si</h4>
+                        <p class="position">Head of Research & Development</p>
+                        <p>Ahli kimia kosmetik yang bertanggung jawab mengembangkan formulasi inovatif Belle Lumière</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop" alt="Michelle Tan" class="team-photo">
+                    <div class="team-info">
+                        <h4>Michelle Tan</h4>
+                        <p class="position">Marketing Director</p>
+                        <p>Berpengalaman dalam beauty industry, memastikan Belle Lumière terhubung dengan konsumen dengan cara yang autentik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Belle Lumière</h3>
+                    <p>Kosmetik premium Indonesia yang menghadirkan kecantikan alami dengan formulasi terbaik untuk kulit sehat dan bercahaya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="products.html#skincare">Skincare</a></li>
+                        <li><a href="products.html#makeup">Makeup</a></li>
+                        <li><a href="products.html#bodycare">Body Care</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📍 Jl. Sudirman No. 123, Jakarta Selatan</li>
+                        <li>📞 +62 21 5555 8888</li>
+                        <li>✉️ info@bellelumiere.co.id</li>
+                        <li>🕐 Senin - Jumat: 09.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Belle Lumière. All rights reserved. | Terdaftar di BPOM & Halal MUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

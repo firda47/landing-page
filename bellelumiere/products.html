@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Belle Lumière</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .filter-section {
+            padding: 50px 0;
+            background: var(--gray-color);
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 30px;
+            background: var(--light-color);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--light-color);
+            border-color: var(--primary-color);
+        }
+
+        .products-section {
+            padding: 80px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            background: var(--gray-color);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-category {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            min-height: 50px;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            color: #FFB800;
+        }
+
+        .product-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 968px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="logo">
+                <h1>Belle Lumière</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="products.html" class="active">Produk</a></li>
+                <li><a href="articles.html">Artikel</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Koleksi Produk Kami</h1>
+            <p>Temukan produk perawatan yang sempurna untuk kebutuhan kecantikan Anda</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua Produk</button>
+                <button class="filter-btn" data-filter="skincare">Skincare</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="bodycare">Body Care</button>
+                <button class="filter-btn" data-filter="haircare">Hair Care</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Skincare Products -->
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop" alt="Vitamin C Serum">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Skincare</p>
+                        <h3>Brightening Vitamin C Serum</h3>
+                        <p class="product-description">Serum pencerah dengan 15% Vitamin C murni untuk kulit glowing</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.8/5)</span>
+                        </div>
+                        <p class="product-price">Rp 245.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop" alt="Hydrating Toner">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Skincare</p>
+                        <h3>Hydrating Rose Toner</h3>
+                        <p class="product-description">Toner menyegarkan dengan ekstrak mawar untuk hidrasi optimal</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.7/5)</span>
+                        </div>
+                        <p class="product-price">Rp 185.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400&h=400&fit=crop" alt="Night Cream">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Skincare</p>
+                        <h3>Nourishing Night Cream</h3>
+                        <p class="product-description">Krim malam dengan retinol untuk regenerasi kulit maksimal</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.9/5)</span>
+                        </div>
+                        <p class="product-price">Rp 295.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/294/2023/08/18/Screenshot-419-974923812.png" alt="Sunscreen">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Skincare</p>
+                        <h3>UV Defense Sunscreen SPF 50+</h3>
+                        <p class="product-description">Sunscreen ringan non-sticky dengan perlindungan maksimal</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.8/5)</span>
+                        </div>
+                        <p class="product-price">Rp 165.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <!-- Makeup Products -->
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop" alt="Cushion Foundation">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Makeup</p>
+                        <h3>Dewy Glow Cushion Foundation</h3>
+                        <p class="product-description">Cushion dengan coverage natural dan hasil dewy glowing</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.9/5)</span>
+                        </div>
+                        <p class="product-price">Rp 215.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=400&h=400&fit=crop" alt="Lipstick">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Makeup</p>
+                        <h3>Velvet Matte Lipstick</h3>
+                        <p class="product-description">Lipstik matte lembut dengan 12 pilihan warna cantik</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.7/5)</span>
+                        </div>
+                        <p class="product-price">Rp 125.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <img src="https://makeupforever.co.id/cdn/shop/files/I000034004_1@2x.jpg?v=1739418829" alt="Eyeshadow Palette">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Makeup</p>
+                        <h3>Nude Harmony Eyeshadow Palette</h3>
+                        <p class="product-description">Palet 12 warna nude dengan pigmentasi tinggi</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.8/5)</span>
+                        </div>
+                        <p class="product-price">Rp 275.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <img src="https://siopen.balangankab.go.id/storage/merchant/products/2024/06/14/3113f5f542bd017d2d990329b8d05186.jpg" alt="Blush On">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Makeup</p>
+                        <h3>Natural Glow Cream Blush</h3>
+                        <p class="product-description">Blush on krim dengan finish natural dan tahan lama</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.6/5)</span>
+                        </div>
+                        <p class="product-price">Rp 145.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <!-- Body Care Products -->
+                <div class="product-card" data-category="bodycare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop" alt="Body Lotion">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Body Care</p>
+                        <h3>Nourishing Body Lotion</h3>
+                        <p class="product-description">Body lotion dengan shea butter untuk kulit lembut seharian</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.7/5)</span>
+                        </div>
+                        <p class="product-price">Rp 135.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bodycare">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJDsMpaJNiOalzL41EL8E3oSAtwtGjjFKnHw&s" alt="Body Scrub">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Body Care</p>
+                        <h3>Brightening Coffee Body Scrub</h3>
+                        <p class="product-description">Lulur kopi untuk mengangkat sel kulit mati dan mencerahkan</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.8/5)</span>
+                        </div>
+                        <p class="product-price">Rp 155.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bodycare">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcQvPyV8WuJ7Zbq2XOsnwecn0MUdGt1OAWyA&s" alt="Hand Cream">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Body Care</p>
+                        <h3>Intensive Hand Cream</h3>
+                        <p class="product-description">Hand cream dengan vitamin E untuk tangan halus terawat</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.6/5)</span>
+                        </div>
+                        <p class="product-price">Rp 85.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bodycare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop" alt="Body Mist">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Body Care</p>
+                        <h3>Sakura Blossom Body Mist</h3>
+                        <p class="product-description">Body mist dengan aroma sakura segar yang menenangkan</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.7/5)</span>
+                        </div>
+                        <p class="product-price">Rp 115.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <!-- Hair Care Products -->
+                <div class="product-card" data-category="haircare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=400&h=400&fit=crop" alt="Shampoo">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Hair Care</p>
+                        <h3>Repair & Shine Shampoo</h3>
+                        <p class="product-description">Shampoo perbaikan rambut rusak dengan hasil berkilau</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.8/5)</span>
+                        </div>
+                        <p class="product-price">Rp 125.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="haircare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400&h=400&fit=crop" alt="Hair Mask">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Hair Care</p>
+                        <h3>Deep Nourishing Hair Mask</h3>
+                        <p class="product-description">Masker rambut intensif untuk nutrisi mendalam</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.9/5)</span>
+                        </div>
+                        <p class="product-price">Rp 195.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="haircare">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop" alt="Hair Serum">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Hair Care</p>
+                        <h3>Anti-Frizz Hair Serum</h3>
+                        <p class="product-description">Serum rambut untuk mengontrol rambut kusut dan melindungi</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.7/5)</span>
+                        </div>
+                        <p class="product-price">Rp 165.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="haircare">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGKIROxX3L_-_Rieuirm7SkjdrqgETbaBa9A&s" alt="Hair Spray">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Hair Care</p>
+                        <h3>Volume Boost Hair Spray</h3>
+                        <p class="product-description">Hair spray untuk volume dan hold sepanjang hari</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light);">(4.6/5)</span>
+                        </div>
+                        <p class="product-price">Rp 145.000</p>
+                        <a href="contact.html"><button class="product-btn">Buy</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Belle Lumière</h3>
+                    <p>Kosmetik premium Indonesia yang menghadirkan kecantikan alami dengan formulasi terbaik untuk kulit sehat dan bercahaya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="TikTok">🎵</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="products.html#skincare">Skincare</a></li>
+                        <li><a href="products.html#makeup">Makeup</a></li>
+                        <li><a href="products.html#bodycare">Body Care</a></li>
+                        <li><a href="products.html#haircare">Hair Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📍 Jl. Sudirman No. 123, Jakarta Selatan</li>
+                        <li>📞 +62 21 5555 8888</li>
+                        <li>✉️ info@bellelumiere.co.id</li>
+                        <li>🕐 Senin - Jumat: 09.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Belle Lumière. All rights reserved. | Terdaftar di BPOM & Halal MUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
