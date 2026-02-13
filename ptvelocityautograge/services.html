@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Velocity Auto Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header{padding:150px 0 80px;background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));text-align:center;color:var(--white)}
+        .page-header h1{font-size:48px;font-weight:800;margin-bottom:16px}
+        .page-header p{font-size:18px;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto}
+        .services-list{padding:100px 0}
+        .service-detail{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px}
+        .service-detail:nth-child(even){direction:rtl}
+        .service-detail:nth-child(even)>*{direction:ltr}
+        .service-img{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg)}
+        .service-img img{width:100%;height:400px;object-fit:cover}
+        .service-content h3{font-size:32px;font-weight:800;color:var(--text-dark);margin-bottom:16px}
+        .service-content p{font-size:16px;color:var(--dark-gray);line-height:1.8;margin-bottom:20px}
+        .service-features{margin:24px 0}
+        .service-features li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--dark-gray);margin-bottom:12px}
+        .service-features i{color:var(--success);font-size:18px}
+        .service-price{display:inline-block;padding:12px 24px;background:linear-gradient(135deg,rgba(44,116,179,.1),rgba(32,82,149,.1));color:var(--accent-blue);border-radius:var(--radius-sm);font-weight:700;font-size:18px;margin-bottom:24px}
+        .faq-section{padding:80px 0;background:var(--light-gray)}
+        .faq-container{max-width:800px;margin:60px auto 0}
+        .faq-item{background:var(--white);border-radius:var(--radius-md);margin-bottom:16px;overflow:hidden;border:2px solid var(--gray);transition:var(--transition-base)}
+        .faq-item.active{border-color:var(--light-blue)}
+        .faq-question{padding:24px 30px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:17px;color:var(--text-dark)}
+        .faq-question:hover{color:var(--accent-blue)}
+        .faq-toggle{font-size:20px;color:var(--accent-blue);transition:var(--transition-base)}
+        .faq-item.active .faq-toggle{transform:rotate(180deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}
+        .faq-item.active .faq-answer{max-height:500px}
+        .faq-answer-content{padding:0 30px 24px;font-size:15px;color:var(--dark-gray);line-height:1.8}
+        @media(max-width:968px){
+            .service-detail{grid-template-columns:1fr;gap:40px}
+            .service-detail:nth-child(even){direction:ltr}
+        }
+        @media(max-width:576px){
+            .page-header h1{font-size:32px}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand"><i class="fas fa-car-side"></i><span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link active">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+             <!--   <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li> -->
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container"><h1>Layanan Kami</h1><p>Solusi lengkap perawatan dan perbaikan kendaraan dengan standar profesional</p></div>
+    </section>
+
+    <section class="services-list">
+        <div class="container">
+            <div class="service-detail">
+                <div class="service-img"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800" alt="Servis Berkala"></div>
+                <div class="service-content">
+                    <h3>Servis Berkala</h3>
+                    <p>Perawatan rutin sesuai dengan jadwal yang direkomendasikan pabrikan untuk menjaga performa optimal kendaraan Anda. Termasuk penggantian oli, filter, dan pemeriksaan komprehensif.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Penggantian oli mesin berkualitas tinggi</li>
+                        <li><i class="fas fa-check-circle"></i>Pemeriksaan 50+ komponen kendaraan</li>
+                        <li><i class="fas fa-check-circle"></i>Top up cairan (rem, power steering, radiator)</li>
+                        <li><i class="fas fa-check-circle"></i>Laporan kondisi kendaraan lengkap</li>
+                        <li><i class="fas fa-check-circle"></i>Gratis cuci mobil & vacuum</li>
+                    </ul>
+                    <span class="service-price">Mulai Rp 350.000</span>
+                    <a href="" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-img"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=800" alt="Tune Up"></div>
+                <div class="service-content">
+                    <h3>Tune Up & Engine Service</h3>
+                    <p>Optimalisasi performa mesin dengan pembersihan sistem bahan bakar, setting ulang ECU, dan penyetelan komponen mesin menggunakan teknologi diagnostic scanner.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Pembersihan injector dengan ultrasonic</li>
+                        <li><i class="fas fa-check-circle"></i>Pembersihan throttle body & intake manifold</li>
+                        <li><i class="fas fa-check-circle"></i>Setting ulang ECU & sensor oksigen</li>
+                        <li><i class="fas fa-check-circle"></i>Penggantian busi & filter udara</li>
+                        <li><i class="fas fa-check-circle"></i>Test drive & laporan performa</li>
+                    </ul>
+                    <span class="service-price">Mulai Rp 800.000</span>
+                    <a href="" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-img"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=800" alt="Servis AC"></div>
+                <div class="service-content">
+                    <h3>Servis AC Mobil</h3>
+                    <p>Perawatan dan perbaikan sistem AC menggunakan teknologi vacuum untuk hasil maksimal. Dijamin dingin kembali dengan garansi 30 hari.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Pembersihan evaporator dengan foam cleaner</li>
+                        <li><i class="fas fa-check-circle"></i>Vacuum system untuk hasil optimal</li>
+                        <li><i class="fas fa-check-circle"></i>Isi freon R134a sesuai kapasitas</li>
+                        <li><i class="fas fa-check-circle"></i>Cek kebocoran dengan leak detector</li>
+                        <li><i class="fas fa-check-circle"></i>Garansi dingin 30 hari</li>
+                    </ul>
+                    <span class="service-price">Mulai Rp 450.000</span>
+                    <a href="" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-img"><img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=800" alt="Spooring Balancing"></div>
+                <div class="service-content">
+                    <h3>Spooring & Balancing</h3>
+                    <p>Penyetelan geometri roda untuk kenyamanan berkendara optimal dan mencegah keausan ban yang tidak merata menggunakan alat computerized.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>3D wheel alignment system</li>
+                        <li><i class="fas fa-check-circle"></i>Balancing 4 roda dengan mesin digital</li>
+                        <li><i class="fas fa-check-circle"></i>Cek kondisi suspensi & tie rod</li>
+                        <li><i class="fas fa-check-circle"></i>Laporan hasil print out</li>
+                        <li><i class="fas fa-check-circle"></i>Free re-check dalam 7 hari</li>
+                    </ul>
+                    <span class="service-price">Mulai Rp 250.000</span>
+                    <a href="" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-img"><img src="https://lirp.cdn-website.com/5acf07c3/dms3rep/multi/opt/AdobeStock_329384498-640w.jpeg" alt="General Repair"></div>
+                <div class="service-content">
+                    <h3>General Repair & Maintenance</h3>
+                    <p>Perbaikan umum untuk berbagai komponen kendaraan dengan diagnosis profesional menggunakan peralatan modern dan mekanik berpengalaman.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Perbaikan sistem rem (cakram & tromol)</li>
+                        <li><i class="fas fa-check-circle"></i>Perbaikan sistem kelistrikan</li>
+                        <li><i class="fas fa-check-circle"></i>Perbaikan sistem transmisi</li>
+                        <li><i class="fas fa-check-circle"></i>Perbaikan sistem kemudi</li>
+                        <li><i class="fas fa-check-circle"></i>Estimasi biaya transparan</li>
+                    </ul>
+                    <span class="service-price">Harga Sesuai Kerusakan</span>
+                    <a href="" class="btn-primary">Konsultasi Gratis <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-img"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" alt="Ganti Oli"></div>
+                <div class="service-content">
+                    <h3>Ganti Oli Express</h3>
+                    <p>Layanan cepat penggantian oli mesin untuk kendaraan Anda. Proses hanya 30 menit dengan oli berkualitas dan filter original.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i>Oli semi-synthetic atau full-synthetic</li>
+                        <li><i class="fas fa-check-circle"></i>Filter oli original/aftermarket premium</li>
+                        <li><i class="fas fa-check-circle"></i>Pemeriksaan dasar gratis</li>
+                        <li><i class="fas fa-check-circle"></i>Proses cepat 30 menit</li>
+                        <li><i class="fas fa-check-circle"></i>Sticker reminder penggantian oli</li>
+                    </ul>
+                    <span class="service-price">Mulai Rp 200.000</span>
+                    <a href="" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="section-subtitle">Temukan jawaban untuk pertanyaan umum tentang layanan kami</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama waktu yang dibutuhkan untuk servis berkala?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Untuk servis berkala standar, biasanya membutuhkan waktu sekitar 1-2 jam tergantung kondisi kendaraan dan antrian. Kami menyarankan untuk booking terlebih dahulu agar prosesnya lebih cepat dan Anda tidak perlu menunggu lama.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah suku cadang yang digunakan original?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Kami menggunakan suku cadang original (OEM) atau aftermarket premium sesuai permintaan dan budget Anda. Kami akan selalu menginformasikan pilihan yang tersedia beserta perbedaan harga dan kualitasnya.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah ada garansi untuk servis yang dilakukan?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Ya, semua pekerjaan yang kami lakukan memiliki garansi 30 hari. Jika ada masalah yang sama muncul dalam periode garansi, kami akan memperbaikinya tanpa biaya tambahan (selama penggunaan normal).
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana cara booking servis online?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Anda bisa booking melalui halaman Booking Online di website kami, atau langsung hubungi kami via WhatsApp. Setelah booking dikonfirmasi, Anda akan menerima notifikasi dan reminder sebelum jadwal servis.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah bisa servis di hari Minggu?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Saat ini kami buka Senin-Sabtu pukul 08.00-18.00. Untuk hari Minggu kami libur, namun untuk kasus emergency bisa menghubungi kami via WhatsApp dan kami akan bantu semampu kami.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-card">
+                <div class="promo-content">
+                    <div class="promo-badge">Garansi Servis 30 Hari</div>
+                    <h3 class="promo-title">Jaminan Kepuasan 100%</h3>
+                    <p class="promo-desc">Semua pekerjaan yang kami lakukan dilindungi dengan garansi 30 hari. Jika Anda tidak puas atau ada masalah yang sama muncul dalam periode garansi, kami akan memperbaikinya tanpa biaya tambahan.</p>
+                    <div class="promo-features">
+                        <div class="promo-feature"><i class="fas fa-check-circle"></i><span>Garansi Suku Cadang</span></div>
+                        <div class="promo-feature"><i class="fas fa-check-circle"></i><span>Garansi Pekerjaan</span></div>
+                        <div class="promo-feature"><i class="fas fa-check-circle"></i><span>Free Re-check</span></div>
+                    </div>
+                  <!--  <a href="booking.html" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a> -->
+                </div>
+                <div class="promo-image"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=600" alt="Guarantee"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand"><i class="fas fa-car-side"></i><span>VELOCITY <strong>AUTO GARAGE</strong></span></div>
+                    <p class="footer-desc">Bengkel mobil modern dengan pelayanan profesional, mekanik bersertifikat, dan teknologi terkini.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                      <!--  <li><a href="booking.html">Booking Online</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span></li>
+                        <li><i class="fas fa-phone"></i><span>(021) 5566-7788</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@velocityauto.id</span></li>
+                        <li><i class="fas fa-clock"></i><span>Senin - Sabtu: 08.00 - 18.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <!-- <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a> -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Velocity Auto Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header{padding:150px 0 80px;background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));text-align:center;color:var(--white)}
+        .page-header h1{font-size:48px;font-weight:800;margin-bottom:16px}
+        .page-header p{font-size:18px;color:rgba(255,255,255,.8)}
+        .contact-section{padding:100px 0}
+        .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:60px}
+        .contact-info h3{font-size:28px;font-weight:800;color:var(--text-dark);margin-bottom:24px}
+        .contact-item{display:flex;gap:20px;margin-bottom:30px}
+        .contact-icon{width:50px;height:50px;flex-shrink:0;background:linear-gradient(135deg,var(--accent-blue),var(--light-blue));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:22px}
+        .contact-details h4{font-size:17px;font-weight:700;color:var(--text-dark);margin-bottom:6px}
+        .contact-details p{font-size:15px;color:var(--dark-gray);line-height:1.6}
+        .contact-form{background:var(--white);padding:40px;border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);border:2px solid var(--gray)}
+        .contact-form h3{font-size:24px;font-weight:800;color:var(--text-dark);margin-bottom:24px}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-size:14px;font-weight:600;color:var(--text-dark);margin-bottom:8px}
+        .form-control{width:100%;padding:12px 16px;border:2px solid var(--gray);border-radius:var(--radius-md);font-size:15px;font-family:inherit;transition:var(--transition-base)}
+        .form-control:focus{outline:none;border-color:var(--light-blue);box-shadow:0 0 0 3px rgba(44,116,179,.1)}
+        textarea.form-control{resize:vertical;min-height:120px}
+        .submit-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent-blue),var(--light-blue));color:var(--white);border:none;border-radius:var(--radius-md);font-size:16px;font-weight:700;cursor:pointer;transition:var(--transition-base)}
+        .submit-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .map-section{padding:0;margin-top:-100px}
+        .map-container{width:100%;height:450px;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)}
+        .map-container iframe{width:100%;height:100%;border:none}
+        .notification{position:fixed;top:100px;right:30px;background:var(--white);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:12px;min-width:350px;transform:translateX(450px);transition:var(--transition-base);z-index:9999}
+        .notification.show{transform:translateX(0)}
+        .notification.success{border-left:4px solid var(--success)}
+        .notification.error{border-left:4px solid var(--danger)}
+        .notification i{font-size:24px}
+        .notification.success i{color:var(--success)}
+        .notification.error i{color:var(--danger)}
+        .notification span{font-size:14px;color:var(--text-dark);flex:1}
+        .notification-close{background:none;border:none;font-size:20px;color:var(--dark-gray);cursor:pointer}
+        @media(max-width:968px){
+            .contact-grid{grid-template-columns:1fr}
+            .form-row{grid-template-columns:1fr}
+        }
+        @media(max-width:576px){
+            .page-header h1{font-size:32px}
+            .contact-form{padding:30px 24px}
+            .notification{min-width:auto;right:20px;left:20px}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand"><i class="fas fa-car-side"></i><span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container"><h1>Hubungi Kami</h1><p>Kami siap membantu Anda dengan pertanyaan atau kebutuhan servis kendaraan</p></div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Alamat Bengkel</h4>
+                            <p>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920<br>Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Telepon</h4>
+                            <p>(021) 5566-7788<br>+62 812-3456-7890 (WhatsApp)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@velocityauto.id<br>support@velocityauto.id</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Jumat: 08.00 - 18.00<br>Sabtu: 08.00 - 16.00<br>Minggu & Tanggal Merah: Tutup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" class="form-control" id="contactName" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subjek</label>
+                            <input type="text" class="form-control" id="contactSubject" placeholder="Perihal pesan Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pesan</label>
+                            <textarea class="form-control" id="contactMessage" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2005707557685!2d106.82493931476882!3d-6.238210195485995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e2d527e5d5%3A0xbc2b863bc5df0c4!2sSudirman%20Central%20Business%20District%20(SCBD)!5e0!3m2!1sen!2sid!4v1234567890" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="margin-top:100px">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand"><i class="fas fa-car-side"></i><span>VELOCITY <strong>AUTO GARAGE</strong></span></div>
+                    <p class="footer-desc">Kami siap melayani Anda dengan sepenuh hati. Hubungi kami kapan saja!</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                        <li><a href="booking.html">Booking Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span></li>
+                        <li><i class="fas fa-phone"></i><span>(021) 5566-7788</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@velocityauto.id</span></li>
+                        <li><i class="fas fa-clock"></i><span>Senin - Sabtu: 08.00 - 18.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Velocity Auto Garage</title>
+    <meta name="description" content="Kenali lebih dekat Velocity Auto Garage, bengkel mobil profesional dengan mekanik bersertifikat dan pengalaman lebih dari 10 tahun.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Additional styles for About page */
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-blue));
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-story {
+            padding: 100px 0;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .story-image {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .story-content h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        
+        .story-content p {
+            font-size: 16px;
+            color: var(--dark-gray);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .values-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .value-card {
+            padding: 40px 30px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition-base);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(44, 116, 179, 0.1), rgba(32, 82, 149, 0.1));
+            border-radius: 50%;
+        }
+        
+        .value-icon i {
+            font-size: 36px;
+            color: var(--accent-blue);
+        }
+        
+        .value-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .value-card p {
+            font-size: 15px;
+            color: var(--dark-gray);
+            line-height: 1.7;
+        }
+        
+        .team-section {
+            padding: 100px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .team-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        
+        .team-card:hover .team-image img {
+            transform: scale(1.1);
+        }
+        
+        .team-info {
+            padding: 24px 20px;
+            text-align: center;
+        }
+        
+        .team-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        
+        .team-role {
+            font-size: 14px;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+        
+        .team-cert {
+            font-size: 13px;
+            color: var(--dark-gray);
+        }
+        
+        .certifications {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .cert-card {
+            padding: 30px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 2px solid var(--gray);
+            transition: var(--transition-base);
+        }
+        
+        .cert-card:hover {
+            border-color: var(--light-blue);
+            transform: translateY(-5px);
+        }
+        
+        .cert-icon {
+            font-size: 48px;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
+        }
+        
+        .cert-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .cert-desc {
+            font-size: 13px;
+            color: var(--dark-gray);
+        }
+        
+        @media (max-width: 968px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 32px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-car-side"></i>
+                <span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link active">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+             <!--  <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li> -->
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tentang Velocity Auto Garage</h1>
+            <p>Lebih dari 10 tahun melayani dengan dedikasi, profesionalisme, dan kepercayaan sebagai prioritas utama</p>
+        </div>
+    </section>
+
+    <!-- ========== OUR STORY ========== -->
+    <section class="about-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800" alt="Velocity Auto Garage Workshop">
+                </div>
+                
+                <div class="story-content">
+                    <span class="section-tag">Kisah Kami</span>
+                    <h2>Perjalanan Membangun Kepercayaan</h2>
+                    <p>Velocity Auto Garage didirikan pada tahun 2014 dengan visi sederhana namun ambisius: menyediakan layanan perawatan kendaraan yang jujur, transparan, dan berkualitas tinggi untuk masyarakat Jakarta.</p>
+                    
+                    <p>Berawal dari sebuah bengkel kecil dengan 3 mekanik, kami kini telah berkembang menjadi salah satu bengkel mobil paling dipercaya di Jakarta Selatan dengan 15 mekanik bersertifikat dan fasilitas modern yang lengkap.</p>
+                    
+                    <p>Kami memahami bahwa kendaraan bukan sekadar alat transportasi, tetapi investasi penting yang memerlukan perawatan profesional. Oleh karena itu, setiap pekerjaan yang kami lakukan dilakukan dengan standar tertinggi dan penuh tanggung jawab.</p>
+                    
+                    <p>Hingga kini, lebih dari 5.000 kendaraan telah kami layani dengan tingkat kepuasan pelanggan mencapai 98%. Kepercayaan pelanggan adalah aset terbesar kami, dan kami berkomitmen untuk terus memberikan yang terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VALUES ========== -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nilai Kami</span>
+                <h2 class="section-title">Prinsip yang Kami Pegang Teguh</h2>
+                <p class="section-subtitle">Nilai-nilai fundamental yang menjadi landasan setiap layanan kami</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integritas</h3>
+                    <p>Kami selalu jujur tentang kondisi kendaraan Anda dan hanya merekomendasikan perbaikan yang benar-benar diperlukan. Tidak ada biaya tersembunyi.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Kualitas</h3>
+                    <p>Menggunakan suku cadang original dan teknologi terkini untuk memastikan setiap pekerjaan dilakukan dengan standar tertinggi industri otomotif.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Kepuasan Pelanggan</h3>
+                    <p>Kepuasan Anda adalah prioritas kami. Kami tidak puas sampai Anda puas dengan hasil pekerjaan dan layanan yang kami berikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEAM ========== -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tim Kami</span>
+                <h2 class="section-title">Mekanik Profesional Bersertifikat</h2>
+                <p class="section-subtitle">Tim ahli dengan pengalaman dan sertifikasi internasional</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Ahmad Rizki">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Ahmad Rizki</h4>
+                        <p class="team-role">Head Mechanic</p>
+                        <p class="team-cert">ASE Master Certified • 15 Tahun Pengalaman</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Budi Santoso">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Budi Santoso</h4>
+                        <p class="team-role">Engine Specialist</p>
+                        <p class="team-cert">ASE L1 Certified • 12 Tahun Pengalaman</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Dedi Prasetyo">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Dedi Prasetyo</h4>
+                        <p class="team-role">Transmission Expert</p>
+                        <p class="team-cert">ASE A3 Certified • 10 Tahun Pengalaman</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Eko Wijaya">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Eko Wijaya</h4>
+                        <p class="team-role">AC & Electrical</p>
+                        <p class="team-cert">ASE A6 Certified • 8 Tahun Pengalaman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sertifikasi & Standar</span>
+                <h2 class="section-title">Komitmen terhadap Standar Profesional</h2>
+                <p class="section-subtitle">Sertifikasi dan standar kualitas yang kami miliki</p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4 class="cert-name">ASE Certified</h4>
+                    <p class="cert-desc">Automotive Service Excellence Certification</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="cert-name">ISO 9001:2015</h4>
+                    <p class="cert-desc">Quality Management System</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4 class="cert-name">Best Service Award</h4>
+                    <p class="cert-desc">Jakarta Auto Service 2023</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="cert-name">Customer Choice</h4>
+                    <p class="cert-desc">Rated 4.9/5 by 1000+ Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (Different for About) ========== -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-card">
+                <div class="promo-content">
+                    <h3 class="promo-title" style="margin-bottom: 16px;">Komitmen Kualitas & Keselamatan Pelanggan</h3>
+                    <p class="promo-desc">Setiap kendaraan yang kami tangani diperlakukan dengan standar keselamatan tertinggi. Kami menggunakan peralatan modern dan mengikuti prosedur keselamatan kerja yang ketat untuk memastikan kendaraan Anda kembali dalam kondisi optimal dan aman untuk dikendarai.</p>
+                    <div class="promo-features">
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Safety First Protocol</span>
+                        </div>
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quality Assurance Check</span>
+                        </div>
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                    </div>
+                    <a href="services.html" class="btn-primary">Lihat Layanan Kami <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="promo-image">
+                    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=600" alt="Quality Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-car-side"></i>
+                        <span>VELOCITY <strong>AUTO GARAGE</strong></span>
+                    </div>
+                    <p class="footer-desc">Bengkel mobil modern dengan pelayanan profesional, mekanik bersertifikat, dan teknologi terkini. Kepercayaan Anda adalah prioritas kami.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                      <!-- <li><a href="booking.html">Booking Online</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(021) 5566-7788</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@velocityauto.id</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Senin - Sabtu: 08.00 - 18.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== 
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

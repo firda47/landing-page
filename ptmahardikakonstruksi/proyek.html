@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek - Mahardika Konstruksi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #0D1B2A 0%, #1B2A3F 100%);
+            text-align: center;
+        }
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .projects-section {
+            padding: 6rem 0;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--color-gray-200);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .project-image {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #E5E5E5 0%, #CCCCCC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-tag {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .project-content {
+            padding: 2rem;
+        }
+        .project-content h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--color-dark);
+            margin-bottom: 1rem;
+        }
+        .project-content p {
+            color: var(--color-gray-700);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-specs {
+            display: grid;
+            gap: 0.75rem;
+        }
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+            font-size: 0.95rem;
+        }
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+        .spec-label {
+            color: var(--color-gray-700);
+            font-weight: 600;
+        }
+        .spec-value {
+            color: var(--color-dark);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="nav-main">
+        <div class="container-fluid">
+            <div class="nav-content">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40">
+                            <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                            <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                            <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">MAHARDIKA</span>
+                        <span class="brand-tagline">KONSTRUKSI</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="tentang.html" class="nav-link">TENTANG</a></li>
+                    <li><a href="layanan.html" class="nav-link">LAYANAN</a></li>
+                    <li><a href="proyek.html" class="nav-link active">PROYEK</a></li>
+                  <!--  <li><a href="kontak.html" class="nav-link nav-link-cta">KONTAK</a></li> -->
+                </ul>
+                
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">PORTFOLIO PROYEK</h1>
+            <p class="page-subtitle">Karya Terbaik yang Telah Kami Selesaikan</p>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://media.dekoruma.com/dekohouse/property/real-estate/CHLS-MZNT/perumahan-mazenta-residence-tangerang-selatan-general-fasad-1.jpg'); background-size: cover; background-position: center;">
+                        <div class="project-tag">RUMAH 2 LANTAI</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Residensi Bintaro Modern</h3>
+                        <p>Pembangunan rumah minimalis modern 2 lantai dengan konsep terbuka dan pencahayaan alami maksimal. Menggunakan material premium dan sistem smart home.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Lokasi</span>
+                                <span class="spec-value">Bintaro, Tangerang Selatan</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Luas Bangunan</span>
+                                <span class="spec-value">180 m²</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Durasi</span>
+                                <span class="spec-value">7 Bulan</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Tahun</span>
+                                <span class="spec-value">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-klasik-3-lantai-34131021-351673458131222020602.jpg'); background-size: cover; background-position: center;">
+                       
+                        <div class="project-tag">RENOVASI TOTAL</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Renovasi Rumah Klasik BSD</h3>
+                        <p>Transformasi total rumah klasik menjadi gaya Skandinavia dengan perubahan layout, penambahan skylight, dan upgrade seluruh sistem MEP.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Lokasi</span>
+                                <span class="spec-value">BSD City, Tangerang</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Luas Renovasi</span>
+                                <span class="spec-value">150 m²</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Durasi</span>
+                                <span class="spec-value">5 Bulan</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Tahun</span>
+                                <span class="spec-value">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                     <div class="project-image" style="background-image: url('https://media.dekoruma.com/article/2024/12/09224833/Rumah-3.jpg?fit=800%2C600&ssl=1'); background-size: cover; background-position: center;">
+                        <div class="project-tag">RUMAH 1 LANTAI</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Rumah Tropis Bekasi</h3>
+                        <p>Konsep rumah tropis dengan taman indoor, ventilasi silang alami, dan material ramah lingkungan. Cocok untuk iklim Indonesia.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Lokasi</span>
+                                <span class="spec-value">Summarecon Bekasi</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Luas Bangunan</span>
+                                <span class="spec-value">120 m²</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Durasi</span>
+                                <span class="spec-value">6 Bulan</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Tahun</span>
+                                <span class="spec-value">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                     <div class="project-image" style="background-image: url('https://irp.cdn-website.com/3553c92d/dms3rep/multi/Taman+lingkungan+1+-+04+Edit.webp'); background-size: cover; background-position: center;">
+                        <div class="project-tag">CLUSTER PERUMAHAN</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Cluster Green Valley Depok</h3>
+                        <p>Pembangunan 8 unit rumah cluster dengan konsep hijau, fasilitas taman bersama, dan sistem pengelolaan air ramah lingkungan.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Lokasi</span>
+                                <span class="spec-value">Cinere, Depok</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Jumlah Unit</span>
+                                <span class="spec-value">8 Unit</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Durasi</span>
+                                <span class="spec-value">12 Bulan</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Tahun</span>
+                                <span class="spec-value">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                                <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                                <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">MAHARDIKA</span>
+                            <span class="brand-tagline">KONSTRUKSI</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Perusahaan konstruksi perumahan terpercaya sejak 2014</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="proyek.html">Proyek</a></li>
+                        <!--<li><a href="kontak.html">Kontak</a></li>-->
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Jl. Raya Ciputat No. 45</li>
+                        <li>Jakarta Selatan 12310</li>
+                        <li>+62 812-8765-4321</li>
+                        <li>info@mahardikakonstruksi.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 PT Mahardika Konstruksi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Mahardika Konstruksi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #0D1B2A 0%, #1B2A3F 100%);
+            position: relative;
+        }
+        .page-header-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .services-detail {
+            padding: 6rem 0;
+        }
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        .service-item:nth-child(even) {
+            direction: rtl;
+        }
+        .service-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        .service-visual {
+            background: linear-gradient(135deg, #F5F5F5 0%, #E5E5E5 100%);
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--color-primary);
+        }
+        .service-info h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-dark);
+            margin-bottom: 1.5rem;
+        }
+        .service-info p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--color-gray-700);
+            margin-bottom: 2rem;
+        }
+        .service-features {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+        }
+        .service-features li {
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--color-gray-700);
+        }
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-item {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .service-item:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="nav-main">
+        <div class="container-fluid">
+            <div class="nav-content">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40">
+                            <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                            <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                            <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">MAHARDIKA</span>
+                        <span class="brand-tagline">KONSTRUKSI</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="tentang.html" class="nav-link">TENTANG</a></li>
+                    <li><a href="layanan.html" class="nav-link active">LAYANAN</a></li>
+                    <li><a href="proyek.html" class="nav-link">PROYEK</a></li>
+                 <!--   <li><a href="kontak.html" class="nav-link nav-link-cta">KONTAK</a></li> -->
+                </ul>
+                
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">LAYANAN KAMI</h1>
+                <p class="page-subtitle">Solusi Konstruksi Perumahan yang Komprehensif</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-detail">
+        <div class="container">
+            
+            <div class="service-item">
+                <div class="service-visual" style="background-image: url('https://cms.semenmerahputih.com/storage/5475/responsive-images/biaya-bangun-rumah-per-meter___converted_1085_768.jpg'); background-size: cover; background-position: center;">
+                </div>
+                <div class="service-info">
+                    <h2>PEMBANGUNAN RUMAH BARU</h2>
+                    <p>Wujudkan hunian impian Anda dari nol dengan desain custom dan material berkualitas. Kami menangani seluruh proses dari perencanaan, pengurusan izin, hingga serah terima kunci.</p>
+                    <ul class="service-features">
+                        <li>Desain arsitektur sesuai keinginan</li>
+                        <li>Material grade A dari supplier terpercaya</li>
+                        <li>Pengawasan proyek 100% transparan</li>
+                        <li>Garansi struktur 2 tahun</li>
+                        <li>Progress report berkala</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-visual" style="background-image: url('https://growthteams.com/wp-content/uploads/2024/12/home-remodeling-business-growth.jpg'); background-size: cover; background-position: center;">
+                </div>
+                <div class="service-info">
+                    <h2>RENOVASI & REMODELING</h2>
+                    <p>Ubah tampilan rumah lama Anda menjadi hunian modern yang nyaman dan fungsional. Kami ahli dalam renovasi total maupun parsial dengan hasil maksimal.</p>
+                    <ul class="service-features">
+                        <li>Renovasi kamar, dapur, kamar mandi</li>
+                        <li>Penambahan lantai atau ruangan baru</li>
+                        <li>Upgrade sistem listrik & plumbing</li>
+                        <li>Pengecatan dan finishing berkualitas</li>
+                        <li>Konsultasi desain interior gratis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-visual" style="background-image: url('https://media.dekoruma.com/article/2024/09/23214314/Definisi-Arsitek-Rumah-dan-Perannya-dalam-Proyek-Hunian.jpg'); background-size: cover; background-position: center;">
+                </div>
+                <div class="service-info">
+                    <h2>DESAIN & BANGUN</h2>
+                    <p>Paket lengkap one-stop solution dari konsep desain hingga realisasi pembangunan. Arsitek berpengalaman kami siap membantu mewujudkan visi Anda.</p>
+                    <ul class="service-features">
+                        <li>Desain 3D rendering realistis</li>
+                        <li>Perhitungan RAB yang detail dan akurat</li>
+                        <li>Revisi desain unlimited hingga approved</li>
+                        <li>Koordinasi dengan konsultan struktur</li>
+                        <li>One-stop solution, hemat waktu & biaya</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Tertarik Dengan Layanan Kami?</h2>
+                <p>Konsultasikan kebutuhan konstruksi Anda dengan tim ahli kami</p>
+                <a href="" class="btn btn-primary btn-large">
+                    <span>Hubungi Kami Sekarang</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                                <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                                <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">MAHARDIKA</span>
+                            <span class="brand-tagline">KONSTRUKSI</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Perusahaan konstruksi perumahan terpercaya sejak 2014</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="proyek.html">Proyek</a></li>
+                      <!--  <li><a href="kontak.html">Kontak</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Jl. Raya Ciputat No. 45</li>
+                        <li>Jakarta Selatan 12310</li>
+                        <li>+62 812-8765-4321</li>
+                        <li>info@mahardikakonstruksi.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 PT Mahardika Konstruksi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

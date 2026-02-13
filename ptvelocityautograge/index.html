@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Auto Garage - Bengkel Mobil Profesional Jakarta</title>
+    <meta name="description" content="Bengkel mobil modern dengan mekanik bersertifikat, layanan profesional, dan harga transparan. Servis berkala, tune up, dan perawatan mobil terpercaya.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <div class="nav-brand">
+                <i class="fas fa-car-side"></i>
+                <span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+              <!--  <li><a href="contact.html" class="nav-link">Kontak</a></li> -->
+               <!-- <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li> -->
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <!-- Hero Background -->
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2000');">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Servis Profesional untuk <span class="highlight">Performa Maksimal</span></h1>
+                <p class="hero-subtitle">Bengkel mobil modern dengan teknologi terkini, mekanik bersertifikat ASE, dan layanan transparan. Pengalaman lebih dari 10 tahun melayani ribuan pelanggan setia di Jakarta.</p>
+                
+                <div class="hero-cta">
+                    <a href="booking.html" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i> Booking Sekarang
+                    </a>
+                    <a href="services.html" class="btn-secondary">
+                        <i class="fas fa-tools"></i> Lihat Layanan
+                    </a>
+                </div>
+                
+                <!-- Hero Features -->
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garansi 30 Hari</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Mekanik Bersertifikat</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Harga Transparan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+           
+        </div>
+    </section>
+
+    <!-- ========== STATISTICS SECTION ========== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="10">0</h3>
+                        <p class="stat-label">Tahun Pengalaman</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="5000">0</h3>
+                        <p class="stat-label">Kendaraan Diservis</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <p class="stat-label">Mekanik Bersertifikat</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="98">0</h3>
+                        <p class="stat-label">Kepuasan Pelanggan (%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES PREVIEW ========== -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Layanan Kami</span>
+                <h2 class="section-title">Solusi Lengkap Perawatan Kendaraan</h2>
+                <p class="section-subtitle">Kami menyediakan berbagai layanan perawatan dan perbaikan mobil dengan standar internasional menggunakan peralatan modern dan suku cadang original</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3 class="service-title">Servis Berkala</h3>
+                    <p class="service-desc">Perawatan rutin sesuai jadwal pabrikan dengan checklist lengkap untuk menjaga performa optimal kendaraan Anda</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Penggantian oli mesin</li>
+                        <li><i class="fas fa-check"></i> Pemeriksaan 50 komponen</li>
+                        <li><i class="fas fa-check"></i> Laporan kondisi lengkap</li>
+                    </ul>
+                    <a href="services.html" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card featured">
+                    <div class="featured-badge">Paling Populer</div>
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3 class="service-title">Tune Up & Engine</h3>
+                    <p class="service-desc">Optimalisasi performa mesin dengan tune up profesional menggunakan teknologi diagnostic scanner terbaru</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Pembersihan injector</li>
+                        <li><i class="fas fa-check"></i> Setting ulang ECU</li>
+                        <li><i class="fas fa-check"></i> Test drive performa</li>
+                    </ul>
+                    <a href="services.html" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="service-title">Servis AC Mobil</h3>
+                    <p class="service-desc">Perawatan dan perbaikan sistem AC dengan teknologi vacuum untuk hasil maksimal dan udara lebih sejuk</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Pembersihan evaporator</li>
+                        <li><i class="fas fa-check"></i> Isi freon R134a</li>
+                        <li><i class="fas fa-check"></i> Garansi dingin 30 hari</li>
+                    </ul>
+                    <a href="services.html" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="services.html" class="btn-outline-large">Lihat Semua Layanan <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <span class="section-tag">Mengapa Kami?</span>
+                    <h2 class="section-title">Kepercayaan adalah Prioritas Kami</h2>
+                    <p class="why-intro">Velocity Auto Garage telah menjadi pilihan utama ribuan pemilik kendaraan di Jakarta karena komitmen kami terhadap kualitas, transparansi, dan kepuasan pelanggan.</p>
+                    
+                    <div class="why-items">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Mekanik Bersertifikat ASE</h4>
+                                <p>Tim mekanik profesional dengan sertifikasi internasional dan pengalaman lebih dari 10 tahun di industri otomotif</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Peralatan Modern</h4>
+                                <p>Menggunakan teknologi diagnostic scanner terbaru dan peralatan standar internasional untuk hasil maksimal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Harga Transparan</h4>
+                                <p>Estimasi biaya jelas sebelum pengerjaan, tanpa biaya tersembunyi. Invoice detail untuk setiap komponen</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Garansi Komprehensif</h4>
+                                <p>Garansi servis 30 hari untuk semua pekerjaan yang kami lakukan dengan jaminan kepuasan 100%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn-primary">Kenali Kami Lebih Jauh <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="why-image">
+                    <img src="https://media.istockphoto.com/id/1387759698/id/foto/tangan-mekanik-mobil-dengan-kunci-pas-garasi-perbaikan-otomatis-mekanik-bekerja-pada-mesin.jpg?s=612x612&w=0&k=20&c=5H-DulDxIkxqBf4SbLOZoz5PomnscP2F-dArAb_FF14=" alt="Mekanik Profesional Velocity Auto Garage">
+                    <div class="image-badge">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <strong>Award Winner</strong>
+                            <p>Best Service 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimoni Pelanggan</span>
+                <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+                <p class="section-subtitle">Kepuasan pelanggan adalah bukti nyata kualitas layanan kami</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Pelayanan sangat memuaskan! Mekanik profesional dan jujur. Mobil Honda CR-V saya yang sempat bermasalah di mesin sekarang sudah normal kembali. Harga juga transparan dan wajar."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Budi Santoso</h4>
+                            <p>Pemilik Honda CR-V 2019</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sudah langganan di sini sejak 3 tahun lalu. Service AC mobil Innova saya selalu dingin dan awet. Tempatnya bersih, nyaman, dan ada ruang tunggu ber-AC. Sangat recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Siti Nurhaliza</h4>
+                            <p>Pemilik Toyota Innova 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Tune up mesin di sini hasilnya luar biasa! Tarikan mobil jadi lebih responsif dan konsumsi BBM lebih irit. Mekaniknya menjelaskan detail kondisi mobil dengan baik. Top service!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Andi Wijaya</h4>
+                            <p>Pemilik Mazda CX-5 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROMO SECTION (Home Footer) ========== -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-card">
+                <div class="promo-content">
+                    <div class="promo-badge">Promo Bulan Ini</div>
+                    <h3 class="promo-title">Diskon Spesial Servis Berkala</h3>
+                    <p class="promo-desc">Dapatkan diskon hingga 25% untuk paket servis berkala. Gratis top up air wiper dan check up 50 komponen kendaraan. Promo terbatas!</p>
+                    <div class="promo-features">
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Gratis Oli Filter</span>
+                        </div>
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Gratis Cuci Mobil</span>
+                        </div>
+                        <div class="promo-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garansi 30 Hari</span>
+                        </div>
+                    </div>
+                    <a href="booking.html" class="btn-primary">Booking Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="promo-image">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=600" alt="Promo Servis">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <i class="fas fa-car-side"></i>
+                        <span>VELOCITY <strong>AUTO GARAGE</strong></span>
+                    </div>
+                    <p class="footer-desc">Bengkel mobil modern dengan pelayanan profesional, mekanik bersertifikat, dan teknologi terkini. Kepercayaan Anda adalah prioritas kami.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                       <!-- <li><a href="booking.html">Booking Online</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(021) 5566-7788</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@velocityauto.id</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Senin - Sabtu: 08.00 - 18.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== 
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->x`
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

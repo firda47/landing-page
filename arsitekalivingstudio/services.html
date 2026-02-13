@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Arsiteka Living Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">ARSITEKA</span>
+                    <span class="logo-subtext">Living Studio</span>
+                </a>
+                
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="process.html" class="nav-link">Process</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                  <!--  <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Layanan Kami</h1>
+            <p class="page-subtitle">Solusi lengkap untuk kebutuhan desain dan permodelan perumahan Anda</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Desain Rumah">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                        </div>
+                        <h3>Desain Rumah Custom</h3>
+                        <p>
+                            Desain arsitektur rumah yang disesuaikan dengan kebutuhan, gaya hidup, dan budget Anda. Dari konsep hingga gambar kerja detail siap bangun.
+                        </p>
+                        <ul class="service-features">
+                            <li>Konsultasi desain unlimited</li>
+                            <li>Site analysis & feasibility study</li>
+                            <li>Denah, tampak, potongan lengkap</li>
+                            <li>Detail konstruksi & RAB</li>
+                            <li>Revisi hingga approved</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://media.istockphoto.com/id/643893980/video/architectural-drawing-changed-3d-house-interior.jpg?s=640x640&k=20&c=yNNyJ1U0nZBYTUAf86-m97OHztmpq_9e7cv7lXerRrw=" alt="3D Modeling">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <h3>3D Modeling</h3>
+                        <p>
+                            Visualisasi 3D profesional menggunakan software terkini untuk membantu Anda melihat desain secara realistis sebelum pembangunan dimulai.
+                        </p>
+                        <ul class="service-features">
+                            <li>Model 3D detail interior & eksterior</li>
+                            <li>Multiple angle views</li>
+                            <li>Material & texture realistic</li>
+                            <li>File editable (SketchUp/AutoCAD)</li>
+                            <li>Revisi model unlimited</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt="Rendering">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Rendering Realistis</h3>
+                        <p>
+                            Render foto-realistis dengan pencahayaan natural dan material detail untuk presentasi yang memukau kepada klien atau investor.
+                        </p>
+                        <ul class="service-features">
+                            <li>High-resolution render (4K+)</li>
+                            <li>Realistic lighting & shadow</li>
+                            <li>Day & night scene</li>
+                            <li>Landscape & entourage</li>
+                            <li>Multiple camera angles</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Masterplan">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            </svg>
+                        </div>
+                        <h3>Masterplan Perumahan</h3>
+                        <p>
+                            Perencanaan kawasan perumahan komprehensif dengan konsep sustainable development dan efisiensi tata ruang.
+                        </p>
+                        <ul class="service-features">
+                            <li>Site planning & zoning</li>
+                            <li>Infrastructure layout</li>
+                            <li>Green space design</li>
+                            <li>Traffic flow analysis</li>
+                            <li>Utility planning</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Interior Design">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3>Interior Design</h3>
+                        <p>
+                            Desain interior yang harmonis dengan arsitektur, menciptakan suasana nyaman dan fungsional sesuai karakter penghuni.
+                        </p>
+                        <ul class="service-features">
+                            <li>Space planning & layout</li>
+                            <li>Furniture selection & custom</li>
+                            <li>Color scheme & material</li>
+                            <li>Lighting design</li>
+                            <li>3D visualization interior</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Konsultasi">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                            </svg>
+                        </div>
+                        <h3>Konsultasi Arsitektur</h3>
+                        <p>
+                            Layanan konsultasi untuk evaluasi desain existing, feasibility study, atau second opinion untuk proyek Anda.
+                        </p>
+                        <ul class="service-features">
+                            <li>Review & evaluasi desain</li>
+                            <li>Budget optimization</li>
+                            <li>Material recommendation</li>
+                            <li>Building code compliance</li>
+                            <li>Construction monitoring</li>
+                        </ul>
+                        <a href="#" class="service-link">Mulai Konsultasi →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pertanyaan Umum</span>
+                <h2 class="section-title">Yang Sering Ditanyakan</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Berapa lama waktu yang dibutuhkan untuk menyelesaikan desain rumah?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Waktu penyelesaian desain bervariasi tergantung kompleksitas proyek. Untuk rumah tinggal sederhana (1-2 lantai), biasanya memerlukan 2-3 minggu dari konsultasi awal hingga desain final. Proyek yang lebih kompleks atau masterplan perumahan bisa memakan waktu 1-2 bulan. Kami selalu memberikan timeline yang jelas di awal proyek.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah ada batasan revisi desain?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Kami menyediakan revisi unlimited dalam tahap konsep desain untuk memastikan desain sesuai ekspektasi Anda. Setelah desain disetujui dan masuk tahap detail, revisi mayor akan dikenakan biaya tambahan. Namun, revisi minor dan penyesuaian teknis tetap kami akomodasi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Berapa kisaran biaya jasa desain arsitektur?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Biaya jasa desain kami mulai dari Rp 150.000 per meter persegi untuk paket lengkap (desain + gambar kerja + 3D). Harga dapat bervariasi tergantung kompleksitas desain, lokasi proyek, dan layanan tambahan yang dipilih. Kami juga menawarkan paket khusus untuk proyek skala besar. Silakan hubungi kami untuk quotation detail.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah menyediakan layanan pengawasan konstruksi?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Ya, kami menyediakan layanan pengawasan konstruksi atau construction management. Tim kami akan melakukan site visit berkala, memastikan pembangunan sesuai dengan desain dan spesifikasi, serta memberikan solusi teknis jika ada kendala di lapangan. Layanan ini tersedia sebagai add-on service.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Software apa yang digunakan untuk desain dan 3D modeling?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Kami menggunakan AutoCAD untuk gambar kerja teknis, SketchUp untuk 3D modeling, dan Lumion/V-Ray untuk rendering realistis. Untuk presentasi, kami juga menggunakan Photoshop dan Adobe Suite. Semua file desain akan diserahkan dalam format yang editable dan kompatibel dengan standar industri.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah bisa konsultasi dulu sebelum memutuskan menggunakan jasa?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Tentu! Kami menyediakan konsultasi awal gratis untuk membahas kebutuhan, budget, dan ekspektasi Anda. Sesi konsultasi bisa dilakukan via WhatsApp, video call, atau kunjungan ke studio kami. Tidak ada komitmen yang mengikat, dan Anda bebas bertanya apapun seputar proyek Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer khusus Services -->
+    <footer class="footer footer-services">
+        <div class="container">
+            <div class="footer-process-summary">
+                <h3>Proses Kerja Sederhana</h3>
+                <div class="process-steps-mini">
+                    <div class="mini-step">
+                        <span class="mini-number">1</span>
+                        <p>Konsultasi & Brief</p>
+                    </div>
+                    <div class="mini-step">
+                        <span class="mini-number">2</span>
+                        <p>Konsep Desain</p>
+                    </div>
+                    <div class="mini-step">
+                        <span class="mini-number">3</span>
+                        <p>3D Modeling</p>
+                    </div>
+                    <div class="mini-step">
+                        <span class="mini-number">4</span>
+                        <p>Revisi & Finalisasi</p>
+                    </div>
+                    <div class="mini-step">
+                        <span class="mini-number">5</span>
+                        <p>Serah Terima File</p>
+                    </div>
+                </div>
+                <a href="process.html" class="btn btn-outline">Lihat Detail Process →</a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Arsiteka Living Studio</h4>
+                    <p>Studio desain arsitektur yang berfokus pada inovasi, estetika, dan keberlanjutan dalam setiap proyek perumahan.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Jl. Raya Pajajaran No. 45</li>
+                        <li>Bogor, Jawa Barat 16143</li>
+                        <li>Email: info@arsiteka.studio</li>
+                        <li>Phone: +62 851-2345-6789</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arsiteka Living Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+   <!-- <a href="https://wa.me/6285123456789" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

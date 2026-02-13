@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Mahardika Konstruksi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #0D1B2A 0%, #1B2A3F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.02) 40px, rgba(255,255,255,.02) 80px);
+        }
+        .page-header-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .about-section {
+            padding: 6rem 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        .about-image {
+            background: linear-gradient(135deg, #E5E5E5 0%, #CCCCCC 100%);
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-image svg {
+            width: 70%;
+            height: 70%;
+            
+        }
+        .about-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-dark);
+        }
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--color-gray-700);
+            margin-bottom: 1.5rem;
+        }
+        
+        .values-section {
+            padding: 6rem 0;
+            background: var(--color-gray-100);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .value-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .value-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .value-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+        .value-card p {
+            color: var(--color-gray-700);
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="nav-main">
+        <div class="container-fluid">
+            <div class="nav-content">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40">
+                            <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                            <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                            <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">MAHARDIKA</span>
+                        <span class="brand-tagline">KONSTRUKSI</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="tentang.html" class="nav-link active">TENTANG</a></li>
+                    <li><a href="layanan.html" class="nav-link">LAYANAN</a></li>
+                    <li><a href="proyek.html" class="nav-link">PROYEK</a></li>
+                  <!--  <li><a href="kontak.html" class="nav-link nav-link-cta">KONTAK</a></li> -->
+                </ul>
+                
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">TENTANG KAMI</h1>
+                <p class="page-subtitle">Perusahaan Konstruksi Perumahan Terpercaya Sejak 2014</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" style="background-image: url('https://fatek.umsu.ac.id/wp-content/uploads/2023/08/perusahaan-konstruksi-yang-ada-di-indonesia.jpg'); background-size: cover; background-position: center;">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Siapa Kami?</h2>
+                    <p>PT Mahardika Konstruksi adalah perusahaan jasa konstruksi yang berfokus pada pembangunan dan renovasi rumah tinggal. Didirikan pada tahun 2014, kami telah dipercaya oleh ratusan klien di wilayah Jabodetabek.</p>
+                    <p>Kami memahami bahwa rumah adalah investasi jangka panjang dan tempat berkumpulnya keluarga. Oleh karena itu, kami berkomitmen memberikan hasil konstruksi berkualitas tinggi dengan menggunakan material pilihan dan tenaga ahli bersertifikat.</p>
+                </div>
+            </div>
+
+            <div class="about-grid" style="flex-direction: row-reverse;">
+                <div class="about-image" style="background-image: url('https://protect.cermati.com/wp-content/uploads/2023/11/shutterstock_2302260717-1.jpg'); background-size: cover; background-position: center;">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Pengalaman & Keahlian</h2>
+                    <p>Dengan pengalaman lebih dari 10 tahun di industri konstruksi perumahan, kami telah menyelesaikan 350+ proyek dengan tingkat kepuasan klien mencapai 98%. Setiap proyek dikerjakan oleh tim profesional yang memiliki sertifikasi dan keahlian khusus.</p>
+                    <p>Kami menggunakan metode konstruksi modern, material berkualitas tinggi, dan sistem manajemen proyek yang terstruktur untuk memastikan setiap proyek selesai tepat waktu dengan hasil yang memuaskan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-label">NILAI-NILAI KAMI</span>
+                <h2 class="section-title">Komitmen Kami Kepada Anda</h2>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 8V20L28 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>KETEPATAN WAKTU</h3>
+                    <p>Kami berkomitmen menyelesaikan setiap proyek sesuai jadwal yang telah disepakati tanpa mengorbankan kualitas hasil pekerjaan.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 6L24 14L33 15L26.5 21L28 30L20 25.5L12 30L13.5 21L7 15L16 14L20 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>KUALITAS TERJAMIN</h3>
+                    <p>Material pilihan dan pengawasan ketat di setiap tahap konstruksi memastikan hasil yang tahan lama dan berkualitas tinggi.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 34C10 26 14 20 20 20C26 20 30 26 30 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>TIM PROFESIONAL</h3>
+                    <p>Tenaga ahli bersertifikat dengan pengalaman puluhan tahun siap mewujudkan rumah impian Anda dengan sempurna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="2" y="12" width="12" height="26" fill="currentColor"/>
+                                <rect x="16" y="6" width="12" height="32" fill="currentColor"/>
+                                <rect x="30" y="16" width="8" height="22" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">MAHARDIKA</span>
+                            <span class="brand-tagline">KONSTRUKSI</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Perusahaan konstruksi perumahan terpercaya sejak 2014</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="proyek.html">Proyek</a></li>
+                       <!--  <li><a href="kontak.html">Kontak</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Jl. Raya Ciputat No. 45</li>
+                        <li>Jakarta Selatan 12310</li>
+                        <li>+62 812-8765-4321</li>
+                        <li>info@mahardikakonstruksi.co.id</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 PT Mahardika Konstruksi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga - Velocity Auto Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header{padding:150px 0 80px;background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));text-align:center;color:var(--white)}
+        .page-header h1{font-size:48px;font-weight:800;margin-bottom:16px}
+        .page-header p{font-size:18px;color:rgba(255,255,255,.8)}
+        .pricing-section{padding:100px 0}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:60px}
+        .price-card{background:var(--white);border:2px solid var(--gray);border-radius:var(--radius-lg);padding:40px 30px;text-align:center;transition:var(--transition-base);position:relative}
+        .price-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:var(--light-blue)}
+        .price-card.featured{background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));border-color:var(--primary-blue)}
+        .price-card.featured *{color:var(--white)!important}
+        .popular-badge{position:absolute;top:-12px;right:30px;padding:6px 16px;background:var(--warning);color:var(--white);border-radius:var(--radius-sm);font-size:12px;font-weight:700;text-transform:uppercase}
+        .package-name{font-size:24px;font-weight:700;color:var(--text-dark);margin-bottom:12px}
+        .package-price{font-size:42px;font-weight:800;color:var(--accent-blue);margin-bottom:8px}
+        .package-price span{font-size:18px;font-weight:400}
+        .package-period{font-size:14px;color:var(--dark-gray);margin-bottom:30px}
+        .package-features{text-align:left;margin-bottom:30px}
+        .package-features li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--dark-gray);margin-bottom:14px}
+        .package-features i{color:var(--success);font-size:18px}
+        .price-card.featured .package-features i{color:var(--light-blue)}
+        .select-package{width:100%;padding:14px 28px;background:linear-gradient(135deg,var(--accent-blue),var(--light-blue));color:var(--white);border-radius:var(--radius-md);font-weight:600;font-size:15px;transition:var(--transition-base);cursor:pointer}
+        .select-package:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+        .price-card.featured .select-package{background:var(--light-blue);color:var(--light-blue);border:2px solid var(--light-blue)}
+        .payment-methods{padding:80px 0;background:var(--light-gray)}
+        .payment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+        .payment-card{padding:24px;background:var(--white);border-radius:var(--radius-md);text-align:center;border:2px solid var(--gray);transition:var(--transition-base)}
+        .payment-card:hover{border-color:var(--light-blue);transform:translateY(-3px)}
+        .payment-icon{font-size:42px;color:var(--accent-blue);margin-bottom:12px}
+        .payment-name{font-size:16px;font-weight:600;color:var(--text-dark)}
+        @media(max-width:968px){
+            .pricing-grid{grid-template-columns:1fr}
+            .payment-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media(max-width:576px){
+            .page-header h1{font-size:32px}
+            .payment-grid{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand"><i class="fas fa-car-side"></i><span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link active">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+            <!--    <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li> -->
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container"><h1>Paket Harga Servis</h1><p>Pilih paket yang sesuai dengan kebutuhan kendaraan Anda</p></div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Paket Layanan</span>
+                <h2 class="section-title">Harga Transparan & Terpercaya</h2>
+                <p class="section-subtitle">Semua paket sudah termasuk suku cadang original/premium dan jaminan garansi 30 hari</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3 class="package-name">Paket Basic</h3>
+                    <div class="package-price">Rp 350<span>K</span></div>
+                    <p class="package-period">Per Servis</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i>Ganti oli mesin (4L)</li>
+                        <li><i class="fas fa-check-circle"></i>Ganti filter oli</li>
+                        <li><i class="fas fa-check-circle"></i>Top up air radiator</li>
+                        <li><i class="fas fa-check-circle"></i>Top up air wiper</li>
+                        <li><i class="fas fa-check-circle"></i>Cek tekanan ban</li>
+                        <li><i class="fas fa-check-circle"></i>Pemeriksaan visual</li>
+                        <li><i class="fas fa-check-circle"></i>Cuci mobil gratis</li>
+                    </ul>
+                    <button class="select-package">Pilih Paket</button>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="popular-badge">Paling Populer</div>
+                    <h3 class="package-name">Paket Premium</h3>
+                    <div class="package-price">Rp 750<span>K</span></div>
+                    <p class="package-period">Per Servis</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i>Semua dari Paket Basic</li>
+                        <li><i class="fas fa-check-circle"></i>Ganti filter udara</li>
+                        <li><i class="fas fa-check-circle"></i>Ganti filter AC</li>
+                        <li><i class="fas fa-check-circle"></i>Tune up mesin ringan</li>
+                        <li><i class="fas fa-check-circle"></i>Injector cleaner</li>
+                        <li><i class="fas fa-check-circle"></i>Pemeriksaan 50 komponen</li>
+                        <li><i class="fas fa-check-circle"></i>Laporan kondisi lengkap</li>
+                    </ul>
+                    <button class="select-package">Pilih Paket</button>
+                </div>
+
+                <div class="price-card">
+                    <h3 class="package-name">Paket Lengkap</h3>
+                    <div class="package-price">Rp 1.2<span>Jt</span></div>
+                    <p class="package-period">Per Servis</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i>Semua dari Paket Premium</li>
+                        <li><i class="fas fa-check-circle"></i>Servis AC lengkap</li>
+                        <li><i class="fas fa-check-circle"></i>Spooring & balancing</li>
+                        <li><i class="fas fa-check-circle"></i>Tune up mesin full</li>
+                        <li><i class="fas fa-check-circle"></i>Cek & setting ECU</li>
+                        <li><i class="fas fa-check-circle"></i>Detailing interior</li>
+                        <li><i class="fas fa-check-circle"></i>Garansi extended 60 hari</li>
+                    </ul>
+                    <button class="select-package">Pilih Paket</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="payment-methods">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Metode Pembayaran</span>
+                <h2 class="section-title">Kemudahan Pembayaran</h2>
+                <p class="section-subtitle">Kami menerima berbagai metode pembayaran untuk kenyamanan Anda</p>
+            </div>
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <i class="fas fa-money-bill-wave payment-icon"></i>
+                    <h4 class="payment-name">Tunai</h4>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-university payment-icon"></i>
+                    <h4 class="payment-name">Transfer Bank</h4>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-qrcode payment-icon"></i>
+                    <h4 class="payment-name">QRIS</h4>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-wallet payment-icon"></i>
+                    <h4 class="payment-name">E-Wallet</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand"><i class="fas fa-car-side"></i><span>VELOCITY <strong>AUTO GARAGE</strong></span></div>
+                    <p class="footer-desc">Bengkel mobil modern dengan pelayanan profesional dan harga transparan.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                      <!--  <li><a href="booking.html">Booking Online</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span></li>
+                        <li><i class="fas fa-phone"></i><span>(021) 5566-7788</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@velocityauto.id</span></li>
+                        <li><i class="fas fa-clock"></i><span>Senin - Sabtu: 08.00 - 18.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+   <!-- <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a> -->
+    <script src="script.js"></script>
+</body>
+</html>

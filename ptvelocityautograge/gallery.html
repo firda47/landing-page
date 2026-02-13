@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Velocity Auto Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header{padding:150px 0 80px;background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));text-align:center;color:var(--white)}
+        .page-header h1{font-size:48px;font-weight:800;margin-bottom:16px}
+        .page-header p{font-size:18px;color:rgba(255,255,255,.8)}
+        .gallery-section{padding:100px 0}
+        .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .gallery-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+        .gallery-item img{width:100%;height:100%;object-fit:cover;transition:var(--transition-slow)}
+        .gallery-item:hover img{transform:scale(1.1)}
+        .gallery-item::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(10,38,71,.3),rgba(20,66,114,.3));opacity:0;transition:var(--transition-base)}
+        .gallery-item:hover::after{opacity:1}
+        .gallery-overlay{position:absolute;bottom:20px;left:20px;right:20px;color:var(--white);z-index:2;opacity:0;transform:translateY(20px);transition:var(--transition-base)}
+        .gallery-item:hover .gallery-overlay{opacity:1;transform:translateY(0)}
+        .gallery-overlay h4{font-size:18px;font-weight:700;margin-bottom:4px}
+        .gallery-overlay p{font-size:14px;opacity:.9}
+        .gallery-modal{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:var(--transition-base)}
+        .gallery-modal.show{opacity:1;visibility:visible}
+        .modal-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);cursor:pointer}
+        .modal-content{position:relative;z-index:1;max-width:90%;max-height:90%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+        .modal-content img{max-width:100%;max-height:80vh;border-radius:var(--radius-md);box-shadow:var(--shadow-xl)}
+        .modal-caption{color:var(--white);text-align:center;margin-top:20px;font-size:16px}
+        .modal-close,.modal-prev,.modal-next{position:absolute;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);color:var(--white);border:none;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:var(--transition-base);display:flex;align-items:center;justify-content:center;font-size:20px}
+        .modal-close{top:30px;right:30px}
+        .modal-close:hover{background:var(--danger);transform:rotate(90deg)}
+        .modal-prev{left:30px;top:50%;transform:translateY(-50%)}
+        .modal-next{right:30px;top:50%;transform:translateY(-50%)}
+        .modal-prev:hover,.modal-next:hover{background:rgba(255,255,255,.2);transform:scale(1.1)}
+        @media(max-width:968px){
+            .gallery-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media(max-width:576px){
+            .page-header h1{font-size:32px}
+            .gallery-grid{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand"><i class="fas fa-car-side"></i><span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link active">Galeri</a></li>
+              <!-- <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li> -->
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container"><h1>Galeri Kami</h1><p>Dokumentasi pekerjaan dan fasilitas bengkel kami</p></div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800" alt="Workshop Area">
+                    <div class="gallery-overlay">
+                        <h4>Workshop Area</h4>
+                        <p>Ruang kerja modern dengan peralatan lengkap</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=800" alt="Engine Repair">
+                    <div class="gallery-overlay">
+                        <h4>Engine Repair</h4>
+                        <p>Perbaikan mesin dengan teknologi terkini</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=800" alt="Diagnostic Equipment">
+                    <div class="gallery-overlay">
+                        <h4>Diagnostic Scanner</h4>
+                        <p>Alat diagnostic canggih untuk akurasi tinggi</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://products.unitedtractors.com/wp-content/uploads/2022/11/banner-01.jpg" alt="Team Work">
+                    <div class="gallery-overlay">
+                        <h4>Professional Team</h4>
+                        <p>Mekanik bersertifikat yang berpengalaman</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=800" alt="AC Service">
+                    <div class="gallery-overlay">
+                        <h4>AC Service</h4>
+                        <p>Perawatan AC dengan vacuum technology</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800" alt="Oil Change">
+                    <div class="gallery-overlay">
+                        <h4>Oil Change Station</h4>
+                        <p>Penggantian oli cepat dan bersih</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" alt="Waiting Area">
+                    <div class="gallery-overlay">
+                        <h4>Comfortable Waiting Room</h4>
+                        <p>Ruang tunggu ber-AC dengan WiFi gratis</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800" alt="Car Lift">
+                    <div class="gallery-overlay">
+                        <h4>Hydraulic Lift</h4>
+                        <p>Alat angkat kendaraan profesional</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Before After">
+                    <div class="gallery-overlay">
+                        <h4>Before After Service</h4>
+                        <p>Hasil servis yang memuaskan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand"><i class="fas fa-car-side"></i><span>VELOCITY <strong>AUTO GARAGE</strong></span></div>
+                    <p class="footer-desc">Dokumentasi pekerjaan berkualitas kami untuk kepuasan pelanggan.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                       <!-- <li><a href="booking.html">Booking Online</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span></li>
+                        <li><i class="fas fa-phone"></i><span>(021) 5566-7788</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@velocityauto.id</span></li>
+                        <li><i class="fas fa-clock"></i><span>Senin - Sabtu: 08.00 - 18.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+  <!--  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a> -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Online - Velocity Auto Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header{padding:150px 0 80px;background:linear-gradient(135deg,var(--primary-navy),var(--primary-blue));text-align:center;color:var(--white)}
+        .page-header h1{font-size:48px;font-weight:800;margin-bottom:16px}
+        .page-header p{font-size:18px;color:rgba(255,255,255,.8)}
+        .booking-section{padding:100px 0;background:var(--light-gray)}
+        .booking-container{max-width:700px;margin:0 auto}
+        .booking-form{background:var(--white);padding:50px;border-radius:var(--radius-xl);box-shadow:var(--shadow-lg)}
+        .form-group{margin-bottom:24px}
+        .form-group label{display:block;font-size:15px;font-weight:600;color:var(--text-dark);margin-bottom:8px}
+        .form-group label span{color:var(--danger);margin-left:2px}
+        .form-control{width:100%;padding:14px 18px;border:2px solid var(--gray);border-radius:var(--radius-md);font-size:15px;font-family:inherit;transition:var(--transition-base)}
+        .form-control:focus{outline:none;border-color:var(--light-blue);box-shadow:0 0 0 3px rgba(44,116,179,.1)}
+        .form-control::placeholder{color:var(--dark-gray);opacity:.6}
+        select.form-control{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;appearance:none}
+        .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent-blue),var(--light-blue));color:var(--white);border:none;border-radius:var(--radius-md);font-size:16px;font-weight:700;cursor:pointer;transition:var(--transition-base)}
+        .submit-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .notification{position:fixed;top:100px;right:30px;background:var(--white);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:12px;min-width:350px;transform:translateX(450px);transition:var(--transition-base);z-index:9999}
+        .notification.show{transform:translateX(0)}
+        .notification.success{border-left:4px solid var(--success)}
+        .notification.error{border-left:4px solid var(--danger)}
+        .notification i{font-size:24px}
+        .notification.success i{color:var(--success)}
+        .notification.error i{color:var(--danger)}
+        .notification span{font-size:14px;color:var(--text-dark);flex:1}
+        .notification-close{background:none;border:none;font-size:20px;color:var(--dark-gray);cursor:pointer;padding:0;width:24px;height:24px}
+        .booking-info{background:linear-gradient(135deg,rgba(44,116,179,.05),rgba(32,82,149,.05));padding:24px;border-radius:var(--radius-md);margin-bottom:30px;border-left:4px solid var(--accent-blue)}
+        .booking-info h4{font-size:16px;font-weight:700;color:var(--text-dark);margin-bottom:12px}
+        .booking-info ul{margin:0;padding-left:20px}
+        .booking-info li{font-size:14px;color:var(--dark-gray);margin-bottom:8px}
+        @media(max-width:768px){
+            .booking-form{padding:30px 24px}
+            .notification{min-width:auto;right:20px;left:20px}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand"><i class="fas fa-car-side"></i><span class="brand-text">VELOCITY <strong>AUTO GARAGE</strong></span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="booking.html" class="btn-primary-nav">Booking Online</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container"><h1>Booking Online</h1><p>Jadwalkan servis kendaraan Anda dengan mudah dan cepat</p></div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h4><i class="fas fa-info-circle"></i> Informasi Booking</h4>
+                    <ul>
+                        <li>Isi formulir dengan lengkap dan benar</li>
+                        <li>Kami akan menghubungi Anda untuk konfirmasi booking</li>
+                        <li>Datang 10 menit sebelum waktu booking untuk proses admin</li>
+                        <li>Bawa STNK kendaraan saat kedatangan</li>
+                    </ul>
+                </div>
+
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label>Nama Lengkap <span>*</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nomor HP/WhatsApp <span>*</span></label>
+                        <input type="tel" class="form-control" id="phone" placeholder="08xx-xxxx-xxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nomor Polisi Kendaraan <span>*</span></label>
+                        <input type="text" class="form-control" id="plate" placeholder="B 1234 ABC" required style="text-transform:uppercase">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kendaraan</label>
+                        <input type="text" class="form-control" id="vehicle" placeholder="Contoh: Toyota Innova 2020">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilih Layanan <span>*</span></label>
+                        <select class="form-control" id="service" required>
+                            <option value="">-- Pilih Layanan --</option>
+                            <option value="Servis Berkala">Servis Berkala</option>
+                            <option value="Tune Up Mesin">Tune Up & Engine Service</option>
+                            <option value="Servis AC">Servis AC Mobil</option>
+                            <option value="Spooring Balancing">Spooring & Balancing</option>
+                            <option value="Ganti Oli Express">Ganti Oli Express</option>
+                            <option value="General Repair">General Repair & Maintenance</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Booking <span>*</span></label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Waktu Booking <span>*</span></label>
+                        <select class="form-control" id="time" required>
+                            <option value="">-- Pilih Waktu --</option>
+                            <option value="08:00">08:00 - 09:00</option>
+                            <option value="09:00">09:00 - 10:00</option>
+                            <option value="10:00">10:00 - 11:00</option>
+                            <option value="11:00">11:00 - 12:00</option>
+                            <option value="13:00">13:00 - 14:00</option>
+                            <option value="14:00">14:00 - 15:00</option>
+                            <option value="15:00">15:00 - 16:00</option>
+                            <option value="16:00">16:00 - 17:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Catatan Tambahan (Opsional)</label>
+                        <textarea class="form-control" id="notes" rows="4" placeholder="Keluhan atau permintaan khusus..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-calendar-check"></i> Kirim Booking
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand"><i class="fas fa-car-side"></i><span>VELOCITY <strong>AUTO GARAGE</strong></span></div>
+                    <p class="footer-desc">Bengkel mobil modern dengan sistem booking online yang mudah.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="pricing.html">Harga</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Servis Berkala</a></li>
+                        <li><a href="services.html">Tune Up Mesin</a></li>
+                        <li><a href="services.html">Servis AC</a></li>
+                        <li><a href="services.html">Spooring Balancing</a></li>
+                        <li><a href="booking.html">Booking Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sudirman No. 123<br>Jakarta Selatan 12920</span></li>
+                        <li><i class="fas fa-phone"></i><span>(021) 5566-7788</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@velocityauto.id</span></li>
+                        <li><i class="fas fa-clock"></i><span>Senin - Sabtu: 08.00 - 18.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Velocity Auto Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>
