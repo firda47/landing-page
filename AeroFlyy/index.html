@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>AeroFly | Company Profile</title>
+  </head>
+
+  <body>
+    <!-- NAV (sticky & selalu tampil full) -->
+    <nav class="nav" id="nav">
+      <div class="nav__left">
+        <a class="brand" href="#home" aria-label="AeroFly home">
+          <span class="brand__icon" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="brand__plane"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
+              ></path>
+            </svg>
+          </span>
+          <span class="brand__text">AeroFly</span>
+        </a>
+
+        <!-- Menu desktop (selalu tampil) -->
+       <ul class="nav__links" id="navLinks">
+  <li class="link"><a href="../index.html">Home</a></li>
+  <li class="link"><a href="about.html">About</a></li>
+  <li class="link"><a href="services.html">Services</a></li>
+  <li class="link"><a href="fleet.html">Fleet</a></li>
+  <li class="link"><a href="partners.html">Partners</a></li>
+  <li class="link"><a href="careers.html">Careers</a></li>
+</ul>
+
+      <div class="nav__right">
+        <a class="btn nav__cta" href="contact.html">Contact</a>
+
+
+        <button class="nav__toggle" aria-label="Open menu">
+          <i class="ri-menu-3-line"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU (DRAWER) -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Mobile menu">
+      <div class="drawer__head">
+        <strong>AeroFly</strong>
+        <button class="drawer__close" aria-label="Close menu">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+     <a href="../index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="fleet.html">Fleet</a>
+<a href="partners.html">Partners</a>
+<a href="careers.html">Careers</a>
+<a class="drawer__btn" href="contact.html">Contact</a>
+
+    </aside>
+
+    <!-- HERO -->
+    <header class="section__container header__container" id="home">
+      <div class="hero__content reveal">
+        <p class="hero__badge">
+          <i class="ri-shield-check-line"></i> Safety - Service - Innovation
+        </p>
+
+        <h1 class="section__header hero__title">
+          AeroFly – <span class="type" id="typeText"></span>
+        </h1>
+
+        <p class="hero__desc">
+          AeroFly adalah perusahaan penerbangan yang berkomitmen menghadirkan layanan
+          transportasi udara yang aman, nyaman, dan efisien untuk masyarakat maupun dunia bisnis.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" href="#contact">Hubungi Kami</a>
+          <a class="btn btn--ghost" href="#about">Lihat Profil</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat reveal">
+            <h4>99%</h4>
+            <p>On-time Performance</p>
+          </div>
+          <div class="stat reveal">
+            <h4>24/7</h4>
+            <p>Customer Support</p>
+          </div>
+          <div class="stat reveal">
+            <h4>Modern</h4>
+            <p>Fleet & Maintenance</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__image reveal">
+  <div class="hero__image-box">
+    <img src="assets/header.jpg" alt="AeroFly aircraft">
+  </div>
+</div>
+
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section__container about__container" id="about">
+      <h2 class="subheader reveal">ABOUT US</h2>
+      <p class="description reveal">
+  AeroFly adalah perusahaan penerbangan yang mengutamakan keselamatan, kenyamanan,
+  dan ketepatan waktu untuk mendukung mobilitas masyarakat dan bisnis.
+</p>
+
+
+      <div class="about__grid">
+        <div class="about__card reveal">
+          <h4><i class="ri-building-4-line"></i> Profil Perusahaan</h4>
+          <p>
+            AeroFly melayani kebutuhan mobilitas penumpang dan korporasi dengan standar operasional
+            yang kuat dan pelayanan ramah.
+          </p>
+        </div>
+
+        <div class="about__card reveal">
+          <h4><i class="ri-focus-3-line"></i> Visi</h4>
+          <p>
+            Menjadi perusahaan penerbangan terpercaya yang menghubungkan berbagai wilayah serta
+            mendukung mobilitas bisnis dan masyarakat secara berkelanjutan.
+          </p>
+        </div>
+
+        <div class="about__card reveal">
+          <h4><i class="ri-rocket-2-line"></i> Misi</h4>
+          <ul class="check">
+            <li>Menyediakan layanan penerbangan aman dan efisien</li>
+            <li>Mengutamakan kenyamanan dan kepuasan pelanggan</li>
+            <li>Menerapkan standar keselamatan internasional</li>
+            <li>Mengembangkan inovasi & teknologi penerbangan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (SLIDER) -->
+    <section class="memories" id="services">
+      <div class="section__container memories__container">
+        <div class="memories__header reveal">
+          <div>
+            <p class="subheader" style="text-align:left;margin-bottom:6px;">SERVICES</p>
+            <h2 class="section__header">Layanan AeroFly</h2>
+          </div>
+
+          <div class="memories__actions">
+            <button class="chip" id="srvPrev" aria-label="Previous services">
+              <i class="ri-arrow-left-line"></i>
+            </button>
+            <button class="chip" id="srvNext" aria-label="Next services">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+            <button class="view__all" data-scroll="#contact">Business Inquiry</button>
+          </div>
+        </div>
+
+        <div class="slider" id="servicesSlider" aria-label="Services slider">
+          <article class="memories__card reveal">
+            <span><i class="ri-flight-takeoff-line"></i></span>
+            <h4>Passenger Transport</h4>
+            <p>Layanan penerbangan penumpang dengan kabin nyaman, kru profesional, dan perjalanan aman.</p>
+          </article>
+
+          <article class="memories__card reveal">
+            <span><i class="ri-briefcase-4-line"></i></span>
+            <h4>Corporate Travel</h4>
+            <p>Solusi perjalanan bisnis yang fleksibel, efisien, dan tepat waktu untuk kebutuhan perusahaan.</p>
+          </article>
+
+          <article class="memories__card reveal">
+            <span><i class="ri-plane-line"></i></span>
+            <h4>Charter Flight</h4>
+            <p>Penerbangan carter untuk event/dinas/kebutuhan khusus dengan layanan premium.</p>
+          </article>
+
+          <article class="memories__card reveal">
+            <span><i class="ri-box-3-line"></i></span>
+            <h4>Cargo Support</h4>
+            <p>Pengiriman kargo udara dengan penanganan aman dan sistem pelacakan terarah.</p>
+          </article>
+
+          <article class="memories__card reveal">
+            <span><i class="ri-customer-service-2-line"></i></span>
+            <h4>Customer Support</h4>
+            <p>Dukungan pelanggan 24/7 untuk informasi layanan, kerja sama, dan bantuan perjalanan.</p>
+          </article>
+
+          <article class="memories__card reveal">
+            <span><i class="ri-device-line"></i></span>
+            <h4>Digital Innovation</h4>
+            <p>Inovasi sistem operasional & informasi penerbangan agar layanan lebih cepat dan modern.</p>
+          </article>
+        </div>
+
+        <div class="dots" id="srvDots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- FLEET -->
+    <section class="section__container plan__container" id="fleet">
+      <h2 class="section__header reveal">Modern Fleet for Reliable Operations</h2>
+      <p class="description reveal">
+        AeroFly mengoperasikan armada modern untuk efisiensi, kenyamanan kabin, dan standar keselamatan tinggi.
+      </p>
+
+      <div class="plan__grid">
+        <div class="plan__content reveal">
+          <span class="number">01</span>
+          <h4>Maintenance Terjadwal</h4>
+          <p>Perawatan rutin dan inspeksi berkala memastikan pesawat selalu siap terbang.</p>
+
+          <span class="number">02</span>
+          <h4>Cabin Comfort</h4>
+          <p>Kabin dirancang untuk kenyamanan penumpang dengan standar kebersihan yang konsisten.</p>
+
+          <span class="number">03</span>
+          <h4>Operational Efficiency</h4>
+          <p>Sistem operasional efisien membantu ketepatan waktu dan pengalaman perjalanan lebih baik.</p>
+        </div>
+
+        <div class="plan__image reveal">
+          <img src="assets/plan-1.jpg" alt="Fleet 1" />
+          <img src="assets/plan-2.jpg" alt="Fleet 2" />
+          <img src="assets/plan-3.jpg" alt="Fleet 3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PERKS (Nikmati Layanan Terbaik) - versi mirip gambar ke-2 -->
+    <section class="perks" id="perks">
+      <div class="perks__wrap">
+        <div class="perks__head reveal">
+          <h2>Nikmati Layanan Terbaik<br/>Bersama Kami</h2>
+          <button class="view__all" data-scroll="#services">View All</button>
+        </div>
+
+        <div class="perks__grid">
+          <article class="perk reveal">
+            <div class="perk__media">
+              <img src="assets/fasilitas kursi.jpeg" alt="Wider Seat Aircraft" />
+            </div>
+            <h3>Wider Seat Aircraft</h3>
+            <p>Nikmati penerbangan yang lebih santai dengan kursi yang dirancang khusus untuk memberikan kenyamanan maksimal.</p>
+          </article>
+
+          <article class="perk reveal">
+            <div class="perk__media">
+              <img src="assets/tvaudio.jpeg" alt="Smart Checklist" />
+            </div>
+            <h3>Smart Checklist</h3>
+            <p>Bersantailah selama perjalanan dengan sistem hiburan & informasi. Layar interaktif membantu perjalanan lebih nyaman.</p>
+          </article>
+
+          <article class="perk reveal">
+            <div class="perk__media">
+              <img src="assets/fasilitas makanan.jpeg" alt="Save More" />
+            </div>
+            <h3>Save More</h3>
+            <p>Nikmati hidangan praktis dan higienis untuk menemani perjalanan Anda. Disajikan dengan kemasan rapi dan nyaman.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAVELLERS -->
+    <section class="section__container travellers__container" id="travellers">
+      <h2 class="section__header reveal">Best travellers of the month</h2>
+
+      <div class="travellers__grid">
+        <article class="travellers__card reveal">
+          <img src="assets/bali - jkt.jpg" alt="Jakarta - Bali" />
+          <div class="travellers__card__content">
+            <h4>Jakarta - Bali</h4>
+            <p>Rp 954.696</p>
+          </div>
+        </article>
+
+        <article class="travellers__card reveal">
+          <img src="assets/jkt - singapura.jpg" alt="Jakarta - Singapura" />
+          <div class="travellers__card__content">
+            <h4>Jakarta - Singapura</h4>
+            <p>Rp 2.269.613</p>
+          </div>
+        </article>
+
+        <article class="travellers__card reveal">
+          <img src="assets/bali - perth.jpg" alt="Bali - Perth" />
+          <div class="travellers__card__content">
+            <h4>Bali - Perth</h4>
+            <p>Rp 3.958.011</p>
+          </div>
+        </article>
+
+        <article class="travellers__card reveal">
+          <img src="assets/bali - Melbourne.jpg" alt="Bali - Melbourne" />
+          <div class="travellers__card__content">
+            <h4>Bali - Melbourne</h4>
+            <p>Rp 3.379.006</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="section__container lounge__container" id="partners">
+      <div class="lounge__image reveal">
+        <img src="assets/lounge-1.jpg" alt="partners 1" />
+        <img src="assets/lounge-2.jpg" alt="partners 2" />
+      </div>
+
+      <div class="lounge__content reveal">
+        <p class="subheader" style="text-align:left;">PARTNERS</p>
+        <h2 class="section__header">Collaboration & Partnership</h2>
+        <p class="description" style="text-align:left;margin-left:0;">
+          AeroFly menjalin kerja sama strategis dengan bandara, vendor teknis, mitra logistik, serta partner korporasi.
+        </p>
+
+        <div class="lounge__grid">
+          <div class="lounge__details">
+            <h4>Airport Network</h4>
+            <p>Kolaborasi operasional untuk kelancaran layanan ground dan boarding.</p>
+          </div>
+          <div class="lounge__details">
+            <h4>Technical Vendors</h4>
+            <p>Dukungan teknis untuk pemeliharaan dan peningkatan standar layanan.</p>
+          </div>
+          <div class="lounge__details">
+            <h4>Corporate Partners</h4>
+            <p>Kerja sama perjalanan bisnis, dinas, dan program korporasi.</p>
+          </div>
+          <div class="lounge__details">
+            <h4>Logistics Partners</h4>
+            <p>Kolaborasi pengiriman kargo yang aman dan terarah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section class="section__container careers__container" id="careers">
+      <p class="subheader reveal">CAREERS</p>
+      <h2 class="section__header reveal">Join Our Team</h2>
+      <p class="description reveal">
+        AeroFly membuka peluang bagi individu berdedikasi untuk bertumbuh di industri penerbangan.
+      </p>
+
+      <div class="careers__grid">
+        <div class="careers__card reveal">
+          <h4>Cabin Crew</h4>
+          <p>Ramah, disiplin, berorientasi layanan, dan mampu bekerja dalam tim.</p>
+        </div>
+        <div class="careers__card reveal">
+          <h4>Ground Staff</h4>
+          <p>Teliti, komunikatif, dan memiliki kemampuan koordinasi yang baik.</p>
+        </div>
+        <div class="careers__card reveal">
+          <h4>Engineering & Maintenance</h4>
+          <p>Fokus pada pemeliharaan/inspeksi pesawat dengan standar keselamatan tinggi.</p>
+        </div>
+      </div>
+
+      <div class="careers__cta reveal">
+        <a class="btn btn--ghost" href="#partners">Lihat Partnership</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section__container contact__container" id="contact">
+      <p class="subheader reveal">CONTACT</p>
+      <h2 class="section__header reveal">Let’s Work Together</h2>
+      <p class="description reveal">
+        Hubungi AeroFly untuk informasi layanan, kerja sama bisnis, atau kebutuhan perusahaan.
+      </p>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="info__card">
+            <h4><i class="ri-map-pin-line"></i> Kantor Pusat</h4>
+            <p>Indonesia</p>
+          </div>
+          <div class="info__card">
+            <h4><i class="ri-mail-line"></i> Email</h4>
+            <p>info@aerofly.co.id</p>
+          </div>
+          <div class="info__card">
+            <h4><i class="ri-phone-line"></i> Phone</h4>
+            <p>+62 xxx xxxx xxxx</p>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm">
+          <div class="form__row">
+            <div class="field">
+              <label>Nama</label>
+              <input type="text" id="name" placeholder="Nama lengkap" required />
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="email@contoh.com" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Subjek</label>
+            <input type="text" id="subject" placeholder="Kerja sama / pertanyaan" required />
+          </div>
+
+          <div class="field">
+            <label>Pesan</label>
+            <textarea id="message" rows="5" placeholder="Tulis pesan..." required></textarea>
+          </div>
+
+          <button class="btn" type="submit">
+            Kirim Pesan <i class="ri-send-plane-2-line"></i>
+          </button>
+
+          <p class="form__note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>AeroFly</h3>
+          <p>
+            AeroFly adalah perusahaan penerbangan yang berkomitmen pada keselamatan, kualitas layanan,
+            dan inovasi untuk menghadirkan pengalaman terbang yang profesional.
+          </p>
+          <p>
+            Kami terus berkembang melalui kolaborasi strategis, penguatan operasional, dan peningkatan kualitas SDM.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#fleet">Fleet</a>
+          <a href="#travellers">Travellers</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+          <a href="#partners">Partners</a>
+          <a href="#careers">Careers</a>
+          <a href="#contact">Contact</a>
+          <div class="footer__socials">
+            <span title="Facebook"><i class="ri-facebook-fill"></i></span>
+            <span title="Twitter"><i class="ri-twitter-fill"></i></span>
+            <span title="Instagram"><i class="ri-instagram-line"></i></span>
+            <span title="YouTube"><i class="ri-youtube-fill"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__container footer__bar">
+        <p>Copyright © AeroFly. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
