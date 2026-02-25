@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – BlueWave Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div class="page-transition"></div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose">✕</button>
+  <div class="mobile-menu-logo" onclick="window.location.href='index.html'">Blue<span>Wave</span></div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<nav class="navbar navbar-solid" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Blue<span>Wave</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-banner">
+  <div class="container">
+    <span class="banner-tag" data-aos="fade-down">What We Offer</span>
+    <h1 data-aos="fade-up">Our Services</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Solusi kreatif digital lengkap yang dirancang khusus untuk membawa bisnis Anda ke level selanjutnya.</p>
+  </div>
+</section>
+
+<!-- ====== SERVICES GRID ====== -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-aos="fade-down">Our Expertise</span>
+      <h2 class="section-title" data-aos="fade-up">Layanan <span>Unggulan</span> Kami</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Dari branding hingga digital marketing, kami menyediakan solusi end-to-end yang komprehensif untuk bisnis Anda.</p>
+    </div>
+
+    <div class="services-grid-full">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="service-icon">🎨</div>
+        <h3>Branding & Identity</h3>
+        <p>Kami membangun identitas brand yang kuat, konsisten, dan memorable. Dari logo hingga brand guideline lengkap yang mencerminkan nilai dan kepribadian brand Anda.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+        <div class="service-icon">🖌️</div>
+        <h3>UI/UX Design</h3>
+        <p>Desain antarmuka yang intuitif, estetis, dan berpusat pada pengguna. Kami memastikan setiap touchpoint memberikan pengalaman yang luar biasa kepada user Anda.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Website modern, responsif, cepat, dan aman yang dibangun dengan teknologi terkini. Dioptimalkan untuk SEO, konversi, dan pengalaman pengguna terbaik.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+        <div class="service-icon">✏️</div>
+        <h3>Logo Design</h3>
+        <p>Logo profesional yang mencerminkan esensi brand Anda. Setiap logo kami rancang dengan pendekatan strategis untuk memastikan keunikan dan ketepatan visual.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="service-icon">📱</div>
+        <h3>Social Media Design</h3>
+        <p>Konten visual social media yang menarik perhatian, konsisten dengan brand, dan dirancang untuk meningkatkan engagement dan pertumbuhan followers organik.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="350">
+        <div class="service-icon">📊</div>
+        <h3>Digital Marketing</h3>
+        <p>Strategi digital marketing data-driven yang efektif. Dari SEO, SEM, hingga social media marketing yang terintegrasi untuk hasil maksimal dan ROI yang terukur.</p>
+        <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section style="background:var(--gray-100); padding:6rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-aos="fade-down">How We Work</span>
+      <h2 class="section-title" data-aos="fade-up">Proses Kerja <span>Kami</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Pendekatan sistematis dan kolaboratif untuk memastikan setiap project berjalan dengan lancar dan menghasilkan output terbaik.</p>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1.5rem; margin-top:2rem;" class="process-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="text-align:center;">
+        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">01</div>
+        <div class="service-icon" style="margin:0 auto 1rem;">🔍</div>
+        <h3>Discovery</h3>
+        <p>Memahami kebutuhan, tujuan, dan target audience bisnis Anda secara mendalam.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200" style="text-align:center;">
+        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">02</div>
+        <div class="service-icon" style="margin:0 auto 1rem;">💡</div>
+        <h3>Strategy</h3>
+        <p>Merancang strategi dan konsep yang tepat sasaran berdasarkan data dan insight.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300" style="text-align:center;">
+        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">03</div>
+        <div class="service-icon" style="margin:0 auto 1rem;">🎨</div>
+        <h3>Design</h3>
+        <p>Mengeksekusi desain dengan standar kualitas premium dan perhatian penuh pada detail.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400" style="text-align:center;">
+        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">04</div>
+        <div class="service-icon" style="margin:0 auto 1rem;">🚀</div>
+        <h3>Launch</h3>
+        <p>Meluncurkan dan memonitor hasil untuk memastikan tujuan bisnis tercapai optimal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <span class="banner-tag" data-aos="fade-down">Start Today</span>
+      <h2 data-aos="fade-up">Siap Memulai Proyek Anda?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Hubungi kami sekarang dan dapatkan konsultasi gratis untuk menentukan solusi terbaik bagi bisnis Anda.</p>
+      <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Free Consultation</a>
+        <a href="portfolio.html" class="btn btn-outline"><i class="fas fa-folder-open"></i> See Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Blue<span>Wave</span></a>
+        <p>Creative digital agency yang berdedikasi untuk membantu brand Anda berkembang di era digital.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-behance"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Branding</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Social Media</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Dapatkan update terbaru dan tips desain eksklusif.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Email Anda..." />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>BlueWave Studio</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+@media (max-width: 768px) {
+  .process-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
