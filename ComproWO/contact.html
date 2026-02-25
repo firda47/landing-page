@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ethereal Vows</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CSS MASTER VARIABLES --- */
+        :root {
+            --gold: #C5A059;
+            --dark: #1A1A1A;
+            --light: #F9F9F7;
+            --white: #ffffff;
+            --gray: #666;
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* --- RESET & GLOBAL --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); background: var(--light); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; transition: var(--transition); color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- NAVIGATION --- */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; position: fixed; width: 100%; top: 0; z-index: 1000; 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; opacity: 0.7; }
+        .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
+        .btn-nav { border: 1px solid var(--gold); padding: 8px 20px; color: var(--gold) !important; opacity: 1 !important; }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; z-index: 1001; }
+        .nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); visibility: hidden; opacity: 0;
+            transition: 0.3s; z-index: 998;
+        }
+        .nav-overlay.active { visibility: visible; opacity: 1; }
+
+        /* --- PAGE HEADER --- */
+        .page-header { 
+            height: 40vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80') center/cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            padding-top: 80px;
+        }
+        .page-header h2 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; }
+        .section-tag { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 10px; }
+
+        /* --- CONTACT SECTION LAYOUT --- */
+        .contact-page { padding: 80px 0; }
+        
+        /* Grid setup: Form di kiri/atas, Info di kanan/bawah */
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: 1.4fr 1fr; 
+            gap: 60px; 
+            align-items: start;
+        }
+
+        /* --- FORM SIDE --- */
+        .contact-form-side { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04); 
+        }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: var(--gray); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #eee;
+            font-family: var(--sans); font-size: 1rem; outline: none; transition: var(--transition);
+            background: transparent;
+        }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        textarea { height: 100px; resize: none; }
+
+        .btn-gold-full {
+            width: 100%; background: var(--dark); color: white; padding: 18px; border: none;
+            font-family: var(--sans); font-weight: 600; text-transform: uppercase;
+            letter-spacing: 2px; cursor: pointer; transition: var(--transition); margin-top: 20px;
+            border-radius: 4px;
+        }
+        .btn-gold-full:hover { background: var(--gold); transform: translateY(-2px); }
+
+        /* --- INFO SIDE (The Part You Wanted to Move) --- */
+        .contact-info-side {
+            position: sticky;
+            top: 120px;
+        }
+        .info-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .info-block { margin-bottom: 35px; }
+        .info-block:last-child { margin-bottom: 0; }
+        
+        .info-block h3 { 
+            font-family: var(--serif); 
+            font-size: 1.6rem; 
+            margin-bottom: 12px; 
+            color: var(--gold); 
+            font-weight: 500; 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .info-block p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
+        
+        .social-icons { display: flex; gap: 20px; margin-top: 15px; }
+        .social-icons a { font-size: 1.2rem; color: var(--dark); opacity: 0.6; }
+        .social-icons a:hover { color: var(--gold); opacity: 1; transform: translateY(-3px); }
+
+        /* --- FAQ SECTION --- */
+        .faq-section { background: white; padding: 80px 0; }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .faq-item h4 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 10px; }
+        .faq-item p { font-size: 0.9rem; color: var(--gray); }
+
+        /* --- FOOTER --- */
+        .main-footer { background: var(--dark); color: white; padding: 100px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.2fr; gap: 80px; margin-bottom: 80px; }
+        .footer-brand .logo { font-size: 2rem; margin-bottom: 20px; }
+        .footer-brand p { opacity: 0.6; font-size: 0.95rem; line-height: 2; margin-bottom: 30px; max-width: 350px; }
+        .footer-socials { display: flex; gap: 20px; }
+        .footer-socials a { font-size: 1.4rem; color: white; opacity: 0.5; }
+        .footer-socials a:hover { opacity: 1; color: var(--gold); }
+        .footer-links h4 { font-family: var(--serif); font-size: 1.5rem; color: var(--gold); margin-bottom: 30px; }
+        .footer-links ul li { margin-bottom: 15px; }
+        .footer-links a { opacity: 0.6; font-size: 0.9rem; letter-spacing: 1px; }
+        .footer-links a:hover { opacity: 1; color: var(--gold); padding-left: 8px; }
+        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; opacity: 0.4; font-size: 0.8rem; letter-spacing: 1px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .mobile-toggle { display: block; }
+            .nav-links { 
+                position: fixed; top: 0; right: -70%; width: 70%; height: 100vh; 
+                background: white; flex-direction: column; justify-content: center; 
+                transition: 0.5s; z-index: 999; box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 15px 0; }
+            .nav-links a { color: var(--dark); }
+            
+            /* Stack form on top, info on bottom for mobile */
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-info-side { position: static; order: 2; }
+            .contact-form-side { order: 1; padding: 30px; }
+
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+        }
+
+        @media (max-width: 576px) {
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .page-header h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <nav>
+        <div class="logo">ETHEREAL <span>VOWS</span></div>
+        <div class="mobile-toggle" id="mobile-toggle">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="active btn-nav">Consultation</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">Let's Talk</span>
+            <h2>Wujudkan Pernikahan Impian Anda</h2>
+        </div>
+    </header>
+
+    <section class="contact-page container">
+        <div class="contact-grid">
+            
+            <div class="contact-form-side">
+                <form id="waForm">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Contoh: Amanda Clarissa" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Rencana Tanggal</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pilihan Paket</label>
+                            <select id="package">
+                                <option value="Silver Edition">Silver Edition</option>
+                                <option value="Gold Signature">Gold Signature</option>
+                                <option value="Platinum Royale">Platinum Royale</option>
+                                <option value="Custom Package">Custom Package</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pesan / Keinginan Khusus</label>
+                        <textarea id="message" placeholder="Beri tahu kami konsep pernikahan yang Anda bayangkan..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold-full">Kirim via WhatsApp →</button>
+                </form>
+            </div>
+
+            <div class="contact-info-side">
+                <div class="info-card">
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-location-dot"></i> Atelier Office</h3>
+                        <p>Jl. Senopati No. 88, Kebayoran Baru<br>Jakarta Selatan, 12190</p>
+                    </div>
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-comment-dots"></i> Contact Detail</h3>
+                        <p><strong>WhatsApp:</strong> +62 812 3456 7890</p>
+                        <p><strong>Email:</strong> hello@etherealvows.com</p>
+                        <p><strong>Working Hours:</strong> Mon-Sat, 09:00 - 18:00</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Follow Our Journey</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span class="section-tag">Inquiry Guide</span>
+                <h3 style="font-family: var(--serif); font-size: 2.5rem;">Frequently Asked Questions</h3>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Kapan waktu terbaik untuk booking?</h4>
+                    <p>Kami menyarankan minimal 6-12 bulan sebelum hari-H untuk Full Planning, dan 3 bulan untuk Coordination.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Apakah melayani luar kota/pulau?</h4>
+                    <p>Ya, tim kami siap mendampingi Anda di mana pun, mulai dari Bali hingga destinasi internasional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">ETHEREAL <span style="color: var(--gold);">VOWS</span></div>
+                    <p>Kami percaya setiap pasangan memiliki cerita unik. Tugas kami adalah memastikan dunia melihat cerita itu melalui perayaan yang paling indah.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">Senopati, Jakarta Selatan</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">+62 812 3456 7890</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">hello@etherealvows.com</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Ethereal Vows Wedding Organizer. Created with love.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Logic
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function toggleMenu() {
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars-staggered');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        mobileToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // WhatsApp Form Logic
+        document.getElementById('waForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const pkg = document.getElementById('package').value;
+            const msg = document.getElementById('message').value;
+            
+            const phone = "6281234567890"; // Ganti no WA ini
+            
+            const text = `Halo Ethereal Vows, saya tertarik untuk konsultasi:%0A%0A` +
+                         `*Nama:* ${name}%0A` +
+                         `*Rencana Tanggal:* ${date}%0A` +
+                         `*Pilihan Paket:* ${pkg}%0A` +
+                         `*Catatan:* ${msg}`;
+            
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>

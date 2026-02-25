@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Ethereal Vows</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CSS MASTER VARIABLES --- */
+        :root {
+            --gold: #C5A059;
+            --dark: #1A1A1A;
+            --light: #F9F9F7;
+            --white: #ffffff;
+            --gray: #666;
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* --- RESET & GLOBAL --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--sans); 
+            background: var(--light); 
+            color: var(--dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+        a { text-decoration: none; transition: var(--transition); color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; height: auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- NAVIGATION --- */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; position: fixed; width: 100%; top: 0; z-index: 1000; 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); 
+            transition: var(--transition); box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; opacity: 0.7; }
+        .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
+        .btn-nav { border: 1px solid var(--gold); padding: 8px 20px; color: var(--gold) !important; opacity: 1 !important; }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; z-index: 1001; }
+        
+        /* Overlay untuk menu mobile */
+        .nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4); visibility: hidden; opacity: 0;
+            transition: 0.3s; z-index: 998;
+        }
+        .nav-overlay.active { visibility: visible; opacity: 1; }
+
+        /* --- PAGE HEADER --- */
+        .page-header { 
+            height: 50vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80') center/cover no-repeat; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white; 
+        }
+        .page-header h2 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; margin-bottom: 10px; }
+        .page-header p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; opacity: 0.9; }
+
+        /* --- SERVICES DETAIL --- */
+        .service-detail { padding: 100px 0; background: white; }
+        .detail-row { 
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; 
+            align-items: center; margin-bottom: 120px; 
+        }
+        .detail-row:last-child { margin-bottom: 0; }
+        .detail-row.reverse { direction: rtl; }
+        .detail-row.reverse .detail-text { direction: ltr; }
+
+        .num { font-family: var(--serif); font-size: 4rem; color: #eee; display: block; line-height: 1; margin-bottom: -10px; }
+        .detail-text h3 { font-family: var(--serif); font-size: 2.5rem; margin-bottom: 25px; color: var(--dark); font-weight: 500; }
+        .detail-text p { color: var(--gray); margin-bottom: 30px; font-size: 1.05rem; }
+        
+        .detail-text ul li { 
+            margin-bottom: 15px; font-size: 0.9rem; display: flex; align-items: center; 
+            color: var(--dark); font-weight: 500;
+        }
+        .detail-text ul li::before { 
+            content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+            color: var(--gold); margin-right: 15px; font-size: 0.8rem;
+        }
+
+        .detail-img { position: relative; }
+        .detail-img img { 
+            width: 100%; border-radius: 4px; 
+            box-shadow: 30px 30px 0 -10px var(--light), 30px 30px 0 -10px var(--gold);
+            transition: var(--transition);
+        }
+        .detail-row:hover .detail-img img { transform: translate(-10px, -10px); }
+
+        /* --- FOOTER --- */
+        .main-footer { background: var(--dark); color: white; padding: 100px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.2fr; gap: 80px; }
+        .footer-brand p { opacity: 0.6; font-size: 0.95rem; margin-top: 20px; max-width: 350px; }
+        .footer-socials { display: flex; gap: 20px; margin-top: 30px; }
+        .footer-socials a { font-size: 1.2rem; opacity: 0.5; color: white; }
+        .footer-socials a:hover { opacity: 1; color: var(--gold); }
+        .footer-links h4 { font-family: var(--serif); font-size: 1.5rem; color: var(--gold); margin-bottom: 30px; }
+        .footer-links ul li { margin-bottom: 15px; }
+        .footer-links a { opacity: 0.6; font-size: 0.9rem; }
+        .footer-links a:hover { opacity: 1; color: var(--gold); padding-left: 8px; }
+        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; margin-top: 80px; opacity: 0.4; font-size: 0.8rem; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .mobile-toggle { display: block; }
+            
+            /* Hamburger Menu 70% Width */
+            .nav-links { 
+                position: fixed; top: 0; right: -70%; width: 70%; height: 100vh; 
+                background: white; flex-direction: column; justify-content: center; 
+                transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 20px 0; }
+            .nav-links a { color: var(--dark); font-size: 1.1rem; }
+
+            .detail-row, .detail-row.reverse { 
+                grid-template-columns: 1fr; gap: 40px; direction: ltr; 
+            }
+            .detail-img img { box-shadow: 15px 15px 0 var(--gold); }
+            .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+            .service-detail { padding: 60px 0; }
+            .detail-text h3 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <nav>
+        <div class="logo">ETHEREAL <span>VOWS</span></div>
+        <div class="mobile-toggle" id="mobile-toggle">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="btn-nav">Consultation</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h2>Our Services</h2>
+        <p>Pendampingan profesional untuk setiap tahap pernikahan Anda.</p>
+    </header>
+
+    <section class="service-detail">
+        <div class="container">
+            <div class="detail-row">
+                <div class="detail-text">
+                    <span class="num">01</span>
+                    <h3>Full Wedding Planner</h3>
+                    <p>Layanan menyeluruh bagi pasangan yang menginginkan persiapan tanpa stres. Kami menangani segalanya dari nol hingga janji suci diucapkan.</p>
+                    <ul>
+                        <li>Budgeting & Financial Tracking</li>
+                        <li>Vendor Selection & Negotiation</li>
+                        <li>Concept & Theme Development</li>
+                        <li>Monthly Planning Meetings</li>
+                    </ul>
+                </div>
+                <div class="detail-img">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80" alt="Full Wedding Planning">
+                </div>
+            </div>
+
+            <div class="detail-row reverse">
+                <div class="detail-text">
+                    <span class="num">02</span>
+                    <h3>Partial & Vendor Management</h3>
+                    <p>Sudah memulai perencanaan sendiri tapi butuh bantuan ahli untuk menyelesaikannya? Kami akan menyatukan kepingan puzzle pernikahan Anda.</p>
+                    <ul>
+                        <li>Vendor Contract Reviews</li>
+                        <li>Technical Meeting Coordination</li>
+                        <li>Last-minute Logistics Handling</li>
+                        <li>Timeline Synchronization</li>
+                    </ul>
+                </div>
+                <div class="detail-img">
+                    <img src="https://i.pinimg.com/1200x/51/5a/2b/515a2bdcbb60b40a508de1a671a191ed.jpg" alt="Vendor Management">
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-text">
+                    <span class="num">03</span>
+                    <h3>Wedding Day Coordinator</h3>
+                    <p>Pastikan hari pernikahan Anda berjalan mulus tanpa gangguan teknis. Tim kami akan menjadi "invisible hands" yang mengatur kelancaran acara.</p>
+                    <ul>
+                        <li>On-site Team (Up to 10 Persons)</li>
+                        <li>Family & VIP Guest Assistance</li>
+                        <li>Gift & Souvenir Management</li>
+                        <li>Time Keeper & Problem Solver</li>
+                    </ul>
+                </div>
+                <div class="detail-img">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80" alt="Wedding Day Coordinator">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">ETHEREAL <span style="color: var(--gold);">VOWS</span></div>
+                    <p>Kami percaya setiap pasangan memiliki cerita unik. Tugas kami adalah memastikan dunia melihat cerita itu melalui perayaan yang paling indah.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">Senopati, Jakarta Selatan</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">+62 812 3456 7890</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">hello@etherealvows.com</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Ethereal Vows Wedding Organizer. Created with love.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function toggleMenu() {
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars-staggered');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        mobileToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+    </script>
+
+</body>
+</html>

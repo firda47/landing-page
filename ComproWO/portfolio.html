@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Ethereal Vows</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CSS MASTER VARIABLES --- */
+        :root {
+            --gold: #C5A059;
+            --dark: #1A1A1A;
+            --light: #F9F9F7;
+            --white: #ffffff;
+            --gray: #666;
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* --- RESET & GLOBAL --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: var(--sans); 
+            background: var(--light); 
+            color: var(--dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+        a { text-decoration: none; transition: var(--transition); }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- NAVIGATION --- */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; position: fixed; width: 100%; top: 0; z-index: 1000; 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: var(--dark); opacity: 0.7; }
+        .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
+        .btn-nav { border: 1px solid var(--gold); padding: 8px 20px; color: var(--gold) !important; opacity: 1 !important; }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; z-index: 1001; }
+        .nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); visibility: hidden; opacity: 0;
+            transition: 0.3s; z-index: 998;
+        }
+        .nav-overlay.active { visibility: visible; opacity: 1; }
+
+        /* --- PAGE HEADER --- */
+        .page-header { 
+            height: 50vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80') center/cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+        .page-header h2 { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; font-style: italic; }
+        .section-tag { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 10px; }
+
+        /* --- FILTER TABS --- */
+        .portfolio-filter { padding: 60px 0 30px; text-align: center; }
+        .filter-tabs { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .filter-tabs button { 
+            background: none; border: none; font-family: var(--sans); 
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; 
+            letter-spacing: 2px; cursor: pointer; padding: 10px 20px; 
+            color: var(--gray); transition: var(--transition);
+        }
+        .filter-tabs button.active, .filter-tabs button:hover { color: var(--gold); }
+
+        /* --- GALLERY GRID (MASONRY STYLE) --- */
+        .gallery-section { padding-bottom: 100px; }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            grid-auto-rows: 250px; 
+            grid-auto-flow: dense; 
+            gap: 20px; 
+        }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 4px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        
+        /* Grid Variation */
+        .gallery-item.tall { grid-row: span 2; }
+        .gallery-item.wide { grid-column: span 2; }
+
+        /* Hover Overlay */
+        .gallery-overlay { 
+            position: absolute; inset: 0; background: rgba(0,0,0,0.4); 
+            display: flex; align-items: flex-end; padding: 30px; 
+            opacity: 0; transition: var(--transition);
+        }
+        .overlay-text { transform: translateY(20px); transition: var(--transition); color: white; }
+        .overlay-text span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); }
+        .overlay-text h4 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin-top: 5px; }
+
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item:hover .overlay-text { transform: translateY(0); }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background: white; padding: 100px 0; }
+        .center-title { text-align: center; margin-bottom: 60px; }
+        .center-title h2 { font-family: var(--serif); font-size: 2.8rem; font-weight: 500; }
+        
+        .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        .testi-card { padding: 40px; background: var(--light); border-radius: 8px; position: relative; }
+        .testi-card::before { 
+            content: "\f10d"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+            position: absolute; top: 20px; right: 40px; font-size: 3rem; color: rgba(197, 160, 89, 0.1);
+        }
+        .rating { color: var(--gold); margin-bottom: 20px; font-size: 0.8rem; }
+        .testi-card p { font-style: italic; font-size: 1.1rem; color: var(--dark); margin-bottom: 30px; line-height: 1.8; }
+        .client-info strong { display: block; font-size: 1rem; color: var(--gold); }
+        .client-info span { font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- FOOTER --- */
+        .main-footer { background: var(--dark); color: white; padding: 100px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.2fr; gap: 80px; }
+        .footer-brand p { opacity: 0.6; font-size: 0.9rem; margin-top: 20px; max-width: 350px; }
+        .footer-socials { display: flex; gap: 20px; margin-top: 30px; }
+        .footer-socials a { color: white; opacity: 0.5; font-size: 1.2rem; }
+        .footer-links h4 { font-family: var(--serif); font-size: 1.4rem; color: var(--gold); margin-bottom: 25px; }
+        .footer-links ul li { margin-bottom: 12px; }
+        .footer-links a { color: white; opacity: 0.6; font-size: 0.85rem; }
+        .footer-links a:hover { opacity: 1; color: var(--gold); padding-left: 5px; }
+        .footer-bottom { text-align: center; padding-top: 40px; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.4; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .mobile-toggle { display: block; }
+            .nav-links { 
+                position: fixed; top: 0; right: -70%; width: 70%; height: 100vh; 
+                background: white; flex-direction: column; justify-content: center; 
+                transition: 0.5s; z-index: 999; box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 15px 0; }
+            .nav-links a { color: var(--dark); font-size: 1.1rem; }
+            
+            .gallery-item.wide { grid-column: span 1; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
+            .gallery-item.tall { grid-row: span 1; }
+            .page-header h2 { font-size: 2rem; }
+            .filter-tabs { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <nav>
+        <div class="logo">ETHEREAL <span>VOWS</span></div>
+        <div class="mobile-toggle" id="mobile-toggle">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html" class="btn-nav">Consultation</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">Our Legacy</span>
+            <h2>Gallery of Eternal Love</h2>
+        </div>
+    </header>
+
+    <section class="portfolio-filter container">
+        <div class="filter-tabs">
+            <button class="active">All Stories</button>
+            <button>Intimate</button>
+            <button>Traditional</button>
+            <button>International</button>
+            <button>Engagement</button>
+        </div>
+    </section>
+
+    <section class="gallery-section container">
+        <div class="gallery-grid">
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80" alt="Glass House Wedding">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Jakarta, 2024</span>
+                        <h4>The Glass House Wedding</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80" alt="Ocean Breeze Bali">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Bali, 2023</span>
+                        <h4>Ocean Breeze Intimate</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/1200x/cf/59/df/cf59df656827e4a076687b0eb0ef917d.jpg" alt="Javanese Ritual">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Bandung, 2024</span>
+                        <h4>Modern Javanese Ritual</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item wide">
+                <img src="https://i.pinimg.com/1200x/31/12/e6/3112e6342376c6207eff0ab80551339b.jpg" alt="Pine Forest Bogor">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Bogor, 2023</span>
+                        <h4>Pine Forest Celebration</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80" alt="Royal Night">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Yogyakarta, 2024</span>
+                        <h4>Royal Heritage Night</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80" alt="Garden Soiree">
+                <div class="gallery-overlay">
+                    <div class="overlay-text">
+                        <span>Jakarta, 2023</span>
+                        <h4>Summer Garden Soirée</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="center-title">
+                <span class="section-tag">Words from Hearts</span>
+                <h2>What They Say</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testi-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Ethereal Vows benar-benar mewujudkan apa yang ada di kepala kami. Timnya detail banget, bahkan hal kecil yang kami lupa, mereka sudah siapkan dengan sempurna."</p>
+                    <div class="client-info">
+                        <strong>Andini & Bram</strong>
+                        <span>The Glass House Wedding</span>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Awalnya pusing mikirin vendor di luar kota, tapi untungnya ada tim Ethereal. Hari H lancar tanpa ada hambatan sama sekali. Luar biasa!"</p>
+                    <div class="client-info">
+                        <strong>Sarah & Kevin</strong>
+                        <span>Ocean Breeze Intimate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">ETHEREAL <span style="color: var(--gold);">VOWS</span></div>
+                    <p>Kami percaya setiap pasangan memiliki cerita unik. Tugas kami adalah memastikan dunia melihat cerita itu melalui perayaan yang paling indah.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">Senopati, Jakarta Selatan</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">+62 812 3456 7890</p></li>
+                        <li><p style="opacity: 0.6; font-size: 0.9rem;">hello@etherealvows.com</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Ethereal Vows Wedding Organizer. Created with love.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function toggleMenu() {
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars-staggered');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        mobileToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Simple Filter Logic (Visual only for now)
+        const buttons = document.querySelectorAll('.filter-tabs button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
