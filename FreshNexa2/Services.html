@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>FreshNexa | Services</title>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__left">
+      <a class="brand" href="index.html" aria-label="FreshNexa home">
+        <span class="brand__icon" aria-hidden="true">
+          <i class="ri-leaf-line"></i>
+        </span>
+        <span class="brand__text">FreshNexa</span>
+      </a>
+
+      <!-- Menu desktop -->
+      <ul class="nav__links">
+        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="About.html">About</a></li>
+        <li class="link"><a class="active" href="Services.html">Services</a></li>
+        <li class="link"><a href="Network.html">Network</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="nav__right">
+      <a class="btn nav__cta" href="Contact.html">Contact</a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU (DRAWER) -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile menu">
+    <div class="drawer__head">
+      <strong>FreshNexa</strong>
+      <button class="drawer__close" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services</a>
+    <a href="Network.html">Network</a>
+    <a class="drawer__btn" href="Contact.html">Contact</a>
+  </aside>
+
+ <!-- SOLUTIONS (SERVICES SLIDER) -->
+  <section class="memories" id="services">
+    <div class="section__container memories__container">
+      <div class="memories__header reveal">
+        <div>
+          <p class="subheader" style="text-align:left;margin-bottom:6px;">SERVICES</p>
+          <h2 class="section__header">Layanan FreshNexa</h2>
+          <p class="description" style="text-align:left;margin-left:0;max-width:720px;">
+            Solusi supply & retail produk segar dengan alur rapi: QC, cold chain, dan pengiriman terjadwal.
+          </p>
+        </div>
+
+        <div class="memories__actions">
+          <button class="chip" id="srvPrev" aria-label="Previous services"><i class="ri-arrow-left-line"></i></button>
+          <button class="chip" id="srvNext" aria-label="Next services"><i class="ri-arrow-right-line"></i></button>
+          <button class="view__all" data-scroll="#contact">Request Demo</button>
+        </div>
+      </div>
+
+      <div class="slider" id="servicesSlider" aria-label="Services slider">
+        <article class="memories__card reveal">
+          <span><i class="ri-store-2-line"></i></span>
+          <h4>Fresh Retail</h4>
+          <p>Belanja produk segar harian dengan kualitas terkurasi dan packing higienis.</p>
+        </article>
+
+        <article class="memories__card reveal">
+          <span><i class="ri-restaurant-2-line"></i></span>
+          <h4>HORECA Supply</h4>
+          <p>Pasokan stabil untuk restoran, katering, hotel—jadwal rutin & spesifikasi jelas.</p>
+        </article>
+
+        <article class="memories__card reveal">
+          <span><i class="ri-snowy-line"></i></span>
+          <h4>Cold Chain Handling</h4>
+          <p>Proses penyimpanan & distribusi menjaga suhu agar kesegaran tetap maksimal.</p>
+        </article>
+
+        <article class="memories__card reveal">
+          <span><i class="ri-shield-check-line"></i></span>
+          <h4>Quality Control</h4>
+          <p>Sorting, grading, dan pengecekan sebelum kirim untuk kualitas konsisten.</p>
+        </article>
+
+        <article class="memories__card reveal">
+          <span><i class="ri-route-line"></i></span>
+          <h4>Smart Delivery</h4>
+          <p>Optimasi rute + penjadwalan untuk pengiriman cepat dan biaya lebih efisien.</p>
+        </article>
+
+        <article class="memories__card reveal">
+          <span><i class="ri-barcode-box-line"></i></span>
+          <h4>Trace & Reporting</h4>
+          <p>Laporan supply, shrink, dan repeat order untuk bisnis yang butuh kontrol.</p>
+        </article>
+      </div>
+
+      <div class="dots" id="srvDots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- SUPPLY -->
+  <section class="section__container plan__container" id="supply">
+    <h2 class="section__header reveal">Supply Chain yang Stabil & Minim Waste</h2>
+    <p class="description reveal">
+      Kami menyatukan proses supplier, penyimpanan, dan pengiriman dalam satu alur kerja yang rapi.
+      Tujuannya: <b>kualitas stabil</b> dan <b>pemborosan turun</b>.
+    </p>
+
+    <div class="plan__grid">
+      <div class="plan__content reveal">
+        <span class="number">01</span>
+        <h4>Kurasi & Standarisasi Supplier</h4>
+        <p>Seleksi mitra berdasarkan kualitas, konsistensi pasokan, dan standar proses.</p>
+
+        <span class="number">02</span>
+        <h4>QC + Cold Storage</h4>
+        <p>Produk dicek, disortir, dan disimpan sesuai kategori untuk menjaga kesegaran.</p>
+
+        <span class="number">03</span>
+        <h4>Distribusi Terjadwal</h4>
+        <p>Pengiriman berbasis jadwal & rute efisien agar cepat sampai dan hemat biaya.</p>
+      </div>
+
+      <div class="plan__image reveal" aria-label="Supply photos">
+  <img
+    src="assets/kurasi.png"
+    alt="Fresh apple supply"
+    loading="lazy"
+  />
+  <img
+    src="assets/qc.png"
+    alt="Fresh tomato supply"
+    loading="lazy"
+  />
+  <img
+    src="assets/distribusi.png"
+    alt="Fresh banana supply"
+    loading="lazy"
+  />
+</div>
+
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section__container travellers__container" id="impact">
+    <h2 class="section__header reveal">Impact yang Bisa Kamu Rasakan</h2>
+    <p class="description reveal">
+      Lebih dari sekadar “cepat kirim”. Ini soal konsistensi kualitas dan efisiensi operasional.
+    </p>
+
+    <div class="travellers__grid">
+      <article class="travellers__card reveal">
+        <img
+          src="assets/qc1.png"
+          alt="Consistent quality"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+        <div class="travellers__card__content">
+          <h4>Kualitas Lebih Stabil</h4>
+          <p>Sorting & QC berlapis</p>
+        </div>
+      </article>
+
+      <article class="travellers__card reveal">
+        <img
+          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+          alt="Less waste"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+        <div class="travellers__card__content">
+          <h4>Waste Turun</h4>
+          <p>Alur storage terukur</p>
+        </div>
+      </article>
+
+      <article class="travellers__card reveal">
+        <img
+          src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80"
+          alt="Traceability"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+        <div class="travellers__card__content">
+          <h4>Asal Produk Jelas</h4>
+          <p>Trace & reporting</p>
+        </div>
+      </article>
+
+      <article class="travellers__card reveal">
+        <img
+          src="assets/jadwal.png"
+          alt="Operations efficiency"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+        <div class="travellers__card__content">
+          <h4>Operasional Efisien</h4>
+          <p>Rute & jadwal rapi</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>FreshNexa</h3>
+        <p>
+          Green supply & fresh retail untuk rumah tangga dan bisnis.
+          Fokus pada kualitas, traceability, dan efisiensi distribusi.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>INFORMATION</h4>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>CONTACT</h4>
+        <a href="index.html#partners">Network</a>
+        <a href="index.html#contact">Contact</a>
+        <div class="footer__socials">
+          <span title="Instagram"><i class="ri-instagram-line"></i></span>
+          <span title="LinkedIn"><i class="ri-linkedin-fill"></i></span>
+          <span title="YouTube"><i class="ri-youtube-fill"></i></span>
+    
+        </div>
+      </div>
+    </div>
+
+    <div class="section__container footer__bar">
+      <p>Copyright © FreshNexa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

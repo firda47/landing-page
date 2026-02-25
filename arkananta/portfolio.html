@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+  <title>Portfolio | Arkananta Build & Interior</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- Root Variables --- */
+    :root {
+      --primary: #1a1a1a;
+      --accent: #c5a059;
+      --text-main: #333333;
+      --text-light: #666666;
+      --white: #ffffff;
+      --bg-light: #f9f9f9;
+      --border: #eeeeee;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --container-width: 1200px;
+    }
+
+    /* --- Reset & Base --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { 
+      overflow-x: hidden; 
+      width: 100%;
+      background-color: var(--white);
+      touch-action: pan-y;
+    }
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      line-height: 1.6; 
+      color: var(--text-main); 
+    }
+
+    .container { 
+      max-width: var(--container-width); 
+      margin: 0 auto; 
+      padding: 0 24px; /* Menjaga jarak aman dari tepi layar */
+    }
+
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+    /* --- Header & Navigation --- */
+    .site-header { 
+      padding: 12px 0; 
+      position: sticky; 
+      top: 0; 
+      background: rgba(255, 255, 255, 0.95); 
+      z-index: 1100; 
+      border-bottom: 1px solid var(--border); 
+      backdrop-filter: blur(10px); 
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.3rem; z-index: 1200; color: var(--primary); }
+    .brand svg { width: 24px; height: 24px; }
+
+    /* Hamburger Menu (3 Strip) */
+    .nav-toggle { 
+      display: none; 
+      flex-direction: column; 
+      gap: 5px; 
+      cursor: pointer; 
+      border: none; 
+      background: none; 
+      z-index: 1200; 
+      padding: 5px;
+    }
+    .nav-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); transition: var(--transition); }
+
+    .site-nav { display: flex; align-items: center; gap: 20px; }
+    .nav-link { font-weight: 600; font-size: 0.9rem; color: var(--text-light); transition: var(--transition); }
+    .nav-link:hover, .nav-link.active { color: var(--accent); }
+
+    .btn { 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 10px 24px; 
+      font-weight: 700; 
+      border-radius: 6px; 
+      transition: var(--transition); 
+      font-size: 0.9rem;
+    }
+    .btn-primary { background: var(--primary); color: var(--white); border: none; }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-3px); }
+
+    /* --- Hero Section (FIXED MARGIN HP) --- */
+    .hero-section { padding: 80px 0 40px; }
+    h1 { font-size: clamp(2.2rem, 8vw, 3.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 1.2rem; color: var(--primary); }
+    .kicker { text-transform: uppercase; letter-spacing: 2px; font-weight: 700; color: var(--accent); font-size: 0.75rem; margin-bottom: 0.5rem; display: block; }
+    .lead { font-size: clamp(1rem, 4vw, 1.2rem); color: var(--text-light); max-width: 650px; }
+
+    /* --- Portfolio Grid --- */
+    .work-grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 30px; 
+      padding-bottom: 100px;
+    }
+
+    .work-item { 
+      position: relative; 
+      overflow: hidden; 
+      height: 480px; 
+      border-radius: 16px; 
+      background: #f0f0f0;
+    }
+    
+    .work-item.featured { grid-column: span 2; height: 550px; }
+    .work-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    .work-details { 
+      position: absolute; inset: 0; padding: 40px; 
+      display: flex; flex-direction: column; justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+      color: #fff; transition: var(--transition);
+    }
+
+    .work-details span { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 8px; display: block; }
+    .work-details h3 { font-size: 2rem; margin-bottom: 5px; font-weight: 700; }
+    .work-details p { font-size: 0.95rem; opacity: 0.8; }
+
+    @media (min-width: 993px) {
+      .work-details { opacity: 0; transform: translateY(20px); }
+      .work-item:hover .work-details { opacity: 1; transform: translateY(0); }
+      .work-item:hover img { transform: scale(1.08); }
+    }
+
+    /* --- Footer --- */
+    .site-footer { background: #0f0f0f; color: #888; padding: 80px 0 30px; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 40px; }
+    .footer-links h4 { color: #ffffff; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
+    .footer-nav a, .contact-info span, .social-links a { display: block; margin-bottom: 12px; font-size: 0.9rem; color: #888; }
+    .footer-nav a:hover, .social-links a:hover { color: var(--accent); transform: translateX(5px); }
+    .footer-meta { grid-column: 1 / -1; margin-top: 60px; padding-top: 30px; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+
+    /* --- MOBILE RESPONSIVE --- */
+    @media (max-width: 992px) {
+      .nav-toggle { display: flex; }
+      
+      .site-nav { 
+        position: fixed; top: 0; right: -100%; width: 75%; height: 100vh; 
+        background: var(--white); flex-direction: column; padding: 100px 30px; 
+        transition: 0.4s; box-shadow: -10px 0 30px rgba(0,0,0,0.1); 
+        z-index: 1150;
+      }
+      .site-nav.active { right: 0; }
+      .nav-link { font-size: 1.1rem; width: 100%; padding: 12px 0; border-bottom: 1px solid var(--border); }
+
+      /* Hamburger Animation */
+      .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      .nav-toggle.active span:nth-child(2) { opacity: 0; }
+      .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+      .hero-section { padding: 40px 0 30px; }
+      .work-grid { grid-template-columns: 1fr; gap: 16px; }
+      .work-item, .work-item.featured { grid-column: span 1; height: 380px; border-radius: 12px; }
+      
+      .work-details { opacity: 1; transform: translateY(0); padding: 25px; }
+      .work-details h3 { font-size: 1.6rem; }
+      
+      .footer-inner { grid-template-columns: 1fr; text-align: center; }
+      .footer-meta { flex-direction: column; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 10 L90 45 H80 V85 H20 V45 H10 L50 10 Z" fill="none" stroke="#c5a059" stroke-width="6"/>
+          <path d="M50 30 L35 75 H42 L45 65 H55 L58 75 H65 L50 30 Z M47 58 L50 48 L53 58 H47 Z" fill="#1a1a1a"/>
+        </svg>
+        <span>Arkananta</span>
+      </a>
+      
+      <button class="nav-toggle" id="menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="navMenu">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="contact.html" style="margin-top: 10px;">Konsultasi Gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <span class="kicker">Selected Works</span>
+        <h1>Proyek Representatif</h1>
+        <p class="lead">Eksplorasi karya konstruksi dan interior yang menggabungkan presisi struktur dengan keindahan visual yang abadi.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="work-grid">
+        <a href="#" class="work-item featured">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="Villa">
+          <div class="work-details">
+            <span>Residential</span>
+            <h3>The Nara Residence</h3>
+            <p>Jakarta Selatan • Full Build & Interior</p>
+          </div>
+        </a>
+
+        <a href="#" class="work-item">
+          <img src="https://i.pinimg.com/1200x/55/4d/1b/554d1b0b1a450a3314ed68eb9adab1f4.jpg" alt="Office">
+          <div class="work-details">
+            <span>Workspace</span>
+            <h3>Tech Hub Office</h3>
+            <p>BSD City • Interior Design</p>
+          </div>
+        </a>
+
+        <a href="#" class="work-item">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafe">
+          <div class="work-details">
+            <span>Commercial</span>
+            <h3>Industrial Brew Bar</h3>
+            <p>Bandung • Renovation</p>
+          </div>
+        </a>
+
+        <a href="#" class="work-item">
+          <img src="https://i.pinimg.com/1200x/06/e3/fd/06e3fd0f6caca5f5e5e6273a21fa1be2.jpg" alt="Kitchen">
+          <div class="work-details">
+            <span>Interior</span>
+            <h3>Modern Scandi Kitchen</h3>
+            <p>Tangerang • Custom Furniture</p>
+          </div>
+        </a>
+
+        <a href="#" class="work-item">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Bedroom">
+          <div class="work-details">
+            <span>Residential</span>
+            <h3>Serene Master Bedroom</h3>
+            <p>Bogor • Interior Styling</p>
+          </div>
+        </a>
+
+        <a href="#" class="work-item featured">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Meeting Room">
+          <div class="work-details">
+            <span>Corporate</span>
+            <h3>Global Connect HQ</h3>
+            <p>Jakarta Pusat • Office Expansion</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+ <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L90 45 H80 V85 H20 V45 H10 L50 10 Z" fill="none" stroke="#ffffff" stroke-width="6"/>
+            <path d="M50 30 L35 75 H42 L45 65 H55 L58 75 H65 L50 30 Z M47 58 L50 48 L53 58 H47 Z" fill="#c5a059"/>
+          </svg>
+          <strong class="brand-name">Arkananta</strong>
+        </div>
+        <p style="max-width: 300px; line-height: 1.8; font-size: 0.95rem;">Membangun dengan integritas, menciptakan ruang yang menginspirasi kehidupan dan bisnis Anda.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-links">
+        <h4>Kontak</h4>
+        <div class="contact-info">
+          <span>info@arkanantabuild.co.id</span>
+          <span>+62 812 3456 7890</span>
+          <span>Jakarta, Indonesia</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Ikuti Kami</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.linkedin.com/">LinkedIn</a>
+          <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Arkananta Build & Interior. All rights reserved.</p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="background:none; border:none; color:#fff; cursor:pointer; font-weight:600;">
+          ↑ Kembali ke atas
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    menuBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+  </script>
+</body>
+</html>
